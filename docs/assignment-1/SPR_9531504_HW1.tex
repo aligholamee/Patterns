@@ -103,10 +103,10 @@ anchorcolor = darkblue]{hyperref}
 \end{center}
 
 \begin{abstract}
-This is an introductory assignment to the world of \textit{Statistics} and \textit{Probability} in the world of \textit{Pattern Recognition}. We'll introduce some key concepts like \textit{Probability Distribution Function, Cumulative Distribution Function, Probability Density Function, Probability Mass Function, Joint Probability Density Function, Joint Cumulative Density Function, Marginal Density} \& more details as the probabilistic point of view. Furthermore, we'll review the concepts of \textit{Expected Value, Variance, Standard Deviation, Covariance \& Correlation of Random Variables(e.g. Random Vectors), Univariate \& Multivariate Gaussian Distribution, Total Probability \& Bayes Theorem, Geometric \& Mahalanobis Distances, Central Limit Theorem, Independence \& Correlation} as the statistics point of view. Also, a principal concept called \textit{Linear Transformation} is discussed. The relationship between these fields is far more important than each separately.
+This is an introductory assignment to the world of \textit{Statistics} and \textit{Probability} in the context of \textit{Pattern Recognition}. We'll introduce some key concepts like \textit{Probability Distribution Function, Cumulative Distribution Function, Probability Density Function, Probability Mass Function, Joint Probability Density Function, Joint Cumulative Density Function, Marginal Density} \& more details as the probabilistic point of view. Furthermore, we'll review the concepts of \textit{Expected Value, Variance, Standard Deviation, Covariance \& Correlation of Random Variables(e.g. Random Vectors), Univariate \& Multivariate Gaussian Distribution, Total Probability \& Bayes Theorem, Geometric \& Mahalanobis Distances, Central Limit Theorem, Independence \& Correlation} as the statistics point of view. Also, a principal concept called \textit{Linear Transformation} is discussed. The relationship between these fields is far more important than each separately.
 \end{abstract}
 
-\subparagraph{Key Words.} \textit{PDF, PMF, JPDF, JPMF, CDF, JCDF, Covariance Matrix, Correlation Coefficient, Correlation, Variance, Expected Vector, Gaussian Distribution, Marginal Probability, Linear Tranformation, Eigenvector, Eigenvalue, Rank.}
+\subparagraph{Keywords.} \textit{PDF, PMF, JPDF, JPMF, CDF, JCDF, Covariance Matrix, Correlation Coefficient, Correlation, Variance, Expected Vector, Gaussian Distribution, Marginal Probability, Linear Tranformation, Eigenvector, Eigenvalue, Rank.}
 
 \section{Expectation \& Variance}
 
@@ -385,4 +385,132 @@ $$
 	1\\
 	\end{bmatrix} , \ \ \lambda = 4
 $$
+Calculating the \textit{eigenvector} using the same procedure, we'll get the following results.
+\begin{equation}\label{eq:2.7}	
+E_2 = (A + 7I \ | \ 0) = 
+\renewcommand\arraystretch{1}
+\setlength\arraycolsep{6pt}
+\begin{bmatrix}[ccc|c]
+11 & 0 & 0 & 0\\	
+0 & 9 & 2 & 0\\
+0 & 9 & 2 & 0\\
+\end{bmatrix}
+\end{equation}
+Using \textit{Row Operations} we'll have:
+$$
+E_2 = 
+\renewcommand\arraystretch{1}
+\setlength\arraycolsep{6pt}
+\begin{bmatrix}[ccc|c]
+11 & 0 & 0 & 0\\	
+0 & 9 & 2 & 0\\
+0 & 0 & 0 & 0\\
+\end{bmatrix}
+$$
+Since $E_2$ is in the \textit{Row Echelon Form}, we can infer the equation for $E_2$ as:
+$$
+(11)(X_1) + (1)(X_2) = 0
+$$
+For the \textit{eigenvector} we'll have:
+$$
+	X =  X_2 \renewcommand\arraystretch{2}
+	\setlength\arraycolsep{10pt}
+	\begin{bmatrix}[ccc|c]
+	\frac{-1}{11}\\	
+	1\\
+	0\\
+	\end{bmatrix} , \ \ \lambda = -7
+$$
+\noindent\rule{\textwidth}{.5pt}
+(b) Since \textit{A} is a $2*2$ matrix, we have:
+$$
+	A = 
+	\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
+	\begin{bmatrix}
+	a & b\\	
+	c & d\\
+	\end{bmatrix}
+$$
+Given \textit{eigenvectors} and \textit{eigenvalues} in the problem description, we can conduct the \textit{Characteristic Equation} presented in \ref{eq:2.2} and get the following results.
+$$
+(A - 2 I)X = 
+\renewcommand\arraystretch{1}
+\setlength\arraycolsep{6pt}
+\begin{bmatrix}
+a-2 & b\\	
+c & d-2\\
+\end{bmatrix}
+\begin{bmatrix}
+1\\
+0 \\
+\end{bmatrix} = \begin{bmatrix}
+0\\
+0 \\
+\end{bmatrix}
+$$
+$$
+(A - 5 I)X = 
+\renewcommand\arraystretch{1}
+\setlength\arraycolsep{6pt}
+\begin{bmatrix}
+a-5 & b\\	
+c & d-5\\
+\end{bmatrix}
+\begin{bmatrix}
+1\\
+1 \\
+\end{bmatrix} = \begin{bmatrix}
+0\\
+0 \\
+\end{bmatrix}
+$$
+Simply solving these equations will give us the following results.
+$$
+	\boxed{a = 2}
+	\ \ \
+	\boxed{b = 3}
+	\ \ \
+	\boxed{c = 0}
+	\ \ \
+	\boxed{d = 5}
+$$
+Finally, we'll rewrite the matrix \textit{A} replacing the new parameters in it.
+$$
+A = 
+\renewcommand\arraystretch{1}
+\setlength\arraycolsep{6pt}
+\begin{bmatrix}
+2 & 3\\	
+0 & 5\\
+\end{bmatrix}
+$$
+\newpage
+\section{Probability Density Function}
+Let
+\renewcommand\arraystretch{1.2}
+\setlength\arraycolsep{10pt}
+\[f(x, y) = \left\{
+\begin{array}{lr}
+c(x + y^2) &  if \ \ 0 < x < 1\ ;\ 0 < y < 1\\
+0 &  elsewhere.
+\end{array}
+\right.
+\]
+Find each of the following.
+
+\begin{enumerate}[label=(\alph*)]
+	\item \textit{$c$}
+	
+	\item \textit{$f_X (x)$}
+	
+	\item \textit{$f_{X|Y} (y)$}
+	
+	\item Are \textit{X} and \textit{Y} independent?
+	
+	\item What is the probability $Pr(X<\frac{1}{2}  | Y = \frac{1}{2})
+	$?
+	 
+\end{enumerate}
+
 \end{document}
