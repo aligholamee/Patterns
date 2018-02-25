@@ -294,24 +294,95 @@ Thus, for each \textit{eigenvalue} determined in the previous computations, we'l
 \end{equation}
 Now we can find the proper \textit{X} for each \textit{eigenvalue}, using \textit{augmented} version of \ref{eq:2.3} and \ref{eq:2.4}. We'll have \ref{eq:2.5} and \ref{eq:2.6} as result.
 \begin{equation}\label{eq:2.5}
-	(A - 4I \ | \ 0)= 
+	E_1 = (A - 4I \ | \ 0)= 
 	\renewcommand\arraystretch{1}
 	\setlength\arraycolsep{6pt}
-		\begin{bmatrix}[cc|c]
-		1 & 2 & 3\\	
-		4 & 5 & 9\\
+		\begin{bmatrix}[ccc|c]
+		0 & 0 & 0 & 0\\	
+		0 & -2 & 2 & 0\\
+		0 & 9 & -9 & 0\\
 		\end{bmatrix}
 \end{equation}
 
 \begin{equation}\label{eq:2.6}	
-	(A + 7I \ | \ 0) = 
+	E_2 = (A + 7I \ | \ 0) = 
 	\renewcommand\arraystretch{1}
 	\setlength\arraycolsep{6pt}
-	\begin{bmatrix}
-	11 & 0 & 0 \\
-	0 & 9 & 2 \\
-	0 & 9 & 2 \\
-	\end{bmatrix}
+		\begin{bmatrix}[ccc|c]
+		11 & 0 & 0 & 0\\	
+		0 & 9 & 2 & 0\\
+		0 & 9 & 2 & 0\\
+		\end{bmatrix}
 \end{equation}
-
+The above matrices will be converted to the \textit{Row Echelon Form} below using \textit{Row Operations.}
+$$
+	E_1 = 
+		\renewcommand\arraystretch{1}
+		\setlength\arraycolsep{6pt}
+		\begin{bmatrix}[ccc|c]
+		0 & 9 & -9 & 0\\	
+		0 & -2 & 2 & 0\\
+		0 & 9 & -9 & 0\\
+		\end{bmatrix}
+$$
+$$
+	E_1 = 
+		\renewcommand\arraystretch{1}
+		\setlength\arraycolsep{6pt}
+		\begin{bmatrix}[ccc|c]
+		0 & 9 & -9 & 0\\	
+		0 & -2 & 2 & 0\\
+		0 & 0 & 0 & 0\\
+		\end{bmatrix}
+$$
+$$
+	E_1 = 
+	\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
+	\begin{bmatrix}[ccc|c]
+	0 & 1 & -1 & 0\\	
+	0 & -2 & 2 & 0\\
+	0 & 0 & 0 & 0\\
+	\end{bmatrix}
+$$
+$$
+E_1 = 
+\renewcommand\arraystretch{1}
+\setlength\arraycolsep{6pt}
+\begin{bmatrix}[ccc|c]
+0 & 1 & -1 & 0\\	
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0\\
+\end{bmatrix}
+$$
+The resulting equation for $E_1$ will be as following.
+$$
+	(0)(X_1) + (1)(X_2) - (1)(X_3) = 0
+$$
+Thus, we'll have the following \textit{eigenvector} and \textit{eigenvalue}.
+$$
+	X = 
+		\renewcommand\arraystretch{1}
+		\setlength\arraycolsep{6pt}
+		\begin{bmatrix}[ccc|c]
+		X_1\\	
+		X_2\\
+		X_3\\
+		\end{bmatrix} = \renewcommand\arraystretch{1}
+		\setlength\arraycolsep{6pt}
+		\begin{bmatrix}[ccc|c]
+		0\\	
+		X_2\\
+		X_2\\
+		\end{bmatrix}
+$$
+$$
+	X =  X_2 \renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
+	\begin{bmatrix}[ccc|c]
+	0\\	
+	1\\
+	1\\
+	\end{bmatrix} , \ \ \lambda = 4
+$$
 \end{document}
