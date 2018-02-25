@@ -59,7 +59,24 @@
 \usetikzlibrary{positioning}
 \usepackage{titlesec}
 \newcommand{\junk}[1]{{}}
+\usepackage{sectsty}
 \usepackage{xcolor}
+
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+	\edef\arraystretch{#1}%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{*\c@MaxMatrixCols c}}
+\makeatother
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{#1}}
+\makeatother
+
 \definecolor{darkblue}{rgb}{0,0,0.4}
 \usepackage[colorlinks = true,
 linkcolor = darkblue,
@@ -91,8 +108,7 @@ This is an introductory assignment to the world of \textit{Statistics} and \text
 
 \subparagraph{Key Words.} \textit{PDF, PMF, JPDF, JPMF, CDF, JCDF, Covariance Matrix, Correlation Coefficient, Correlation, Variance, Expected Vector, Gaussian Distribution, Marginal Probability, Linear Tranformation, Eigenvector, Eigenvalue, Rank.}
 
-\section{Practical \& Theoretical Problems}
-\subsection{1. Expectation \& Variance}
+\section{Expectation \& Variance}
 
 A random variable \textit{$X$} has \textit{$E(X) = -4$} and \textit{$E(X^2) = 30$.} Let \textit{$Y = -3X + 7$.} Compute the following.
 
@@ -113,7 +129,7 @@ A random variable \textit{$X$} has \textit{$E(X) = -4$} and \textit{$E(X^2) = 30
 {0pt}                          % How much space exists between the prefix and the title
 {Section \thesection:\quad}    % How the section is represented
 
-\subsection{Solution}
+\subsection*{Solution}
 
 The main equation to calculate the \textit{Variance} of a random variable \textit{X} is given in \ref{eq:1.1}.
 \begin{equation}\label{eq:1.1}
@@ -186,14 +202,16 @@ $$
 	E[Y^2] = 487
 $$
 
-\subsection{2. Eigenvector \& Eigenvalue}
+\section{Eigenvector \& Eigenvalue}
 (a) Compute eigenvalues and eigenvectors of
 $
 A = 
+	\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
 \begin{bmatrix}
-	 4 && 0 && 0 \\
-	 0 && 2 && 2 \\
-	 0 && 9 && -5 \\
+	 4 & 0 & 0 \\
+	 0 & 2 & 2 \\
+	 0 & 9 & -5 \\
 \end{bmatrix}
 $
 and compare your results with Matlab outputs.
@@ -202,16 +220,98 @@ and compare your results with Matlab outputs.
 (b) A $2*2$ matrix \textit{A} has $\lambda_1 = 2$ and $\lambda_2 = 5$, with corresponding eigenvectors 
 $
 V_1 = 
+	\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
 \begin{bmatrix}
-1 && 0
+1 & 0
 \end{bmatrix}^\mathsf{\textit{T}}
 $
 and
 $
 V_2 = 
+	\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
 \begin{bmatrix}
-1 && 1
+1 & 1
 \end{bmatrix}^\mathsf{\textit{T}}
 $. Find \textit{A}.
+
+\titleformat{\section}
+{\normalfont\Large\bfseries}   % The style of the section title
+{}                             % a prefix
+{0pt}                          % How much space exists between the prefix and the title
+{Section \thesection:\quad}    % How the section is represented
+
+\subsection*{Solution}
+(a) First of all, we'll find the \textit{eigenvalues} using the \textit{characteristic equation} given in \ref{eq:2.1}.
+
+\begin{equation}\label{eq:2.1}
+| A - \lambda I |= 0
+\end{equation}
+Using this equation, all of the diagonal components of matrix \textit{A} will be decremented by a $\lambda$ term. The determinant of the resulting matrix will be as following.
+$$
+	A - \lambda I = 
+		\renewcommand\arraystretch{1}
+		\setlength\arraycolsep{6pt}
+	\begin{bmatrix}
+	4-\lambda & 0 & 0 \\
+	0 & 2-\lambda & 2 \\
+	0 & 9 & -5-\lambda \\
+	\end{bmatrix}	
+$$
+$$
+| A - \lambda I | = (4-\lambda)(\lambda^2 + 3\lambda - 28)
+$$
+This will result in the following two roots for the $\lambda$ term.
+$$
+	\boxed{\lambda_1 = 4} \ \ \ \boxed{\lambda_2 = -7}
+$$
+These are the \textit{eigenvalues} of the given matrix \textit{A}. We'll continue using the \textit{Gaussian Elimination} technique to compute the \textit{eigenvectors} of matrix \textit{A}. According to the equation \ref{eq:2.2} we are looking for all possible vectors that can be substitute with vector X.
+\begin{equation}\label{eq:2.2}
+| A - \lambda I |X= 0
+\end{equation}
+Thus, for each \textit{eigenvalue} determined in the previous computations, we'll find the proper \textit{eigenvector} by converting the equation \ref{eq:2.2} to a \textit{Row Echelon Form} and solving the resulting linear system by \textit{Back Substitution}. Using the computed \textit{eigenvalues}, we'll have \ref{eq:2.3} and \ref{eq:2.4}
+\begin{equation}\label{eq:2.3}
+	A - 4I = 
+		\renewcommand\arraystretch{1}
+		\setlength\arraycolsep{6pt}
+		\begin{bmatrix}
+		0 & 0 & 0 \\
+		0 & -2 & 2 \\
+		0 & 9 & -9 \\
+		\end{bmatrix}
+\end{equation}
+
+\begin{equation}\label{eq:2.4}	
+	A + 7I = 
+		\renewcommand\arraystretch{1}
+		\setlength\arraycolsep{6pt}
+		\begin{bmatrix}
+		11 & 0 & 0 \\
+		0 & 9 & 2 \\
+		0 & 9 & 2 \\
+		\end{bmatrix}
+\end{equation}
+Now we can find the proper \textit{X} for each \textit{eigenvalue}, using \textit{augmented} version of \ref{eq:2.3} and \ref{eq:2.4}. We'll have \ref{eq:2.5} and \ref{eq:2.6} as result.
+\begin{equation}\label{eq:2.5}
+	(A - 4I \ | \ 0)= 
+	\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
+		\begin{bmatrix}[cc|c]
+		1 & 2 & 3\\	
+		4 & 5 & 9\\
+		\end{bmatrix}
+\end{equation}
+
+\begin{equation}\label{eq:2.6}	
+	(A + 7I \ | \ 0) = 
+	\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
+	\begin{bmatrix}
+	11 & 0 & 0 \\
+	0 & 9 & 2 \\
+	0 & 9 & 2 \\
+	\end{bmatrix}
+\end{equation}
 
 \end{document}
