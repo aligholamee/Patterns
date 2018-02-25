@@ -544,7 +544,7 @@ $$
 $$
 \noindent\rule{\textwidth}{.5pt}
 (c) While having the relation for the \textit{Joint Probability} and the ease of finding \textit{Marginal Density} of each of the variables, we can simply find the conditional probability using the \textit{Bayes} theorem.
-\begin{equation}
+\begin{equation}\label{eq:3.1}
 	f_{X|Y} (x) = \frac{f(x, y)}{g(y)}  = \frac{joint\ density\ of\ x\ \&\ y}{marginal\ density\ of\ y}
 \end{equation}
 The $g(y)$ can be found by integrating the \textit{JPDF} over the variable \textit{X}.
@@ -571,5 +571,16 @@ $$
 So the variables \textit{X} and \textit{Y} are not \textit{independent}.
 
 \noindent\rule{\textwidth}{.5pt}
-(e) 
+(e) Given the conditional density introduced in \ref{eq:3.1}, we'll have:
+$$
+	Pr(X < \frac{1}{2}\ |\ Y = \frac{1}{2}) = \frac{f(X < \frac{1}{2}, Y = \frac{1}{2})}{g(\frac{1}{2})}
+$$
+$$
+	Pr(X < \frac{1}{2}\ |\ Y = \frac{1}{2}) = \frac{\frac{3}{10}}{\frac{36}{20}}
+$$
+$$
+	Pr(X < \frac{1}{2}\ |\ Y = \frac{1}{2}) = \frac{1}{6}
+$$
+
+
 \end{document}
