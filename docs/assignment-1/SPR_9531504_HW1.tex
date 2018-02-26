@@ -659,6 +659,84 @@ Given $X_1,\ X_2,\ X_3,\ X_4$ as \textit{uncorrelated} random variables each hav
 \end{enumerate}
 
 \subsection*{Solution}
-Before getting into the details of answer, let's talk a bit about the \textit{covariance} and \textit{correlation} terms. They both represent the degree to which two random variables or sets of random variables tend deviate from their expected values.
+Before getting into the details of answer, let's talk a bit about the \textit{covariance} and \textit{correlation} terms. They both represent the degree to which two random variables or sets of random variables tend deviate from their expected values. According to the \textit{Wikipedia}, the \textit{covariance} and \textit{correlation} of two random variables $X$ and $Y$ is computed using \ref{eq:5.1}  \ref{eq:5.2} respectively.
 
+\begin{equation}\label{eq:5.1}
+	\sigma_{XY} = E[(X-\mu_X)(Y-\mu_Y)]
+\end{equation}
+\begin{equation}\label{eq:5.2}
+	\rho_{XY} = \frac{E[(X-\mu_X)(Y-\mu_Y)]}{\sigma_X\sigma_Y}
+\end{equation}
+The difference between \textit{covariance} and \textit{correlation} is clear. \textit{correlation} is a \textit{dimensionless} measure and \textit{covariance} is in \textit{units}. Keeping this in mind, we can safely keep moving through the calculation of (a) and (b).\\
+(a) Using the covariance equation for two random variables which is given in \ref{eq:5.3} we'
+ll get the following.
+\newpage
+\begin{equation}\label{eq:5.3}
+Cov(A,\ B) = E[AB] - E[A]E[B]
+\end{equation}
+$$
+	Cov(A,\ B) = E[X_1X_2 + X_1X_3 + X_2^2 + X_2X_3] - E[X_1 + X_2]E[X_2 + X_3]
+$$
+$$
+Cov(A,\ B) = E[X_1X_2] + E[X_1X_3] + E[X_2^2] + E[X_2X_3]
+$$
+$$
+\hspace{4.5cm}- E[X_1]E[X_2] - E[X_1]E[X_3] - E[X_2]^2 - E[X_2]E[X_3]
+$$
+Since the variables are \textit{uncorrelated} pairwise, we have:
+$$
+	Cov(X_1, X_2) = 0
+$$
+$$
+Cov(X_1, X_3) = 0
+$$
+$$
+Cov(X_1, X_4) = 0
+$$
+$$
+Cov(X_2, X_3) = 0
+$$
+$$
+Cov(X_2, X_4) = 0
+$$
+$$
+Cov(X_3, X_4) = 0
+$$
+Therefore:
+$$
+E[X_1X_2] = E[X_1]E[X_2]
+$$
+$$
+E[X_1X_3] = E[X_1]E[X_3]
+$$
+$$
+E[X_2X_3] = E[X_2]E[X_3]
+$$
+Finally, the results for the $Cov(A,\ B)$ will be:
+$$
+	Cov(A,\ B) = E[X_2^2] - E[X_2]^2
+$$
+which is the \textit{variance} of $X_2$ according to the \ref{eq:1.2} and the value of that is equal to 1 according to the problem description. Thus, we'll have the following result for the correlation of $A=X_1+X_2$ and $B=X_2+X_3$.
+$$
+\boxed{\rho_{AB} =	1}
+$$
+Which represents that \textit{A} and \textit{B} have a \textit{perfect positive} relationship; when one variable moves higher or lower, the other variable moves in the same direction with the same magnitude.
+
+\noindent\rule{\textwidth}{.5pt}
+(b) Using the same terminology as previous section, we'll have the following computations to find the correlation of $A = X_1 + X_2$ and $B = X_3 + X_4$.
+$$
+Cov(A,\ B) = E[X_1X_3 + X_1X_4 + X_2X_3 + X_2X_4] - E[X_1 + X_2]E[X_3 + X_4]
+$$
+$$
+Cov(A,\ B) = E[X_1X_3] + E[X_1X_4] + E[X_2X_3] + E[X_2X_4]
+$$
+$$
+\hspace{4.5cm}- E[X_1]E[X_3] - E[X_1]E[X_4] - E[X_2]E[X_3] - E[X_2]E[X_4]
+$$
+$$
+	Cov(A,\ B) = 0
+$$
+$$
+\boxed{\rho_{AB} =	0}
+$$
 \end{document}
