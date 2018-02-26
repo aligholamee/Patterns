@@ -659,7 +659,7 @@ Given $X_1,\ X_2,\ X_3,\ X_4$ as \textit{uncorrelated} random variables each hav
 \end{enumerate}
 
 \subsection*{Solution}
-Before getting into the details of answer, let's talk a bit about the \textit{covariance} and \textit{correlation} terms. They both represent the degree to which two random variables or sets of random variables tend deviate from their expected values. According to the \textit{Wikipedia}, the \textit{covariance} and \textit{correlation} of two random variables $X$ and $Y$ is computed using \ref{eq:5.1}  \ref{eq:5.2} respectively.
+Before getting into the details of answer, let's talk a bit about the \textit{covariance} and \textit{correlation} terms. They both represent the degree to which two random variables or sets of random variables tend deviate from their expected values. According to the \textit{Wikipedia}, the \textit{covariance} and \textit{correlation} of two random variables $X$ and $Y$ is computed using \ref{eq:5.1} and \ref{eq:5.2} respectively.
 
 \begin{equation}\label{eq:5.1}
 	\sigma_{XY} = E[(X-\mu_X)(Y-\mu_Y)]
@@ -739,4 +739,61 @@ $$
 $$
 \boxed{\rho_{AB} =	0}
 $$
+\newpage
+\section{Independence \& Expectation}
+If $X$ and $Y$ are \textit{independent} and \textit{identically distributed} with \textit{mean} $\lambda$ and \textit{variance} $\sigma^2$, find $E[(X-Y)^2]$.
+
+\subsection*{Solution}
+We have the following information about $X$ and $Y$ random variables:\\
+$$
+	E[X] = \lambda
+$$
+$$
+	E[Y] = \lambda
+$$
+$$
+	V[X] = \sigma^2
+$$
+$$
+	V[Y] = \sigma^2
+$$
+Expanding the given equation for the $X$ and $Y$ we get:
+$$
+	E[(X-Y)^2] = E[X^2] + E[Y^2] - 2E[X]E[Y]
+$$	
+\begin{equation}\label{eq:6.1}
+E[(X-Y)^2] = E[X^2] + E[Y^2] - 2\lambda^2
+\end{equation}
+Using the equation \ref{eq:1.2} we can simply find $E[X^2]$ and $E[Y^2]$:
+$$
+	E[X^2] = \sigma^2 + \lambda^2
+$$
+$$
+	E[Y^2] = \sigma^2 + \lambda^2
+$$
+Replacing with materials in equation \ref{eq:6.1} we'll get:
+$$
+	\boxed{E[(X-Y)^2] = 2(\sigma^2 + \lambda^2)- 2\lambda^2 = 2\sigma^2}	
+$$
+\section{Marginal \& Conditional Density}
+Let $p(X)$ be $\mathcal{N}(M, \Sigma)$ with
+$$
+	X = \begin{bmatrix}
+	x_1\\	
+	x_2\\
+	\end{bmatrix},\ \ \ 
+	M = \begin{bmatrix}
+	m_1\\	
+	m_2\\
+	\end{bmatrix}\ and\ \ 
+	\Sigma = \begin{bmatrix}
+	\sigma_1^2 & \rho\sigma_1\sigma_2\\	
+	\rho\sigma_1\sigma_2\ & \sigma_2^2\\
+	\end{bmatrix}
+$$
+Show that:
+\begin{enumerate}[label=(\alph*)]
+	\item $p(x_1) \sim \mathcal{N}_{x_1}(m_1,\ \sigma_1^2)\ \ $  (\textit{a marginal density})
+	\item $p(x_1\ |\ x_2) \sim \mathcal{N}_{x_1}(m_1 + \frac{\rho\sigma_1(x_2 - m_2)}{\sigma_2},\ \sigma_1^2(1-\rho^2))\ \ $ (\textit{a conditional density})
+\end{enumerate}
 \end{document}
