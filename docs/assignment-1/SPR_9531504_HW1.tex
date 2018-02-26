@@ -588,30 +588,33 @@ Recall the multivariate Gaussian for a vector $x\ \epsilon\ R^n$.
 \begin{equation}\label{eq:4.1}
 	p(x\ |\ \mu, \Sigma) = \frac{1}{(2\pi)^\frac{n}{2}|\Sigma|^\frac{1}{2}} e^{\frac{-1}{2}(x - \mu)^T\Sigma^{-1}(x - \mu)} 
 \end{equation}
-(a) Let $y=v_i^Tx$, where $v_i$ is an eigenvector of $\Sigma$ with an eigenvalue of $\lambda_i$. Find the probability density of $p(Y)$.
-\vspace{.5cm}
-\\
-(b) Let $X$ be a zero mean Gaussian random vector with an isotropic covariance ($\Sigma  = I$). Let $Y = AX + B$. Compute the mean and variance of $Y$.
-\vspace{.5cm}
-\\
-(c) (\textit{Matlab}) Generate 500 random samples from a 2 dimensional Gaussian with an isotropic $\Sigma$ using the \textit{Matlab} command \textit{\textbf{randn}}. Transform the data as above with
-$
-B = 
-\renewcommand\arraystretch{1}
-\setlength\arraycolsep{6pt}
-\begin{bmatrix}
- 0.5 \\
- 1 \\
-\end{bmatrix}
-$, and $
-A = 
-\renewcommand\arraystretch{1}
-\setlength\arraycolsep{6pt}
-\begin{bmatrix}
--5 & 5 \\
-1 & 1 \\
-\end{bmatrix}
-$. Plot the original and transformed points.
+
+\begin{enumerate}[label=(\alph*)]
+	\item Let $y=v_i^Tx$, where $v_i$ is an eigenvector of $\Sigma$ with an eigenvalue of $\lambda_i$. Find the probability density of $p(Y)$.
+	
+	\item Let $X$ be a zero mean Gaussian random vector with an isotropic covariance ($\Sigma  = I$). Let $Y = AX + B$. Compute the mean and variance of $Y$.
+	
+	\item (\textit{Matlab}) Generate 500 random samples from a 2 dimensional Gaussian with an isotropic $\Sigma$ using the \textit{Matlab} command \textit{\textbf{randn}}. Transform the data as above with
+	$
+	B = 
+	\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
+	\begin{bmatrix}
+	0.5 \\
+	1 \\
+	\end{bmatrix}
+	$, and $
+	A = 
+	\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
+	\begin{bmatrix}
+	-5 & 5 \\
+	1 & 1 \\
+	\end{bmatrix}
+	$. Plot the original and transformed points.
+	
+\end{enumerate}
+
 
 \subsection*{Solution}
 (a) The represented map in section a is a \textit{Linear Map}. Applying a \textit{Linear Map} to a random vector \textit{X} with \textit{mean} $\mu_X$ and \textit{covariance matrix} $\Sigma_X$ will give us a new random vector \textit{Y} with the following properties.
@@ -629,6 +632,8 @@ Thus we will have the following probability distribution for random vector \text
 $$
 p(y\ |\ \mu, \Sigma) = \frac{1}{(2\pi)^\frac{n}{2}|v_i \Sigma v_i^T|^\frac{1}{2}} e^{\frac{-1}{2}(y - v_i \mu)^T(v_i \Sigma v_i^T)^{-1}(y - v_i \mu)}
 $$
+\textsc{Side note: The eigenvector of a covariance matrix is equal to principal component. The eigenvector with the largest eigenvalue is along which the dataset has the maximum variance. Out interest is to maximize the variance of data in the new dimensional space after applying the linear map.}
+
 \noindent\rule{\textwidth}{.5pt}
 (b) A formal representation of the problem description is given below.
 $$
@@ -645,5 +650,15 @@ The new \textit{mean} will be equal to \textit{B} and the new \textit{covariance
 $$
 	Cov(Y) = Cov(AX + B) = A\ \Sigma \ A^T = A\ I\ A^T = A\ A^T\ I = I
 $$
-\section*{Correlation \& Expectation}
+\section{Correlation of Random Variables}
+Given $X_1,\ X_2,\ X_3,\ X_4$ as \textit{uncorrelated} random variables each having \textit{mean} 0 and \textit{variance} 1, compute the correlations of:\\
+\begin{enumerate}[label=(\alph*)]
+	\item $X_1 + X_2$ and $X_2 + X_3$
+	
+	\item $X_1 + X_2$ and $X_3 + X_4$
+\end{enumerate}
+
+\subsection*{Solution}
+Before getting into the details of answer, let's talk a bit about the \textit{covariance} and \textit{correlation} terms. They both represent the degree to which two random variables or sets of random variables tend deviate from their expected values.
+
 \end{document}

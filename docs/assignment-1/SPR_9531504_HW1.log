@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.6)  26 FEB 2018 12:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.6)  26 FEB 2018 13:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -663,21 +663,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 192--195
 
  []
 
-[2] [3] [4] [5] [6] [7] [8] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 649.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 649.
+[2] [3] [4] [5] [6] [7]
+Overfull \hbox (0.77417pt too wide) in paragraph at lines 597--615
+[]\OT1/cmr/m/n/12 (\OT1/cmr/m/it/12 Matlab\OT1/cmr/m/n/12 ) Gen-er-ate 500 ran-
+dom sam-ples from a 2 di-men-sional Gaus-sian with an isotropic
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 654--655
+
+ []
+
+[9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 664.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 664.
  (./SPR_9531504_HW1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 649.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 649.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 664.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 664.
 Package rerunfilecheck Info: File `SPR_9531504_HW1.out' has not changed.
-(rerunfilecheck)             Checksum: 406645AEAD0633F4612F6F841D3AF618;254.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 649.
+(rerunfilecheck)             Checksum: BA416F9A722CBD19D223E9BBEFE92E1D;320.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 664.
  ) 
 Here is how much of TeX's memory you used:
- 17158 strings out of 493029
- 322543 string characters out of 6136235
+ 17165 strings out of 493029
+ 322598 string characters out of 6136235
  386547 words of memory out of 5000000
- 20346 multiletter control sequences out of 15000+600000
+ 20347 multiletter control sequences out of 15000+600000
  14292 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,8n,54p,1029b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -698,10 +709,10 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on SPR_9531504_HW1.pdf (9 pages, 225101 bytes).
+Output written on SPR_9531504_HW1.pdf (9 pages, 230437 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 212 PDF objects out of 1000 (max. 8388607)
+ 181 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
