@@ -798,7 +798,7 @@ Show that:
 \end{enumerate}
 \newpage
 \subsection*{Solution}
-Since we'll need some \textit{inverse matrix} computations, we need to review two theorems. The first theorem is about \textit{inverse of a partitioned symmetric matrix} which divides every square matrix into 4 blocks. Correspondingly, the inverse matrix will be divided into 4 blocks and each of these blocks can be calculated separately.
+Since we'll need some \textit{inverse matrix} computations, we need to review two theorems. The first theorem is about \textit{inverse of a partitioned symmetric matrix} which divides every square matrix into 4 blocks. Correspondingly, the inverse matrix will be divided into 4 blocks and the inverse of these blocks can be calculated separately.
 
 \subsubsection*{Theorem 1}
 Let A = $
@@ -860,4 +860,89 @@ A
 	A_{11} - A_{11}A_{22}^{-1}A_{12}^T
 	\end{vmatrix}
 $$
+Now let's derive the \textit{multivariate Gaussian} for vector $X$. The \textit{joint density} of \textit{X} is:
+\begin{equation}\label{eq:7.1}
+p(x_1,\ x_2\ |\ \mu, \Sigma) = \frac{1}{(2\pi)^\frac{n}{2}|\Sigma|^\frac{1}{2}} e^{\frac{-1}{2}D(x_1,\ x_2)} 
+\end{equation}
+Expanding the $D(x_1,\ x_2)$ as a matrix multiplication, we get:
+$$
+	D(x_1, x_2) = \renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
+	\begin{bmatrix}
+	x_1 - \mu_1\\
+	x_2 - \mu_2\\
+	\end{bmatrix}^T
+	\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
+	\begin{bmatrix}
+	\Sigma_{11} & \Sigma_{12} \\
+	\Sigma_{21} & \Sigma_{22}\\
+	\end{bmatrix}^{-1}\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
+	\begin{bmatrix}
+	x_1 - \mu_1\\
+	x_2 - \mu_2\\
+	\end{bmatrix}	
+$$
+The inverse matrix will be displayed with $\Sigma^{ij}$ according to the conventions. Thus, by using \textit{Theorem 1} we get:
+$$
+	D(x_1,\ x_2) = \renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
+	\begin{bmatrix}
+	{(x_1 - \mu_1)}^{T}\ 
+	{(x_2 - \mu_2)}^{T}\\
+	\end{bmatrix}
+	\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
+	\begin{bmatrix}
+	\Sigma^{11} & \Sigma^{12} \\
+	\Sigma^{21} & \Sigma^{22}\\
+	\end{bmatrix}\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
+	\begin{bmatrix}
+	x_1 - \mu_1\\
+	x_2 - \mu_2\\
+	\end{bmatrix}	
+$$
+The result of the multiplication can be shown as following.
+$$
+	D(x_1,\ x_2) = (x_1 - \mu_1)^{T}\Sigma^{11}(x_1 - \mu_1) + 2(x_1 - \mu_1)^T\Sigma^{12}(x_2- \mu_2) + (x_2-\mu_2)^T\Sigma^{22}(x_2-\mu_2)
+$$
+We will replace the $\Sigma^{11},\ \Sigma^{12}$ and $\Sigma^{22}$ with the result from \textit{Theorem 2}. 
+$$
+	D(x_1,\ x_2) = (x_1 - \mu_1)^{T}[\Sigma_{11}^{-1} + \Sigma_{11}^{-1}\Sigma_{12}(\Sigma_{22} - \Sigma_{12}^{T}\Sigma_{11}^{-1}\Sigma_{12})^{-1}\Sigma_{12}^{T}\Sigma_{11}^{-1}](x_1 - \mu_1)
+$$
+$$
+	-2(x_1 - \mu_1)^{T}[\Sigma_{11}^{-1}\Sigma_{12}(\Sigma_{22} - \Sigma_{12}^{T} \Sigma_{11}^{-1}\Sigma_{12})^{-1}](x_2-\mu_2)
+$$
+$$
+	+(x_2 - \mu_2)^{T}[(\Sigma_{22} - \Sigma_{12}^T\Sigma_{11}^{-1}\Sigma_{12})^{-1}](x_2- \mu_2)
+$$
+Applying multiplication on the first term we get:
+$$
+D(x_1,\ x_2) = (x_1 - \mu_1)^{T}\Sigma_{11}^{-1}(x_1 - \mu_1)
+$$
+$$
+	+ (x_1 - \mu_1)^{T}[ \Sigma_{11}^{-1}\Sigma_{12}(\Sigma_{22} - \Sigma_{12}^{T}\Sigma_{11}^{-1}\Sigma_{12})^{-1}\Sigma_{12}^{T}\Sigma_{11}^{-1}](x_1 - \mu_1)
+$$
+$$
+-2(x_1 - \mu_1)^{T}[\Sigma_{11}^{-1}\Sigma_{12}(\Sigma_{22} - \Sigma_{12}^{T} \Sigma_{11}^{-1}\Sigma_{12})^{-1}](x_2-\mu_2)
+$$
+$$
++(x_2 - \mu_2)^{T}[(\Sigma_{22} - \Sigma_{12}^T\Sigma_{11}^{-1}\Sigma_{12})^{-1}](x_2- \mu_2)
+$$
+Now we conduct another \textit{Theorem} to display the $D(x_1,\ x_2)$ in a more compact form.
+\subsubsection*{Theorem 3}
+Given symmetric matrix equation $A = A^T$, for any vectors $u$ and $v$ we have:
+$$
+	u^TAu - 2u^TAv+ v^TAv = (v-u)^TA(v-u)
+$$ 
+Applying \textit{Theorem 3} on $D(x_1,\ x_2)$:
+$$
+	D(x_1,\ x_2) = (x_1 - \mu_1)^T\Sigma_{11}^{-1}(x_1 - \mu_1)
+$$
+$$
+	+[(x_2 - \mu_2) - \Sigma_{12}^T\Sigma_{11}^{-1}(x_1 - \mu_1)]^T(\Sigma_{22} - \Sigma_{12}^T\Sigma_{11}^{-1}\Sigma_{12})^{-1}[(x_2 - \mu_2) - \Sigma_{12}^T\Sigma_{11}^{-1}(x_1 - \mu_1)]
+$$
+Let's define 
 \end{document}
