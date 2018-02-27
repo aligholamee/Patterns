@@ -944,5 +944,80 @@ $$
 $$
 	+[(x_2 - \mu_2) - \Sigma_{12}^T\Sigma_{11}^{-1}(x_1 - \mu_1)]^T(\Sigma_{22} - \Sigma_{12}^T\Sigma_{11}^{-1}\Sigma_{12})^{-1}[(x_2 - \mu_2) - \Sigma_{12}^T\Sigma_{11}^{-1}(x_1 - \mu_1)]
 $$
-Let's define 
+Let's define
+$$
+	\boxed{	A = \Sigma_{22} - \Sigma_{12}^{T}\Sigma_{11}^{-1}\Sigma_{12}}
+$$
+$$
+	\boxed{	b = \mu_2 + \Sigma_{12}^T\Sigma_{11}^{-1}(x_1 - \mu_1)}
+$$
+and 
+$$
+	D_{1}(x_1) = (x_1 - \mu_1)^{T}\Sigma_{11}^{-1}(x_1 - \mu_1)
+$$
+$$
+	D_{2}(x_1,\ x_2) = (x_2 - b)^{T}A^{-1}(x_2-b)
+$$
+Thus we will have
+$$
+	D(x_1,\ x_2) = D_1(x_1) + D_2(x_1,\ x_2)
+$$
+Now we can rewrite the joint distribution as 
+$$
+	p(x_1,\ x_2\ |\ \mu, \Sigma) = \frac{1}{(2\pi)^\frac{n}{2}|\Sigma|^\frac{1}{2}} e^{\frac{-1}{2}D(x_1,\ x_2)}
+$$
+Now according to the \textit{Theorem 3} we get
+$$
+	\begin{vmatrix}
+		\Sigma
+	\end{vmatrix} = \begin{vmatrix}
+		\Sigma_{11}
+	\end{vmatrix}
+	\begin{vmatrix}
+		\Sigma_{22} - \Sigma_{12}^T\Sigma_{11}^{-1}\Sigma_{12}
+	\end{vmatrix}
+$$
+Replacing in the joint probability we get
+$$
+p(x_1,\ x_2\ |\ \mu, \Sigma) = \frac{1}{(2\pi)^\frac{n}{2}|\Sigma_{11}|^\frac{1}{2}|\Sigma_{22} - \Sigma_{12}^T\Sigma_{11}^{-1}\Sigma_{12}|^\frac{1}{2}} e^{\frac{-1}{2}D(x_1,\ x_2)}
+$$
+Separating $x_1$ and $x_2$ according to the definitions above, we'll have the following result for each of the random variables (\textit{this proof is for the general mode, the question has asked for the simple 2*2 mode.})
+$$
+	p(x_1,\ x_2\ |\ \mu,\ \Sigma) = \mathcal{N}_{x_1}(\mu_1,\ \Sigma_{11})\mathcal{N}_{x_2}(b,\ A)
+$$
+which in this special case, we have
+$$
+X = \begin{bmatrix}
+x_1\\	
+x_2\\
+\end{bmatrix},\ \ \ 
+M = \begin{bmatrix}
+m_1\\	
+m_2\\
+\end{bmatrix}\ and\ \ 
+\Sigma = \begin{bmatrix}
+\sigma_1^2 & \rho\sigma_1\sigma_2\\	
+\rho\sigma_1\sigma_2\ & \sigma_2^2\\
+\end{bmatrix}
+$$
+Thus, the \textit{separated distribution} of $x_1$ and $x_2$ will be:
+$$
+	p(x_1,\ x_2\ |\ \mu,\ \Sigma) = \mathcal{N}_{x_1}(m_1,\ \sigma_{1}^2)\mathcal{N}_{x_2}(b,\ A)
+$$
+Finally, the \textit{marginal density} of $x_1$ is
+$$
+	p(x_1) = \int_{}^{}p(x_1,\ x_2)\mathrm{d}x_2 = \frac{1}{2\pi|\sigma_{1}^2|^\frac{1}{2}} e^{\frac{-1}{2}(x_1 - m_1)^T\Sigma^{-1}(x_1 - m_1)}
+$$
+Thus we get the following \textit{marginal densities} as result.
+$$
+	p(x_1) \sim \mathcal{N}_{x_1}(m_1,\ \sigma_1^2)\ \
+$$
+$$
+	p(x_2) \sim \mathcal{N}_{x_2}(m_2,\ \sigma_2^2)\ \
+$$
+For the \textit{conditional density} of $p(x_1\ |\ x_2)$ we will divide the \textit{joint probability} to the forsaken \textit{marginal probability}. Replacing $b$ and $A$ from the problem description we get:
+$$
+	p(x_1\ |\ x_2) = \frac{p(x_1,\ x_2)}{p(x_2)}
+$$
+
 \end{document}
