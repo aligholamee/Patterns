@@ -796,4 +796,68 @@ Show that:
 	\item $p(x_1) \sim \mathcal{N}_{x_1}(m_1,\ \sigma_1^2)\ \ $  (\textit{a marginal density})
 	\item $p(x_1\ |\ x_2) \sim \mathcal{N}_{x_1}(m_1 + \frac{\rho\sigma_1(x_2 - m_2)}{\sigma_2},\ \sigma_1^2(1-\rho^2))\ \ $ (\textit{a conditional density})
 \end{enumerate}
+\newpage
+\subsection*{Solution}
+Since we'll need some \textit{inverse matrix} computations, we need to review two theorems. The first theorem is about \textit{inverse of a partitioned symmetric matrix} which divides every square matrix into 4 blocks. Correspondingly, the inverse matrix will be divided into 4 blocks and each of these blocks can be calculated separately.
+
+\subsubsection*{Theorem 1}
+Let A = $
+	\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
+	\begin{bmatrix}
+	A_{11} & A_{12} \\
+	A_{12}^T & A_{22}\\
+	\end{bmatrix}$,
+which demonstrates the division of every square matrix into 4 blocks. The inverse matrix $B=A^{-1}$ can also be divided into four blocks.
+$$
+	 B = A^{-1} = 
+	 \renewcommand\arraystretch{1}
+	 \setlength\arraycolsep{6pt}
+	 \begin{bmatrix}
+	 B_{11} & B_{12} \\
+	 B_{12}^T & B_{22}\\
+ \end{bmatrix}
+$$
+Now we can separately compute each of the components of inverse matrix.
+$$
+	B_{11} = (A_{11} - A_{12}A_{22}^{-1}A_{12}^{T})^{-1} = A_{11}^{-1} + A_{11}^{-1}A_{12}(A_{22} - A_{12}^{T}A_{11}^{-1}A_{12})^{-1}A_{12}^{T}A_{11}^{-1}
+$$
+$$
+B_{22} = (A_{22} - A_{12}^{T}A_{11}^{-1}A_{12})^{-1} = A_{22}^{-1} + A_{22}^{-1}A_{12}^{T}(A_{11} - A_{12}A_{22}^{-1}A_{12}^{T})^{-1}A_{12}A_{22}^{-1}
+$$
+$$
+B_{12} = -A_{22}^{-1}A_{12}^{T}(A_{11}-A_{12}A_{22}^{-1}A_{12}^T)^{-1}
+$$
+$$
+B_{12}^{T} = -A_{11}^{-1}A_{12}(A_{22}-A_{12}^{T}A_{11}^{-1}A_{12})^{-1}
+$$
+
+\subsubsection*{Theorem 2}
+Let A = $
+\renewcommand\arraystretch{1}
+\setlength\arraycolsep{6pt}
+\begin{bmatrix}
+A_{11} & A_{12} \\
+A_{21} & A_{22}\\
+\end{bmatrix}$, which $A$ is a partitioned symmetric matrix. We can compute the determinant of matrix $A$ using the following formula:
+$$
+\begin{vmatrix}
+A
+\end{vmatrix}=
+	\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}
+	\begin{vmatrix}
+	A_{11} & A_{12} \\
+	A_{21} & A_{22}\\
+	\end{vmatrix} = 
+	\begin{vmatrix}
+	A_{11}
+	\end{vmatrix}\begin{vmatrix}
+	A_{22} - A_{12}^TA_{11}^{-1}A_{12}
+	\end{vmatrix}=\begin{vmatrix}
+	A_{22}
+	\end{vmatrix}\begin{vmatrix}
+	A_{11} - A_{11}A_{22}^{-1}A_{12}^T
+	\end{vmatrix}
+$$
 \end{document}
