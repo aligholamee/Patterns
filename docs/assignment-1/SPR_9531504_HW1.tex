@@ -1017,7 +1017,10 @@ $$
 $$
 For the \textit{conditional density} of $p(x_1\ |\ x_2)$ we will divide the \textit{joint probability} to the forsaken \textit{marginal probability}. Replacing $b$ and $A$ from the problem description we get:
 $$
-	p(x_1\ |\ x_2) = \frac{p(x_1,\ x_2)}{p(x_2)}
+	p(x_1\ |\ x_2) = \frac{p(x_1,\ x_2)}{p(x_2)} = \frac{1}{2\pi|\sigma_{2}^2 - (\rho\sigma_1\sigma_2)^2(\sigma_1)^2|^\frac{1}{2}} e^{\frac{-1}{2}(x_2 - m_2 - (\rho\sigma_1\sigma_2)(\sigma_1)^2)^T\Sigma^{-1}(x_2 - m_2 - (\rho\sigma_1\sigma_2)(\sigma_1)^2)}
 $$
-
+Which denotes that
+$$
+p(x_1\ |\ x_2) \sim \mathcal{N}_{x_1}(m_1 + \frac{\rho\sigma_1(x_2 - m_2)}{\sigma_2},\ \sigma_1^2(1-\rho^2))
+$$
 \end{document}
