@@ -29,6 +29,7 @@ A_T = np.array([
 ])
 
 B_T = np.array([0.5, 1])
+
 # Linear transformation
 def linear_map(transformation_matrix, bias_matrix, data):
     '''
@@ -39,19 +40,35 @@ def linear_map(transformation_matrix, bias_matrix, data):
 
     return Y
 
-# Generate Gaussian samples
+# Function to plot each distribution
+def plot_dists(samples):
+    '''
+        This will plot normal surface for each sample set
+    '''
+
+    x = samples[:, 0]
+    y = samples[:, 1]
+    x, y = np.meshgrid(x, y)
+    xy = np.column_stack([x.flat, y.flat])
+
+    # Use multivariate normal as the result for Z
+    z = multivariate_normal.pdf(xy, mean=MEAN_VECTOR.tolist(), cov=COV_MATRIX.tolist())
+    z = z.reshape(x.shape)
+
+    # Plot
+    FIG = plt.figure()
+    AX = Axes3D(FIG)
+
+    SURF = AX.plot_surface(x, y, z, cmap=cm.winter)
+    FIG.colorbar(SURF, shrink=0.5, aspect=5)
+
+    plt.show()
+    
+# Generate Gaussian samples and plot the results
 GAUSSIAN_SAMPLES = np.random.multivariate_normal(MEAN_VECTOR, COV_MATRIX, size=500)
-X = GAUSSIAN_SAMPLES[:, 0]
-Y = GAUSSIAN_SAMPLES[:, 1]
-X, Y = np.meshgrid(X, Y)
-XY = np.column_stack([X.flat, Y.flat])
+plot_dists(GAUSSIAN_SAMPLES)
 
-# Use multivariate normal as the result for Z
-Z = multivariate_normal.pdf(XY, mean=MEAN_VECTOR.tolist(), cov=COV_MATRIX.tolist())
-Z = Z.reshape(X.shape)
-
-print(GAUSSIAN_SAMPLES.shape)
-# Test the linear map
+# Transform the Gaussian samples
 TRANSFORMED_SAMPLES = np.array([])
 for point in GAUSSIAN_SAMPLES:
     TRANSFORMED_SAMPLES = np.append(TRANSFORMED_SAMPLES, linear_map(data=point, transformation_matrix=A_T, bias_matrix=B_T))
@@ -59,24 +76,9 @@ for point in GAUSSIAN_SAMPLES:
 # Reshape the transformed samples like GAUSSIAN SAMPLES
 TRANSFORMED_SAMPLES = TRANSFORMED_SAMPLES.reshape((500, 2))
 
-print(TRANSFORMED_SAMPLES.shape)
+# Plot the transformed samples
+plot_dists(TRANSFORMED_SAMPLES)
 
-# TX = TRANSFORMED_SAMPLES[:, 0]
-# TY = TRANSFORMED_SAMPLES[:, 1]
-# TX, TY = np.meshgrid(TX, TY)
-# TXY = np.column_stack([TX.flat, TY.flat])
 
-# # Use multivariate normal as the result for Z
-# TZ = multivariate_normal.pdf(TXY, mean=MEAN_VECTOR.tolist(), cov=COV_MATRIX.tolist())
-# TZ = TZ.reshape(TX.shape)
-
-# # Plot
-# FIG = plt.figure()
-# AX = Axes3D(FIG)
-
-# SURF = AX.plot_surface(TX, TY, TZ, cmap=cm.winter)
-# FIG.colorbar(SURF, shrink=0.5, aspect=5)
-
-# plt.show()
 
 
