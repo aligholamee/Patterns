@@ -15,6 +15,8 @@ from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 from scipy.stats import multivariate_normal
 
+color_map=[cm.winter,cm.autumn]
+
 MEAN_VECTOR = np.array([0,0])
 
 COV_MATRIX = np.array([
@@ -49,7 +51,7 @@ def transform_cov_mean(prev_mean, prev_cov, transformation_matrix, bias_matrix):
     return np.transpose(np.matmul(transformation_matrix, np.transpose(prev_mean))) + bias_matrix, np.matmul(np.matmul(np.transpose(transformation_matrix), prev_cov), transformation_matrix)
 
 # Function to plot each distribution
-def plot_dists(samples, mean_vec, cov_mat):
+def plot_dists(samples, mean_vec, cov_mat, i):
     '''
         This will plot normal surface for each sample set
     '''
@@ -67,14 +69,14 @@ def plot_dists(samples, mean_vec, cov_mat):
     FIG = plt.figure()
     AX = Axes3D(FIG)
 
-    SURF = AX.plot_surface(x, y, z, cmap=cm.winter)
+    SURF = AX.plot_surface(x, y, z, cmap=color_map[i])
     FIG.colorbar(SURF, shrink=0.5, aspect=5)
 
     plt.show()
 
 # Generate Gaussian samples and plot the results
 GAUSSIAN_SAMPLES = np.random.multivariate_normal(MEAN_VECTOR, COV_MATRIX, size=500)
-plot_dists(GAUSSIAN_SAMPLES, MEAN_VECTOR, COV_MATRIX)
+plot_dists(GAUSSIAN_SAMPLES, MEAN_VECTOR, COV_MATRIX, 1)
 
 # Transform the Gaussian samples
 TRANSFORMED_SAMPLES = np.array([])
@@ -86,7 +88,7 @@ TRANSFORMED_SAMPLES = TRANSFORMED_SAMPLES.reshape((500, 2))
 
 # Plot the transformed samples
 new_mean, new_cov = transform_cov_mean(MEAN_VECTOR, COV_MATRIX, A_T, B_T)
-plot_dists(TRANSFORMED_SAMPLES, new_mean, new_cov)
+plot_dists(TRANSFORMED_SAMPLES, new_mean, new_cov, 2)
 
 
 
