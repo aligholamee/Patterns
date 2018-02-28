@@ -22,6 +22,18 @@ COV_MATRIX = np.array([
     [0, 1]
 ])
 
+# Linear transformation
+def linear_map(transformation_matrix, bias_matrix, data, prior_mean, prior_cov):
+    '''
+        Performs a matrix multiplication as a linear map
+        also translates the new mean vector and covariance matrix
+    '''
+    Y = np.matmul(transformation_matrix, data) + bias_matrix
+    cov_y = np.matmul(np.transpose(transformation_matrix), prior_cov) + transformation_matrix
+    mean_y = np.matmul(transformation_matrix, prior_mean) + bias_matrix
+
+    return Y, cov_y, mean_y
+    
 # Generate Gaussian samples
 GAUSSIAN_SAMPLES = np.random.multivariate_normal(MEAN_VECTOR, COV_MATRIX, size=500)
 X = GAUSSIAN_SAMPLES[:, 0]
@@ -33,7 +45,7 @@ XY = np.column_stack([X.flat, Y.flat])
 Z = multivariate_normal.pdf(XY, mean=MEAN_VECTOR.tolist(), cov=COV_MATRIX.tolist())
 Z = Z.reshape(X.shape)
 
-# Linear transformation
+
 
 # Plot
 FIG = plt.figure()
