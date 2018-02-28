@@ -22,18 +22,23 @@ COV_MATRIX = np.array([
     [0, 1]
 ])
 
+# Transformation configuration
+A_T = np.array([
+    [-5, 5],
+    [1, 1]
+])
+
+B_T = np.array([0.5, 1])
 # Linear transformation
-def linear_map(transformation_matrix, bias_matrix, data, prior_mean, prior_cov):
+def linear_map(transformation_matrix, bias_matrix, data):
     '''
         Performs a matrix multiplication as a linear map
         also translates the new mean vector and covariance matrix
     '''
-    Y = np.matmul(transformation_matrix, data) + bias_matrix
-    cov_y = np.matmul(np.transpose(transformation_matrix), prior_cov) + transformation_matrix
-    mean_y = np.matmul(transformation_matrix, prior_mean) + bias_matrix
+    Y = np.matmul(transformation_matrix, np.transpose(data)) + bias_matrix
 
-    return Y, cov_y, mean_y
-    
+    return Y
+
 # Generate Gaussian samples
 GAUSSIAN_SAMPLES = np.random.multivariate_normal(MEAN_VECTOR, COV_MATRIX, size=500)
 X = GAUSSIAN_SAMPLES[:, 0]
@@ -45,15 +50,33 @@ XY = np.column_stack([X.flat, Y.flat])
 Z = multivariate_normal.pdf(XY, mean=MEAN_VECTOR.tolist(), cov=COV_MATRIX.tolist())
 Z = Z.reshape(X.shape)
 
+print(GAUSSIAN_SAMPLES.shape)
+# Test the linear map
+TRANSFORMED_SAMPLES = np.array([])
+for point in GAUSSIAN_SAMPLES:
+    TRANSFORMED_SAMPLES = np.append(TRANSFORMED_SAMPLES, linear_map(data=point, transformation_matrix=A_T, bias_matrix=B_T))
+    
+# Reshape the transformed samples like GAUSSIAN SAMPLES
+TRANSFORMED_SAMPLES = TRANSFORMED_SAMPLES.reshape((500, 2))
 
+print(TRANSFORMED_SAMPLES.shape)
 
-# Plot
-FIG = plt.figure()
-AX = Axes3D(FIG)
+# TX = TRANSFORMED_SAMPLES[:, 0]
+# TY = TRANSFORMED_SAMPLES[:, 1]
+# TX, TY = np.meshgrid(TX, TY)
+# TXY = np.column_stack([TX.flat, TY.flat])
 
-SURF = AX.plot_surface(X, Y, Z, cmap=cm.winter)
-FIG.colorbar(SURF, shrink=0.5, aspect=5)
+# # Use multivariate normal as the result for Z
+# TZ = multivariate_normal.pdf(TXY, mean=MEAN_VECTOR.tolist(), cov=COV_MATRIX.tolist())
+# TZ = TZ.reshape(TX.shape)
 
-plt.show()
+# # Plot
+# FIG = plt.figure()
+# AX = Axes3D(FIG)
+
+# SURF = AX.plot_surface(TX, TY, TZ, cmap=cm.winter)
+# FIG.colorbar(SURF, shrink=0.5, aspect=5)
+
+# plt.show()
 
 
