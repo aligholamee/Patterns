@@ -12,7 +12,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-import random
+from matplotlib import cm
 
 MEAN_VECTOR = np.array([
     0,0
@@ -31,7 +31,9 @@ X_SEQUENCE = np.random.normal(size=500)
 FIG = plt.figure()
 AX = Axes3D(FIG)
 
-AX.scatter(X_SEQUENCE, GAUSSIAN_SAMPLES[:, 0], GAUSSIAN_SAMPLES[:, 1])
+SURF = AX.plot_trisurf(X_SEQUENCE, GAUSSIAN_SAMPLES[:, 0], GAUSSIAN_SAMPLES[:, 1], cmap=cm.jet, linewidth=0.1)
+FIG.colorbar(SURF, shrink=0.5, aspect=5)
+
 plt.show()
 
 #print(GAUSSIAN_SAMPLES)
