@@ -609,7 +609,6 @@ $$
 $$
 	Pr(X < \frac{1}{2}\ |\ Y = \frac{1}{2}) = \frac{1}{6}
 $$
-\newpage
 
 \section{Multivariate Gaussian Distribution}
 Recall the multivariate Gaussian for a vector $x\ \epsilon\ R^n$.
@@ -685,6 +684,7 @@ $$
 	\caption{3D Plot of a 2D Gaussian Distribution with zero mean and isotropic covariance.}
 	\label{figsolplot}
 \end{figure}
+\newpage
 
 \section{Correlation of Random Variables}
 Given $X_1,\ X_2,\ X_3,\ X_4$ as \textit{uncorrelated} random variables each having \textit{mean} 0 and \textit{variance} 1, compute the correlations of:\\
@@ -706,7 +706,6 @@ Before getting into the details of answer, let's talk a bit about the \textit{co
 The difference between \textit{covariance} and \textit{correlation} is clear. \textit{correlation} is a \textit{dimensionless} measure and \textit{covariance} is in \textit{units}. Keeping this in mind, we can safely keep moving through the calculation of (a) and (b).\\
 (a) Using the covariance equation for two random variables which is given in \ref{eq:5.3} we'
 ll get the following.
-\newpage
 \begin{equation}\label{eq:5.3}
 Cov(A,\ B) = E[AB] - E[A]E[B]
 \end{equation}
@@ -775,7 +774,7 @@ $$
 $$
 \boxed{\rho_{AB} =	0}
 $$
-\newpage
+
 \section{Independence \& Expectation}
 If $X$ and $Y$ are \textit{independent} and \textit{identically distributed} with \textit{mean} $\lambda$ and \textit{variance} $\sigma^2$, find $E[(X-Y)^2]$.
 
@@ -832,7 +831,7 @@ Show that:
 	\item $p(x_1) \sim \mathcal{N}_{x_1}(m_1,\ \sigma_1^2)\ \ $  (\textit{a marginal density})
 	\item $p(x_1\ |\ x_2) \sim \mathcal{N}_{x_1}(m_1 + \frac{\rho\sigma_1(x_2 - m_2)}{\sigma_2},\ \sigma_1^2(1-\rho^2))\ \ $ (\textit{a conditional density})
 \end{enumerate}
-\newpage
+
 \subsection*{Solution}
 Since we'll need some \textit{inverse matrix} computations, we need to review two theorems. The first theorem is about \textit{inverse of a partitioned symmetric matrix} which divides every square matrix into 4 blocks. Correspondingly, the inverse matrix will be divided into 4 blocks and the inverse of these blocks can be calculated separately.
 
