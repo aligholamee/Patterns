@@ -28,13 +28,7 @@ Y = GAUSSIAN_SAMPLES[:, 1]
 X, Y = np.meshgrid(X, Y)
 XY = np.column_stack([X.flat, Y.flat])
 
-mu = [0, 0]
-cov = [
-    [1, 0],
-    [0, 1]
-]
-
-Z = multivariate_normal.pdf(XY, mean=mu, cov=cov)
+Z = multivariate_normal.pdf(XY, mean=MEAN_VECTOR.tolist(), cov=COV_MATRIX.tolist())
 Z = Z.reshape(X.shape)
 
 FIG = plt.figure()
