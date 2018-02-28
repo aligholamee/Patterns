@@ -49,7 +49,7 @@ def transform_cov_mean(prev_mean, prev_cov, transformation_matrix, bias_matrix):
     return np.transpose(np.matmul(transformation_matrix, np.transpose(prev_mean))) + bias_matrix, np.matmul(np.matmul(np.transpose(transformation_matrix), prev_cov), transformation_matrix)
 
 # Function to plot each distribution
-def plot_dists(samples):
+def plot_dists(samples, mean_vec, cov_mat):
     '''
         This will plot normal surface for each sample set
     '''
@@ -60,7 +60,7 @@ def plot_dists(samples):
     xy = np.column_stack([x.flat, y.flat])
 
     # Use multivariate normal as the result for Z
-    z = multivariate_normal.pdf(xy, mean=MEAN_VECTOR.tolist(), cov=COV_MATRIX.tolist())
+    z = multivariate_normal.pdf(xy, mean=mean_vec.tolist(), cov=cov_mat.tolist())
     z = z.reshape(x.shape)
 
     # Plot
@@ -74,7 +74,7 @@ def plot_dists(samples):
 
 # Generate Gaussian samples and plot the results
 GAUSSIAN_SAMPLES = np.random.multivariate_normal(MEAN_VECTOR, COV_MATRIX, size=500)
-plot_dists(GAUSSIAN_SAMPLES)
+plot_dists(GAUSSIAN_SAMPLES, MEAN_VECTOR, COV_MATRIX)
 
 # Transform the Gaussian samples
 TRANSFORMED_SAMPLES = np.array([])
@@ -85,7 +85,8 @@ for point in GAUSSIAN_SAMPLES:
 TRANSFORMED_SAMPLES = TRANSFORMED_SAMPLES.reshape((500, 2))
 
 # Plot the transformed samples
-plot_dists(TRANSFORMED_SAMPLES)
+new_mean, new_cov = transform_cov_mean(MEAN_VECTOR, COV_MATRIX, A_T, B_T)
+plot_dists(TRANSFORMED_SAMPLES, new_mean, new_cov)
 
 
 
