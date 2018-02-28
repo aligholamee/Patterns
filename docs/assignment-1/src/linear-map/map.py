@@ -40,6 +40,14 @@ def linear_map(transformation_matrix, bias_matrix, data):
 
     return Y
 
+# Finds the new mean and covariance matrix
+def transform_cov_mean(prev_mean, prev_cov, transformation_matrix, bias_matrix):
+    '''
+        Find the new mean as A*prev_mean + B
+        Find the new cov as A^(T) prev_cov A
+    '''
+    return np.transpose(np.matmul(transformation_matrix, np.transpose(prev_mean))) + bias_matrix, np.matmul(np.matmul(np.transpose(transformation_matrix), prev_cov), transformation_matrix)
+
 # Function to plot each distribution
 def plot_dists(samples):
     '''
@@ -63,7 +71,7 @@ def plot_dists(samples):
     FIG.colorbar(SURF, shrink=0.5, aspect=5)
 
     plt.show()
-    
+
 # Generate Gaussian samples and plot the results
 GAUSSIAN_SAMPLES = np.random.multivariate_normal(MEAN_VECTOR, COV_MATRIX, size=500)
 plot_dists(GAUSSIAN_SAMPLES)
