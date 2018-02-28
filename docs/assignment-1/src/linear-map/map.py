@@ -88,7 +88,7 @@ TRANSFORMED_SAMPLES = TRANSFORMED_SAMPLES.reshape((500, 2))
 
 # Plot the transformed samples
 new_mean, new_cov = transform_cov_mean(MEAN_VECTOR, COV_MATRIX, A_T, B_T)
-plot_dists(TRANSFORMED_SAMPLES, new_mean, new_cov, 2)
+plot_dists(TRANSFORMED_SAMPLES, new_mean, new_cov, 0)
 
 
 
