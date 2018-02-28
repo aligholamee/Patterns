@@ -385,7 +385,7 @@ $$
 	1\\
 	\end{bmatrix} , \ \ \lambda = 4
 $$
-Calculating the \textit{eigenvector} using the same procedure, we'll get the following results.
+for any real number $X_1\neq0$. Calculating the \textit{eigenvector} using the same procedure, we'll get the following results.
 \begin{equation}\label{eq:2.7}	
 E_2 = (A + 7I \ | \ 0) = 
 \renewcommand\arraystretch{1}
@@ -409,18 +409,46 @@ E_2 =
 $$
 Since $E_2$ is in the \textit{Row Echelon Form}, we can infer the equation for $E_2$ as:
 $$
-(11)(X_1) + (1)(X_2) = 0
+(11)(X_1) = 0
+$$
+$$
+(9)(X_2) + 2(X_3) = 0
 $$
 For the \textit{eigenvector} we'll have:
 $$
 	X =  X_2 \renewcommand\arraystretch{2}
 	\setlength\arraycolsep{10pt}
 	\begin{bmatrix}[ccc|c]
-	\frac{-1}{11}\\	
+	0\\	
 	1\\
-	0\\
+	\frac{-9}{2}\\
 	\end{bmatrix} , \ \ \lambda = -7
 $$
+for any real number $X_2\neq0$.
+\subsubsection*{Python Outputs}
+\begin{quote}
+	\begin{verbatim}
+	Eigenvalues:  [-7.  4.  4.]
+	Eigenvectors:  [
+	[ 0.          0.          1.        ]
+	[ 0.21693046 -0.70710678  0.        ]
+	[-0.97618706 -0.70710678  0.        ]
+	]
+	\end{verbatim}
+\end{quote}
+
+\subsubsection*{Comparing Results}
+The outputs from \textit{linalg.eig} function of \textit{numpy} library depicts that the \textit{eigenvalues} for this matrix are $-7$ and $4$. The eigenvector has been calculated for an specific $X_1$ and $X_2$. In this case we can obtained the outputs by replacing $X_2 = -0.70710$, $X_2 = 1$ and $X_2=0.2169$. Note that having $\lambda = 4$ gives us $y=z$ also which means that we can write its \textit{eigenvector} form like so.
+$$
+X =  X_2 \renewcommand\arraystretch{1}
+\setlength\arraycolsep{6pt}
+\begin{bmatrix}[ccc|c]
+1\\	
+0\\
+0\\
+\end{bmatrix} , \ \ \lambda = 4
+$$
+
 \noindent\rule{\textwidth}{.5pt}
 (b) Since \textit{A} is a $2*2$ matrix, we have:
 $$
