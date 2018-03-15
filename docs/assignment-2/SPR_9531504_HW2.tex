@@ -46,7 +46,7 @@
 \newcommand{\IC}{\mathbb{C}}
 \newcommand{\Real}[1]{\mathrm{Re}\left({#1}\right)}
 \newcommand{\Imag}[1]{\mathrm{Im}\left({#1}\right)}
-
+\DeclareRobustCommand{\brkbinom}{\genfrac[]{0pt}{}}
 \newcommand{\norm}[2]{\|{#1}\|_{{}_{#2}}}
 \newcommand{\abs}[1]{\left|{#1}\right|}
 \newcommand{\ip}[2]{\left\langle {#1}, {#2} \right\rangle}
@@ -63,6 +63,8 @@
 \newcommand{\junk}[1]{{}}
 \usepackage{sectsty}
 \usepackage{xcolor}
+\newcommand*{\bfrac}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
+\newcommand\myatop[2]{\left[{{#1}\atop#2}\right]} % "wrapper macro"
 
 \makeatletter
 \renewcommand*\env@matrix[1][\arraystretch]{%
@@ -135,7 +137,7 @@ $$
 	1\\
 	0\\
 	\end{bmatrix},
-	\Sigma_{i}	 = \Sigma	\renewcommand\arraystretch{1}
+	\Sigma_{i}	 = \Sigma =	\renewcommand\arraystretch{1}
 	\setlength\arraycolsep{6pt}
 	\begin{bmatrix}
 	1 & 0\\
@@ -227,5 +229,115 @@ $$
 Each of the $g_{i}(\underaccent{\bar}{x})$ represent a discriminator plane in the \textit{3D} space.
 
 \noindent\rule{\textwidth}{.5pt}
-(c) 
+(c) Here are the plots of distributions and discriminators below. These are coded in Python using \textit{PyLab}.
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.8\textwidth]{1_c_1.png}
+	\caption{Distributions of three classes described in the problem description.}
+	\label{pl1}
+\end{figure}
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.8\textwidth]{1_c_2.png}
+	\caption{Linear discriminators of Figure 1.1 distributions.}
+	\label{pl2}
+\end{figure}
+
+\section{Bayes Decision Rule \& Bayes Error Boundaries}
+Consider the following 2-class classification problem involving a single feature $x$. Assume equal class priors and $0-1$ loss function.
+$$
+p(x\ |\ w_1) = \begin{cases} 
+2x &  0 \leq x \leq 1\\
+0       &  otherwise
+\end{cases} \ \ \ \ p(x\ |\ w_2) = \begin{cases} 
+2-2x &  0 \leq x \leq 1\\
+0       &  otherwise
+\end{cases}
+$$	
+\begin{enumerate}[label=(\alph*)]
+	\item Sketch the two densities.
+	
+	\item State the Bayes decision rule and show the decision boundary.
+	
+	\item What is the Bayes classification error?
+	
+	\item How will the decision boundary change if the prior for class w1 is increased to 0.7? 
+\end{enumerate}
+\section*{Solution}
+(a) Figure 2.1, illustrates the density functions of these two classes. I've used the \textit{Seaborn} library to generate these density functions.
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.7\textwidth]{2_1_1.png}
+	\caption{Illustration of density functions of $w_1$(Blue) and $w_2$(Orange).}
+	\label{density}
+\end{figure}
+
+\noindent\rule{\textwidth}{.5pt}
+(b) We drive the Bayes decision rule for these two classes below. $g_1(x)$ and $g_2(x)$ represent the decision function for the classes 1 and 2 respectively.
+
+$$
+	g_i(x)\ \bfrac{\overset{\omega_i}{>}}{\overset{\omega_j}{<}}\ g_j(x)
+$$
+which is our decision baseline for the Bayes classifier. Since $g_i(x) = p(\omega_1\ |\ x)$, expanding the equation according to the Bayes rule and we get:
+$$
+	g_i(x) = \frac{p(\underaccent{\bar}{x}\ |\ \omega_i)P(\omega_i)}{p(\underaccent{\bar}{x})}
+$$
+Replacing the $g_i(x)$ in the decision baseline and we'll have the following results.
+$$
+	\frac{p(\underaccent{\bar}{x}\ |\ \omega_i)P(\omega_i)}{p(\underaccent{\bar}{x})}\  \bfrac{\overset{\omega_i}{>}}{\overset{\omega_j}{<}}\ \frac{p(\underaccent{\bar}{x}\ |\ \omega_j)P(\omega_j)}{p(\underaccent{\bar}{x})}
+$$
+Omitting the constant parts from both sides and replacing the equations from the problem description will result in the following decision function.
+\begin{equation}
+	g(x) = 4x - 2\ \bfrac{\overset{\omega_i}{>}}{\overset{\omega_j}{<}}\ 0
+\end{equation}
+Thus, the linear discriminant function can be displayed as so:
+$$
+	g(x) = 4x - 2
+$$
+in which the point $x = \frac{1}{2}$ is the separation point of two classes. The values greater than $\frac{1}{2}$ are assigned a label from class $i$. The values less the $\frac{1}{2}$ are assigned a label of class $j$.
+
+\noindent\rule{\textwidth}{.5pt}
+(c) Here is the Bayes classification error given in (2.2).
+\begin{equation}
+	\eps = \eps_1P(\omega_1) + \eps_2P(\omega_2)
+\end{equation}
+in which the $\eps_1$ and $\eps_2$ represent the probability of class 1 error by integrating the class 1 density over the region of class 2 and the probability of class 2 error by integrating the class 2 density over the region of class 1 respectively.
+$$
+	\eps_1 = \int_{R_2} p(\underaccent{\bar}{x}\ |\ \omega_1)d\underaccent{\bar}{x}
+$$
+$$
+	\eps_2 = \int_{R_1} p(\underaccent{\bar}{x}\ |\ \omega_2)d\underaccent{\bar}{x}
+$$
+According the section (b), the discriminating point is $x = 0.5$. Correspondingly, the regions $R_1$ and $R_2$ can be easily driven like so:
+$$
+	R_1 = [0\ 0.5] \ \ \ \ R_2 = [0.5\ 1]
+$$
+By integrating the given equation (2.2) over the boundaries of these two regions, we'll have the following:
+$$
+	\eps_1 = \int_{0}^{0.5}(2x) dx = \frac{1}{4}
+$$
+$$
+	\eps_2 = \int_{0.5}^{1} (2-2x)dx = \frac{1}{4}
+$$
+The final value for the Bayes error will be:
+$$
+	\eps = \frac{1}{4} * \frac{1}{2} + \frac{1}{4} * \frac{1}{2} = \frac{1}{4}
+$$
+
+\noindent\rule{\textwidth}{.5pt}
+(d) Changing the prior probabilities for classes $\omega_1$ and $\omega_2$, the bias will be changed. We'll have the following biases as the prior probabilities.
+$$
+	P(\omega_1) = 0.7
+$$
+$$
+	P(\omega_2) = 0.3
+$$
+Rewriting the likelihood ratio for these two classes, we'll have the following results:
+$$
+	\frac{p(\underaccent{\bar}{x}\ |\ \omega_1)}{p(\underaccent{\bar}{x}\ |\ \omega_2)}\  \bfrac{\overset{\omega_1}{>}}{\overset{\omega_2}{<}}\ \frac{P(\omega_2)}{P(\omega_1)}
+$$
+$$
+	\frac{2x}{2-2x}\  \bfrac{\overset{\omega_1}{>}}{\overset{\omega_2}{<}}\ \frac{3}{7}
+$$
+which changes the final discriminant function, $g(x)$ to
+$$
+	g'(x) = 10x - 3\ \bfrac{\overset{\omega_1}{>}}{\overset{\omega_2}{<}}\ 0
+$$
 \end{document}
