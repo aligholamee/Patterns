@@ -34,18 +34,23 @@ v = points - M3
 g3 = -0.5*np.sum(np.dot(v, invC) * v, axis=1) - D*0.5*np.log(2*np.pi) - 0.5*np.log(np.linalg.det(C))
 g3.shape = 100, 100
 
-fig, axes = pl.subplots(1, 6, dpi=120, figsize=(15, 5))
-ax1, ax2, ax3, ax4, ax5, ax6 = axes.ravel()
+# Display the distributions plots
+fig, axes = pl.subplots(1, 3, dpi=60, figsize=(15, 5))
+ax1, ax2, ax3 = axes.ravel()
 for ax in axes.ravel():
     ax.set_aspect("equal")
-
-
+    
 ax1.pcolormesh(X, Y, g1, cmap=color_map[0])
 ax1.set_title("W1")
 ax2.pcolormesh(X, Y, g2, cmap=color_map[0])
 ax2.set_title("W2")
 ax3.pcolormesh(X, Y, g3, cmap=color_map[0])
 ax3.set_title("W3")
+
+# Display the discriminators plots
+fig2, axes2 = pl.subplots(1, 3, dpi=60, figsize=(15, 5))
+ax4, ax5, ax6 = axes2.ravel()
+
 ax4.pcolormesh(X, Y, g1 > g2, cmap=color_map[1])
 ax4.set_title("W1 > W2")
 ax5.pcolormesh(X, Y, g2 > g3, cmap=color_map[1])
