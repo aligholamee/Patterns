@@ -171,6 +171,61 @@ g_{i}(\underaccent{\bar}{x}) = 	-\frac{1}{2}(\underaccent{\bar}{x} - \underaccen
 0 & 0 & \sigma_3^{-2} & \dots & 0\\ 
 \vdots & \vdots & \vdots & \ddots & 0\\
 0 & 0 & 0 & 0 & \sigma_N^{-2}\\
-\end{vmatrix} + \log P(\omega_{i})
+\end{vmatrix} + \log(P(\omega_{i}))
 $$
+Since we have the following criteria:
+$$
+	(\underaccent{\bar}{x} - \underaccent{\bar}{\mu}_{i})^{T} = \begin{bmatrix}
+	x[1] - \mu_{i}[1]\\
+	x[2] - \mu_{i}[2]\\
+	x[3] - \mu_{i}[3]\\
+	x[4] - \mu_{i}[4]\\
+	\vdots\\
+	x[N] - \mu_{i}[N]\\
+	\end{bmatrix}
+$$
+where $\mu_{iN}$ denotes the \textit{N}'th feature of class \textit{i}. Removing the constant term for different classes, which is $ x[k]^2$, we'll have the following results after the matrix multiplication and determinant computation:
+\begin{equation}
+	g_{i}(\underaccent{\bar}{x}) = -\frac{1}{2}\sum_{k=1}^{N}\frac{2x[k]\mu_{i}[k] + \mu_{i}[k]^2}{\sigma_k^2} - \frac{1}{2}\log\prod_{k=1}^{N}\sigma_k^2 + \log(P(\omega_i))
+\end{equation}
+
+One can simply find each discriminator, $g_{i}(\underaccent{\bar}{x})$, by replacing the given information in the problem description in the formula given above. Thus we'll have the following results for the section (a).
+$$
+	g_{1}(\underaccent{\bar}{x}) = -\frac{1}{2}(\frac{2x[1]*0 + 2}{1} + \frac{2x[2]*2 + 4}{\frac{1}{9}}) - \frac{1}{2}\log(1*\frac{1}{9}) + ?
+$$
+$$
+g_{2}(\underaccent{\bar}{x}) = -\frac{1}{2}(\frac{2x[1]*3 + 3}{1} + \frac{2x[2]*1 + 1}{\frac{1}{9}}) - \frac{1}{2}\log(1*\frac{1}{9}) + ?
+$$
+$$
+g_{3}(\underaccent{\bar}{x}) = -\frac{1}{2}(\frac{2x[1]*1 + 1}{1} + \frac{2x[2]*0 + 0}{\frac{1}{9}}) - \frac{1}{2}\log(1*\frac{1}{9}) + ?
+$$
+The simplified results are
+$$
+	g_{1}(\underaccent{\bar}{x}) = -18x[2] - \frac{1}{2}\log\frac{1}{9} - 19
+$$
+$$
+	g_{2}(\underaccent{\bar}{x}) = -3x[1] + 9x[2] - \frac{1}{2}\log\frac{1}{9} - 6
+$$
+$$
+	g_{3}(\underaccent{\bar}{x}) = -x[1] - \frac{1}{2}\log\frac{1}{9} - \frac{1}{2}
+$$
+\noindent\rule{\textwidth}{.5pt}
+(b) The final results given above where in the format of a linear discriminant already. In order to lighten everything up, just assume the linear discriminant function as:
+$$
+	g_{i}(\underaccent{\bar}{x}) = W_{2}x[2] + W_{1}x[1] + W_0
+$$
+where the value of $W_i$ is different for each of the discriminators.
+$$
+	g_{1}(\underaccent{\bar}{x}) \ \ \ W_2 = -18 \ \ W_1 = 0 \ \ W_0 =  - \frac{1}{2}\log\frac{1}{9} - 19
+$$
+$$
+g_{2}(\underaccent{\bar}{x}) \ \ \ W_2 = 9 \ \ W_1 = -3 \ \ W_0 =  - \frac{1}{2}\log\frac{1}{9} - 6
+$$
+$$
+g_{1}(\underaccent{\bar}{x}) \ \ \ W_2 = 0 \ \ W_1 = -1 \ \ W_0 =  - \frac{1}{2}\log\frac{1}{9} - \frac{1}{2}
+$$
+Each of the $g_{i}(\underaccent{\bar}{x})$ represent a discriminator plane in the \textit{3D} space.
+
+\noindent\rule{\textwidth}{.5pt}
+(c) 
 \end{document}
