@@ -150,8 +150,27 @@ $$
 	\item Determine and plot the decision boundaries.
 \end{enumerate}
 \subsection*{Solution}
-(a) The general form of a Bayesian discriminator is given in \label{1.1}.
+(a) The general form of a Bayesian discriminator is given below.
 \begin{equation}\label{eq:1.1}
-g_{i}(\underaccent{\bar}{x}) = 	
+g_{i}(\underaccent{\bar}{x}) = 	-\frac{1}{2}(\underaccent{\bar}{x} - \underaccent{\bar}{\mu}_{i})^{T}\Sigma_{i}^{-1}(\underaccent{\bar}{x} - \underaccent{\bar}{\mu}_{i}) - \frac{1}{2}\log|\Sigma_{i}| + \log P(\omega_{i})
 \end{equation}
+In the problem case, the classes have the same covariance matrix, but the features have different variances.
+Since the $\Sigma_{i}$ is diagonal, we'll have
+$$
+g_{i}(\underaccent{\bar}{x}) = 	-\frac{1}{2}(\underaccent{\bar}{x} - \underaccent{\bar}{\mu}_{i})^{T}
+	\begin{bmatrix}
+\sigma_1^{-2} & 0 & 0 & \dots & 0\\
+0 & \sigma_2^{-2} & 0 & \dots & 0\\
+0 & 0 & \sigma_3^{-2} & \dots & 0\\ 
+\vdots & \vdots & \vdots & \ddots & 0\\
+0 & 0 & 0 & 0 & \sigma_N^{-2}\\
+\end{bmatrix}
+(\underaccent{\bar}{x} - \underaccent{\bar}{\mu}_{i}) - \frac{1}{2}\log \begin{vmatrix}
+\sigma_1^{-2} & 0 & 0 & \dots & 0\\
+0 & \sigma_2^{-2} & 0 & \dots & 0\\
+0 & 0 & \sigma_3^{-2} & \dots & 0\\ 
+\vdots & \vdots & \vdots & \ddots & 0\\
+0 & 0 & 0 & 0 & \sigma_N^{-2}\\
+\end{vmatrix} + \log P(\omega_{i})
+$$
 \end{document}
