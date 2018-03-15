@@ -22,10 +22,12 @@
 \renewcommand{\bottomfraction}{0.85}
 \renewcommand{\floatpagefraction}{0.90}
 
+\usepackage{accents}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
 \makeatletter
 \setlength{\arraycolsep}{2\p@} % make spaces around "=" in eqnarray smaller
 \makeatother
-
+\usepackage{stackengine}
 % change equation, table, figure numbers to be counted inside a section:
 \numberwithin{equation}{section}
 \numberwithin{table}{section}
@@ -147,4 +149,9 @@ $$
 	
 	\item Determine and plot the decision boundaries.
 \end{enumerate}
+\subsection*{Solution}
+(a) The general form of a Bayesian discriminator is given in \label{1.1}.
+\begin{equation}\label{eq:1.1}
+g_{i}(\underaccent{\bar}{x}) = 	
+\end{equation}
 \end{document}

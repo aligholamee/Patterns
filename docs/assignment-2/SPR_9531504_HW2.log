@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.12)  15 MAR 2018 14:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.12)  15 MAR 2018 14:46
 entering extended mode
 **./SPR_9531504_HW2.tex
 (SPR_9531504_HW2.tex
@@ -162,14 +162,67 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
+("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bezos\accent
+s.sty"
+Package: accents 2006/05/12 v1.3 Math Accent Tools
+\cc@skew=\dimen114
+\cc@wd=\dimen115
+\cc@code=\count101
+\cc@group=\count102
+\cc@skewchar=\count103
+)
+("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\stackengine\
+stackengine.sty"
+Package: stackengine 2017/02/13 v4.01\ Stacking text and objects in convenient 
+ways
+
+("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoolbox\eto
+olbox.sty"
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count104
+)
+("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listofitems\
+listofitems.sty"
+("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\listofitem
+s\listofitems.tex"
+\loi_nestcnt=\count105
+)
+Package: listofitems 2018/03/13 v1.53 Grab items in lists using user-specified 
+sep char (CT)
+)
+("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.s
+ty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count106
+\calc@Bcount=\count107
+\calc@Adimen=\dimen116
+\calc@Bdimen=\dimen117
+\calc@Askip=\skip46
+\calc@Bskip=\skip47
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count108
+\calc@Cskip=\skip48
+)
+\c@@stackindex=\count109
+\@boxshift=\skip49
+\stack@tmplength=\skip50
+\temp@stkl=\skip51
+\@stackedboxwidth=\skip52
+\@addedbox=\box28
+\@anchorbox=\box29
+\stackedbox=\box30
+\@centerbox=\box31
+\c@ROWcellindex@=\count110
+)
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\enumitem\enu
 mitem.sty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip46
-\enit@outerparindent=\dimen114
+\labelindent=\skip53
+\enit@outerparindent=\dimen118
 \enit@toks=\toks23
-\enit@inbox=\box28
-\enitdp@description=\count101
+\enit@inbox=\box32
+\enitdp@description=\count111
 )
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontend
 layer\tikz.sty"
@@ -180,14 +233,14 @@ s\pgfrcs.sty"
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilit
 ies\pgfutil-common.tex"
 \pgfutil@everybye=\toks24
-\pgfutil@tempdima=\dimen115
-\pgfutil@tempdimb=\dimen116
+\pgfutil@tempdima=\dimen119
+\pgfutil@tempdimb=\dimen120
 
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilit
 ies\pgfutil-common-lists.tex"))
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilit
 ies\pgfutil-latex.def"
-\pgfutil@abb=\box29
+\pgfutil@abb=\box33
 
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\everyshi.
 sty"
@@ -216,20 +269,20 @@ ies\pgfkeys.code.tex"
 ies\pgfkeysfiltered.code.tex"
 \pgfkeys@tmptoks=\toks27
 ))
-\pgf@x=\dimen117
-\pgf@y=\dimen118
-\pgf@xa=\dimen119
-\pgf@ya=\dimen120
-\pgf@xb=\dimen121
-\pgf@yb=\dimen122
-\pgf@xc=\dimen123
-\pgf@yc=\dimen124
+\pgf@x=\dimen121
+\pgf@y=\dimen122
+\pgf@xa=\dimen123
+\pgf@ya=\dimen124
+\pgf@xb=\dimen125
+\pgf@yb=\dimen126
+\pgf@xc=\dimen127
+\pgf@yc=\dimen128
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count102
-\c@pgf@countb=\count103
-\c@pgf@countc=\count104
-\c@pgf@countd=\count105
+\c@pgf@counta=\count112
+\c@pgf@countb=\count113
+\c@pgf@countc=\count114
+\c@pgf@countd=\count115
 \t@pgf@toka=\toks28
 \t@pgf@tokb=\toks29
 \t@pgf@tokc=\toks30
@@ -251,8 +304,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\system
 layer\pgfsyssoftpath.code.tex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count106
-\pgfsyssoftpath@bigbuffer@items=\count107
+\pgfsyssoftpath@smallbuffer@items=\count116
+\pgfsyssoftpath@bigbuffer@items=\count117
 )
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\system
 layer\pgfsysprotocol.code.tex"
@@ -289,9 +342,9 @@ gfmathcalc.code.tex"
 gfmathutil.code.tex")
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
 gfmathparser.code.tex"
-\pgfmath@dimen=\dimen125
-\pgfmath@count=\count108
-\pgfmath@box=\box30
+\pgfmath@dimen=\dimen129
+\pgfmath@count=\count118
+\pgfmath@box=\box34
 \pgfmath@toks=\toks31
 \pgfmath@stack@operand=\toks32
 \pgfmath@stack@operation=\toks33
@@ -316,57 +369,57 @@ gfmathfunctions.misc.code.tex")
 gfmathfunctions.integerarithmetics.code.tex")))
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
 gfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count109
+\c@pgfmathroundto@lastzeros=\count119
 ))
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
 ayer\pgfcorepoints.code.tex"
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen126
-\pgf@picmaxx=\dimen127
-\pgf@picminy=\dimen128
-\pgf@picmaxy=\dimen129
-\pgf@pathminx=\dimen130
-\pgf@pathmaxx=\dimen131
-\pgf@pathminy=\dimen132
-\pgf@pathmaxy=\dimen133
-\pgf@xx=\dimen134
-\pgf@xy=\dimen135
-\pgf@yx=\dimen136
-\pgf@yy=\dimen137
-\pgf@zx=\dimen138
-\pgf@zy=\dimen139
+\pgf@picminx=\dimen130
+\pgf@picmaxx=\dimen131
+\pgf@picminy=\dimen132
+\pgf@picmaxy=\dimen133
+\pgf@pathminx=\dimen134
+\pgf@pathmaxx=\dimen135
+\pgf@pathminy=\dimen136
+\pgf@pathmaxy=\dimen137
+\pgf@xx=\dimen138
+\pgf@xy=\dimen139
+\pgf@yx=\dimen140
+\pgf@yy=\dimen141
+\pgf@zx=\dimen142
+\pgf@zy=\dimen143
 )
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
 ayer\pgfcorepathconstruct.code.tex"
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen140
-\pgf@path@lasty=\dimen141
+\pgf@path@lastx=\dimen144
+\pgf@path@lasty=\dimen145
 )
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
 ayer\pgfcorepathusage.code.tex"
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen142
-\pgf@shorten@start@additional=\dimen143
+\pgf@shorten@end@additional=\dimen146
+\pgf@shorten@start@additional=\dimen147
 )
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
 ayer\pgfcorescopes.code.tex"
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box31
-\pgf@hbox=\box32
-\pgf@layerbox@main=\box33
-\pgf@picture@serial@count=\count110
+\pgfpic=\box35
+\pgf@hbox=\box36
+\pgf@layerbox@main=\box37
+\pgf@picture@serial@count=\count120
 )
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
 ayer\pgfcoregraphicstate.code.tex"
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen144
+\pgflinewidth=\dimen148
 )
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
 ayer\pgfcoretransformations.code.tex"
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen145
-\pgf@pt@y=\dimen146
-\pgf@pt@temp=\dimen147
+\pgf@pt@x=\dimen149
+\pgf@pt@y=\dimen150
+\pgf@pt@temp=\dimen151
 )
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
 ayer\pgfcorequick.code.tex"
@@ -383,13 +436,13 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
 ayer\pgfcorearrows.code.tex"
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen148
+\pgfarrowsep=\dimen152
 )
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
 ayer\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen149
-\pgf@sys@shading@range@num=\count111
+\pgf@max=\dimen153
+\pgf@sys@shading@range@num=\count121
 )
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
 ayer\pgfcoreimage.code.tex"
@@ -398,7 +451,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
 ayer\pgfcoreexternal.code.tex"
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box34
+\pgfexternal@startupbox=\box38
 ))
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
 ayer\pgfcorelayers.code.tex"
@@ -415,7 +468,7 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\module
 s\pgfmoduleshapes.code.tex"
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box35
+\pgfnodeparttextbox=\box39
 )
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\module
 s\pgfmoduleplot.code.tex"
@@ -424,8 +477,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatib
 ility\pgfcomp-version-0-65.sty"
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen150
-\pgf@nodesepend=\dimen151
+\pgf@nodesepstart=\dimen154
+\pgf@nodesepend=\dimen155
 )
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatib
 ility\pgfcomp-version-1-18.sty"
@@ -447,8 +500,8 @@ Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
 gfmath.code.tex")
-\pgffor@iter=\dimen152
-\pgffor@skip=\dimen153
+\pgffor@iter=\dimen156
+\pgffor@skip=\dimen157
 \pgffor@stack=\toks34
 \pgffor@toks=\toks35
 ))
@@ -459,32 +512,32 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\librar
 ies\pgflibraryplothandlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count112
-\pgfplotmarksize=\dimen154
+\pgf@plot@mark@count=\count122
+\pgfplotmarksize=\dimen158
 )
-\tikz@lastx=\dimen155
-\tikz@lasty=\dimen156
-\tikz@lastxsaved=\dimen157
-\tikz@lastysaved=\dimen158
-\tikzleveldistance=\dimen159
-\tikzsiblingdistance=\dimen160
-\tikz@figbox=\box36
-\tikz@figbox@bg=\box37
-\tikz@tempbox=\box38
-\tikz@tempbox@bg=\box39
-\tikztreelevel=\count113
-\tikznumberofchildren=\count114
-\tikznumberofcurrentchild=\count115
-\tikz@fig@count=\count116
+\tikz@lastx=\dimen159
+\tikz@lasty=\dimen160
+\tikz@lastxsaved=\dimen161
+\tikz@lastysaved=\dimen162
+\tikzleveldistance=\dimen163
+\tikzsiblingdistance=\dimen164
+\tikz@figbox=\box40
+\tikz@figbox@bg=\box41
+\tikz@tempbox=\box42
+\tikz@tempbox@bg=\box43
+\tikztreelevel=\count123
+\tikznumberofchildren=\count124
+\tikznumberofcurrentchild=\count125
+\tikz@fig@count=\count126
 
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\module
 s\pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count117
-\pgfmatrixcurrentcolumn=\count118
-\pgf@matrix@numberofcolumns=\count119
+\pgfmatrixcurrentrow=\count127
+\pgfmatrixcurrentcolumn=\count128
+\pgf@matrix@numberofcolumns=\count129
 )
-\tikz@expandcount=\count120
+\tikz@expandcount=\count130
 
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\fronte
 ndlayer\tikz\libraries\tikzlibrarytopaths.code.tex"
@@ -497,7 +550,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\librar
 ies\pgflibraryarrows.code.tex"
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen161
+\arrowsize=\dimen165
 ))
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\fronte
 ndlayer\tikz\libraries\tikzlibrarypositioning.code.tex"
@@ -506,15 +559,15 @@ File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\titlesec\tit
 lesec.sty"
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
-\ttl@box=\box40
-\beforetitleunit=\skip47
-\aftertitleunit=\skip48
-\ttl@plus=\dimen162
-\ttl@minus=\dimen163
+\ttl@box=\box44
+\beforetitleunit=\skip54
+\aftertitleunit=\skip55
+\ttl@plus=\dimen166
+\ttl@minus=\dimen167
 \ttl@toksa=\toks36
-\titlewidth=\dimen164
-\titlewidthlast=\dimen165
-\titlewidthfirst=\dimen166
+\titlewidth=\dimen168
+\titlewidthlast=\dimen169
+\titlewidthfirst=\dimen170
 )
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\sectsty\sect
 sty.sty"
@@ -566,7 +619,6 @@ Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
 Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
 Package: xcolor-patch 2016/05/16 xcolor patch
 Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
@@ -583,15 +635,15 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen167
-\Hy@linkcounter=\count121
-\Hy@pagecounter=\count122
+\@linkdim=\dimen171
+\Hy@linkcounter=\count131
+\Hy@pagecounter=\count132
 
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1
 enc.def"
 File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count123
+\Hy@SavedSpaceFactor=\count133
 
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyp
 erref.cfg"
@@ -605,12 +657,12 @@ Package hyperref Info: Plain pages OFF on input line 4524.
 Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
-\c@Hy@tempcnt=\count124
+\c@Hy@tempcnt=\count134
 LaTeX Info: Redefining \url on input line 5115.
-\XeTeXLinkMargin=\dimen168
-\Fld@menulength=\count125
-\Field@Width=\dimen169
-\Fld@charsize=\dimen170
+\XeTeXLinkMargin=\dimen172
+\Fld@menulength=\count135
+\Field@Width=\dimen173
+\Fld@charsize=\dimen174
 Package hyperref Info: Hyper figures OFF on input line 6369.
 Package hyperref Info: Link nesting OFF on input line 6374.
 Package hyperref Info: Hyper index ON on input line 6377.
@@ -620,17 +672,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6394.
 Package hyperref Info: PDF/A mode OFF on input line 6399.
 LaTeX Info: Redefining \ref on input line 6439.
 LaTeX Info: Redefining \pageref on input line 6443.
-\Hy@abspage=\count126
-\c@Item=\count127
-\c@Hfootnote=\count128
+\Hy@abspage=\count136
+\c@Item=\count137
+\c@Hfootnote=\count138
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpd
 ftex.def"
 File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
-\Fld@listcount=\count129
-\c@bookmark@seq@number=\count130
+\Fld@listcount=\count139
+\c@bookmark@seq@number=\count140
 
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rer
 unfilecheck.sty"
@@ -638,40 +690,40 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip49
+\Hy@SectionHShift=\skip56
 )
-\fwtwo=\skip50
+\fwtwo=\skip57
  (SPR_9531504_HW2.aux)
 \openout1 = `SPR_9531504_HW2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
 
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-
 pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count131
-\scratchdimen=\dimen171
-\scratchbox=\box41
-\nofMPsegments=\count132
-\nofMParguments=\count133
+\scratchcounter=\count141
+\scratchdimen=\dimen175
+\scratchbox=\box45
+\nofMPsegments=\count142
+\nofMParguments=\count143
 \everyMPshowfont=\toks37
-\MPscratchCnt=\count134
-\MPscratchDim=\dimen172
-\MPnumerator=\count135
-\makeMPintoPDFobject=\count136
+\MPscratchCnt=\count144
+\MPscratchDim=\dimen176
+\MPnumerator=\count145
+\makeMPintoPDFobject=\count146
 \everyMPtoPDFconversion=\toks38
 )
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\eps
@@ -689,8 +741,8 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 ) ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box42
-Package hyperref Info: Link coloring ON on input line 90.
+\AtBeginShipoutBox=\box46
+Package hyperref Info: Link coloring ON on input line 92.
 
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nam
 eref.sty"
@@ -700,64 +752,63 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count137
+\c@section@level=\count147
 )
-LaTeX Info: Redefining \ref on input line 90.
-LaTeX Info: Redefining \pageref on input line 90.
-LaTeX Info: Redefining \nameref on input line 90.
+LaTeX Info: Redefining \ref on input line 92.
+LaTeX Info: Redefining \pageref on input line 92.
+LaTeX Info: Redefining \nameref on input line 92.
  (SPR_9531504_HW2.out) (SPR_9531504_HW2.out)
 \@outlinefile=\write4
 \openout4 = `SPR_9531504_HW2.out'.
 
-LaTeX Font Info:    Try loading font information for U+lasy on input line 101.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 103.
 
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ulasy.f
 d"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 101.
+LaTeX Font Info:    Try loading font information for U+msa on input line 103.
 
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\ums
 a.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 101.
+LaTeX Font Info:    Try loading font information for U+msb on input line 103.
 
 ("C:\Users\Ali Gholami\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\ums
 b.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (7.21712pt too wide) in paragraph at lines 109--110
+Overfull \hbox (7.21712pt too wide) in paragraph at lines 111--112
  []\OT1/cmr/bx/n/12 Keywords.[] \OT1/cmr/m/it/12 Lin-ear Dis-crim-i-na-tor, Qua
 dratic Dis-crim-i-na-tor, Bayes Clas-si-fi-ca-tion, Bayes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
 [1
 
 {C:/Users/Ali Gholami/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 151.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 151.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
 
 (SPR_9531504_HW2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 151.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 151.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 157.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
 Package rerunfilecheck Info: File `SPR_9531504_HW2.out' has not changed.
 (rerunfilecheck)             Checksum: 23BA338933B013E803AA6B7C887C60D7;79.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
  ) 
 Here is how much of TeX's memory you used:
- 17051 strings out of 493303
- 327925 string characters out of 3127172
- 378517 words of memory out of 3000000
- 20304 multiletter control sequences out of 15000+200000
- 11720 words of font info for 45 fonts, out of 3000000 for 9000
+ 17718 strings out of 493303
+ 337126 string characters out of 3127172
+ 393030 words of memory out of 3000000
+ 20947 multiletter control sequences out of 15000+200000
+ 12325 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,7n,54p,545b,522s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,9n,54p,889b,522s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Ali Gholami/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmbx10.pfb><C:/Users/Ali Gholami/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Ali Gholami/AppData/Local/Pro
@@ -775,9 +826,9 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ali Gholami/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Al
 i Gholami/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti
 12.pfb>
-Output written on SPR_9531504_HW2.pdf (1 page, 149451 bytes).
+Output written on SPR_9531504_HW2.pdf (1 page, 150214 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
+ 81 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
