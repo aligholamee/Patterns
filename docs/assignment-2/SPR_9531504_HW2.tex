@@ -423,5 +423,63 @@ $$
 The \textit{Bhattacharyya} error bound will be $\eps_{n-B} = e^{-\frac{1}{2}}$.
 
 \noindent\rule{\textwidth}{.5pt}
-(c) 
+(c) $g_1(\underaccent{\bar}{x})$ and $g_2(\underaccent{\bar}{x})$ can be easily computed using the \textit{general form} of the Bayes classifier.
+$$
+	g_1(\underaccent{\bar}{x}) = -\frac{1}{2}(\underaccent{\bar}{x} - 0)^T\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}\begin{bmatrix}
+	\frac{8}{15} & \frac{2}{15}\\
+	\frac{2}{15} & \frac{8}{15}\\
+	\end{bmatrix}(\underaccent{\bar}{x} - 0) - \frac{1}{2}\log \frac{15}{4} + \log \frac{1}{2}
+$$
+$$
+	g_2(\underaccent{\bar}{x}) = -\frac{1}{2}(\underaccent{\bar}{x} - \begin{bmatrix}
+	1\\
+	1\\
+	\end{bmatrix})^T\renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6pt}\begin{bmatrix}
+	\frac{5}{9} & \frac{4}{9}\\
+	\frac{4}{9} & \frac{5}{9}\\
+	\end{bmatrix}(\underaccent{\bar}{x} - \begin{bmatrix}
+	1\\
+	1\\
+	\end{bmatrix}) - \frac{1}{2}\log 9 + \log \frac{1}{2}
+$$
+Coinciding the two decision functions and we get the following decision boundary:
+$$
+	\underaccent{\bar}{x}^T\Sigma_{1}^{-1}\underaccent{\bar}{x} - (\underaccent{\bar}{x} -1)^T\Sigma_{2}^{-1}(\underaccent{\bar}{x} -1) + \log \frac{5}{12} = 0
+$$
+which appears to be a \textit{Hyper-ellipsoid}. Furthermore, the \textit{Bhattacharyya} error bound can be calculated as following.
+$$
+	\mu(\frac{1}{2}) = \frac{1}{8}(\begin{bmatrix}
+	1\\
+	1\\
+	\end{bmatrix} - \begin{bmatrix}
+	0\\
+	0\\
+	\end{bmatrix})^T(\frac{\begin{bmatrix}
+		7 & 4.5\\
+		4.5 & 7\\
+		\end{bmatrix}}{2})^{-1}(\begin{bmatrix}
+	1\\
+1\\
+\end{bmatrix} - \begin{bmatrix}
+0\\
+0\\
+\end{bmatrix}) + \frac{1}{2}\ln \frac{\frac{\begin{vmatrix}
+		7 & 4.5\\
+		4.5 & 7\\
+		\end{vmatrix}}{2}}{\sqrt{\begin{vmatrix}
+		2 & 0.5\\
+		0.5 & 2\\
+		\end{vmatrix}\begin{vmatrix}
+		5 & 4\\
+		4 & 5\\
+		\end{vmatrix}}}
+$$
+which results in $\mu(\frac{1}{2}) = -0.48$. Finally, the \textit{Bhattacharyya} error bound result is given below.
+$$
+	\eps_{n-B} = e^{0.48}
+$$
+
+\section{title}	
 \end{document} 
