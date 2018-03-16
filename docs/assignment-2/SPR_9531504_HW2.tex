@@ -340,4 +340,88 @@ which changes the final discriminant function, $g(x)$ to
 $$
 	g'(x) = 10x - 3\ \bfrac{\overset{\omega_1}{>}}{\overset{\omega_2}{<}}\ 0
 $$
-\end{document}
+
+\section{Bayes Decision Boundary \& Bhattacharyya Error Bound}
+Consider a two-category classification problem in two dimensions with
+$$
+p(x\ |\ w_{1}) \sim N(0, I),\ \ \ p(x\ |\ w_{2}) \sim N(\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix}, I)
+$$
+and
+$$
+P(\omega_1) = P(\omega_2) = \frac{1}{2}
+$$
+\begin{enumerate}[label=(\alph*)]
+	\item Calculate the Bayes Decision Boundary.
+	
+	\item Calculate the Bhattacharyya error bound.
+	
+	\item Repeat the above for the same probabilities, but
+	$$
+	p(x\ |\ w_{1}) \sim N(0, \begin{bmatrix}
+	2 & 0.5\\
+	0.5 & 2\\
+	\end{bmatrix}),\ \ \ p(x\ |\ w_{2}) \sim N(\begin{bmatrix}
+	1\\
+	1\\
+	\end{bmatrix}, \begin{bmatrix}
+	5 & 4\\
+	4 & 5\\
+	\end{bmatrix})
+	$$
+\end{enumerate}
+\subsection*{Solution}
+(a) The genera for of a Bayesian discriminator was discussed in (1.1). Comparing this to the linear classifier which can be displayed as below:
+$$
+	g_i(\underaccent{\bar}{x}) = W_{i1}^T\underaccent{\bar}{x} + W_{i0}
+$$
+where the weights are also given below:\\
+$$
+	W_{i1} = \frac{\mu_i}{\sigma^2}
+$$
+$$
+	W_{i0} = \frac{-1}{2\sigma^2}\mu_{i}^T\mu_{i} + \log P(\omega_i)
+$$
+Since $\Sigma_i = \sigma^2I$ with $\sigma^2 = 1$(according to problem description) with equal prior probabilities($P(\omega_1) = P(\omega_2) = \frac{1}{2}$, the discriminator can be derived using the \textit{Euclidean Distance} of $x$ and $\mu$.
+$$
+	g_i(\underaccent{\bar}{x}) = (\underaccent{\bar}{x} - \underaccent{\bar}{\mu}_i)^T (\underaccent{\bar}{x} - \underaccent{\bar}{\mu}_i)
+$$
+we can simply find the $g_1(\underaccent{\bar}{x})$ and $g_2(\underaccent{\bar}{x})$ by replacing the parameters in the problem description. We'll get:
+$$
+	g_1(\underaccent{\bar}{x}) = (\underaccent{\bar}{x} - 0)^T(\underaccent{\bar}{x} - 0) = (\underaccent{\bar}{x})^2
+$$	
+$$
+	g_2(\underaccent{\bar}{x}) = (\underaccent{\bar}{x} - \begin{bmatrix}
+	1\\
+	1\\
+	\end{bmatrix})^T(\underaccent{\bar}{x} - \begin{bmatrix}
+	1\\
+	1\\
+	\end{bmatrix}) = (\underaccent{\bar}{x} - 1)^2
+$$	
+In order to find the decision boundary, we'll coincide the two discriminators:
+$$
+	\underaccent{\bar}{x} = \frac{1}{2}
+$$
+Meaning that the decision boundary is the plane $\underaccent{\bar}{x} = \frac{1}{2}$.
+
+\noindent\rule{\textwidth}{.5pt}
+(b) The \textit{Bhattacharyya} error bound is an specific condition of \textit{Chernoff} error bound. This condition happens when $s = \frac{1}{2}$ in the \textit{Chernoff} bound formula. The \textit{Bhattacharyya} formula is given below.
+\begin{equation}
+	\eps_{n-B} = \sqrt{P(\omega_1) P(\omega_2)} \int \sqrt{p(\underaccent{\bar}{x}\ |\ \omega_1)p(\underaccent{\bar}{x}\ |\ \omega_2)}d\underaccent{\bar}{x} = e^{-\mu(s = \frac{1}{2})}
+\end{equation}
+If we have access to the parameters of two distributions we can derive the \textit{Bhattacharyya} error bound by computing the $\mu(s = \frac{1}{2})$ and replacing the result in the $e^{-\mu(s = \frac{1}{2})}$.
+$$
+	\mu(\frac{1}{2}) = \frac{1}{8}(\underaccent{\bar}{m}_2 - \underaccent{\bar}{m}_1)^T(\frac{\Sigma_1 + \Sigma_2}{2})^{-1}(\underaccent{\bar}{m}_2 - \underaccent{\bar}{m}_1) + \frac{1}{2}\ln \frac{|\frac{\Sigma_1 + \Sigma_2}{2}|}{\sqrt{|\Sigma_1| |\Sigma_2|}}
+$$
+after some minor matrix multiplication, we'll get the following results:
+$$
+	\mu(\frac{1}{2}) = (\frac{1}{8})(4) = \frac{1}{2}
+$$
+The \textit{Bhattacharyya} error bound will be $\eps_{n-B} = e^{-\frac{1}{2}}$.
+
+\noindent\rule{\textwidth}{.5pt}
+(c) 
+\end{document} 
