@@ -24,4 +24,3 @@ print("Second class mean vector:\n", set_2.mean(axis=0))
 print("First class covariance matrix:\n", np.cov(set_1.T))
 print("Second class covariance matrix:\n", np.cov(set_2.T))
 
-

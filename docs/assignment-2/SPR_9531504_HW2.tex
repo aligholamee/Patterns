@@ -481,5 +481,119 @@ $$
 	\eps_{n-B} = e^{0.48}
 $$
 
-\section{title}	
+\section{Bayes Decision Boundary \& Dataset Samples}
+Consider the two-dimensional data points from two classes $\omega_1$ and $\omega_2$ below. Each of them are coming from a Gaussian distribution $p(x\ |\ \omega_k) \sim N(\mu_k, \Sigma_k)$.
+
+\begin{table}[!h] \centering
+	\begin{tabular}{rcc}
+		\hline
+		$ \omega_1 $\ \ \ &
+		$ \omega_2 $ &\\
+		\hline
+		(0, 0) & (6, 9)\\
+		(0, 1) & (8, 9)\\
+		(2, 2) & (9, 8)\\
+		(3, 1) & (9, 9)\\
+		(3, 2) & (9, 10)\\
+		(3, 3) & (8, 11)\\
+		\hline
+	\end{tabular}
+	\caption{Data points from class $\omega_1$ and $\omega_2$.}
+	\label{tabconvdemo}
+\end{table}
+
+\begin{enumerate}[label=(\alph*)]
+	\item What is the prior probability for each class? 
+	
+	\item Calculate the mean and covariance matrix for each class. 
+	
+	\item Derive the equation for the decision boundary that separates these two classes, and plot the boundary.
+	
+	\item Think of the case that the penalties for misclassification are different for the two classes (i.e. not zero-one loss), will it affect the decision boundary, and how?
+\end{enumerate}
+
+\subsection*{Solution}
+(a) The prior probability can be estimated using the following formula.
+\begin{equation}
+	P(\omega_i) = \frac{|S|\ \ \epsilon\ \omega_i}{|S|}
+\end{equation}
+this value is the same for both of these classes and its equal to $P(\omega_1) = P(\omega_2) = \frac{1}{2}$.
+
+\noindent\rule{\textwidth}{.5pt}
+(b) For the covariance matrix, diagonal elements are computed as below.
+$$
+	\sigma_{11}^2 = \frac{\sum_{i=1}^{N}x_1[i]}{N} - \mu_{11} \ \ \ 
+	\sigma_{22}^2 = \frac{\sum_{i=1}^{N}x_2[i]}{N} - \mu_{12} 
+$$
+the non-diagonal elements are computed as below.
+$$
+	\sigma_{12}^2 = \frac{1}{n}\sum_{i=1}^{N}(x_i - E[x])(y_i - E[x])
+$$
+and same for the other element. The results would be:
+$$
+	\underaccent{\bar}{\mu}_1 = \begin{bmatrix}
+	1.83\\
+	1.5\\
+	\end{bmatrix} \ \ 
+	\underaccent{\bar}{\mu}_2 = \begin{bmatrix}
+	8.16\\
+	9.33\\
+	\end{bmatrix} \ \ 
+	\Sigma_1 = \begin{bmatrix}
+	2.16 & 1.1\\
+	1.1 & 1.1\\
+	\end{bmatrix} \ \
+	\Sigma_2 = \begin{bmatrix}
+	1.36 & -0.06\\
+	-0.06 & 1.06\\
+	\end{bmatrix}
+$$
+
+\noindent\rule{\textwidth}{.5pt}
+(c) The general case for the Bayes decision is given below. formerly, we have been working with the exact equation given in (1.2).
+
+\begin{equation}
+	g_i(\underaccent{\bar}{x}) = \underaccent{\bar}{x}^TW_i\underaccent{\bar}{x} + w_i^T\underaccent{\bar}{x} + w_{i0}
+\end{equation}
+The weights are computed as following.
+$$
+	W_i = -\frac{1}{2}\Sigma_i^{-1}
+$$
+$$
+	w_i = \Sigma_i^{-1}\underaccent{\bar}{\mu}_i
+$$
+$$
+	w_{i0} = -\frac{1}{2}\underaccent{\bar}{\mu}_i^T\Sigma_i^{-1}\underaccent{\bar}{\mu}_i - \frac{1}{2}\log(|\Sigma_i|) + \log P(\omega_i)
+$$
+Saving some time, we'll be devoting the burden of this computation to Python!. The result will be:
+$$
+	W_1 =  \begin{bmatrix}
+	-0.46 & 0.46\\
+	0.46 & -0.92\\
+	\end{bmatrix}
+$$
+$$
+	w_1 = \begin{bmatrix}
+	0.31 & 1.05\\
+	\end{bmatrix}
+$$
+$$
+	w_{10} = 1.84
+$$
+The corresponding result will be as following for the second discriminator.
+$$
+	W_1 =  \begin{bmatrix}
+	-0.36 & -0.02\\
+	-0.02 & -0.47\\
+	\end{bmatrix}
+$$
+$$
+	w_1 = \begin{bmatrix}
+	6.42 & 9.15\\
+	\end{bmatrix}
+$$
+$$
+	w_{10} = 69.80
+$$
+	
 \end{document} 
