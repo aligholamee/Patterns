@@ -608,4 +608,44 @@ Here is the plotted results.
 	
 \noindent\rule{\textwidth}{.5pt}
 (d) If the classification is based on the misclassification penalty; for example when the penalty for the class 1 being misclassified as class 2 is 0.08 and the other penalty is 0.02, the classifier tends to assign most of the samples to the class 2 because it will cost less. So, changing the misclassification penalty would definitely exerts influence on the classification task.
+
+\section{Decision Boundaries of Exponential \& Uniform Distributions}
+Consider a classification problem with 2 classes and a single real-valued feature vector $X$. for class 1, $p(x\ |\ c_1)$ is uniform $U(a, b)$ with $a=2$ and $b=4$. For class 2, $p(x\ |\ c_2)$ is exponential with density $\lambda \exp(-\lambda x)$ where $\lambda=1$. Let $P(c_1)=P(c_2)=0.5$.
+
+\begin{enumerate}[label=(\alph*)]
+	\item Determine the location of optimal decision regions.
+	
+	\item Draw a sketch of the two class densities multiplied by $P(c_1)$ and $P(c_2)$ respectively, as a function of $x$, clearly showing the optimal decision boundary.
+	
+	\item Compute the Bayes error rate for this problem within 3 decimal places of accuracy.
+	
+	\item Answer the questions above with $a=2$ and $b=22$.
+\end{enumerate}
+\subsection*{Solution}
+We'll derive the \textit{log likelihood} for these two classes.
+$$
+	\frac{p(\underaccent{\bar}{x}\ |\ c_1)}{p(\underaccent{\bar}{x}\ |\ c_2)}\  \bfrac{\overset{c_1}{>}}{\overset{c_2}{<}}\ \frac{P(c_2)}{P(c_1)}
+$$
+The density function for the uniform distribution on an interval $[a, b]$ is equal to $f(x) = \frac{1}{b-a}$. In this case we'll have $p(\underaccent{\bar}{x}\ |\ c_1) = \frac{1}{2}$. Replacing the densities in the \textit{likelihood ratio}:
+$$
+	\frac{\frac{1}{2}}{\exp(-x)}\  		\bfrac{\overset{c_1}{>}}{\overset{c_2}{<}}\ \frac{\frac{1}{2}}{\frac{1}{2}}
+$$	
+Thus, the \textit{log likelihood} will be:
+$$
+	\ln \frac{1}{2} - \ln \exp(-x) \		\bfrac{\overset{c_1}{>}}{\overset{c_2}{<}}\ 0
+$$	
+$$
+	d(x) = x - 0.693\ 		\bfrac{\overset{c_1}{>}}{\overset{c_2}{<}}\ 0
+$$	
+in which $d(x)$ is the decision boundary for the given classes.
+\newpage
+
+(b) Here is the result for after plotting these two distributions. The green line illustrates the decision boundary. Note that although the blue distribution is uniform, the coefficient of 0.5 makes it a bit sloppy.
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.7\textwidth]{5_2.png}
+	\caption{Class 1 and Class 2 Distribution Plots.}
+	\label{pl1}
+\end{figure}
+
+\noindent\rule{\textwidth}{.5pt}
 \end{document} 
