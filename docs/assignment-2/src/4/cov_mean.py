@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Grab the inv function as inverse
+# Grab the inv function as inverse + log and det
 inverse = np.linalg.inv
 log = np.math.log 
 det = np.linalg.det
@@ -68,3 +68,13 @@ print("The results for the second discriminator: ")
 print(W2)
 print(w2)
 print(w20)
+
+# Plot the discriminator
+plt.scatter(set_1[:, 0], set_1[:, 1])
+plt.scatter(set_2[:, 0], set_2[:, 1])
+x = np.linspace(-10, 35, 80)
+y = np.linspace(-10, 35, 80)
+
+xx, yy = np.meshgrid(x, y)
+plt.contour(xx, yy, (-0.1)*xx**2 - (0.45)*yy**2 - (6.11)*xx - 8.1*(yy) + 0.96*xx*yy + 67.96)
+plt.show()
