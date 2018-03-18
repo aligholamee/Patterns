@@ -648,4 +648,18 @@ in which $d(x)$ is the decision boundary for the given classes.
 \end{figure}
 
 \noindent\rule{\textwidth}{.5pt}
+(c) Here is the Bayes error formula. The important thing here is the regions we are integrating each class's density on. Since the interval is unlimited and the discriminant point is $x=0.693$, we'll assume the whole region to be the interval $[0, 1]$.
+$$
+	\eps = \eps_1P(\omega_1) + \eps_2P(\omega_2)
+$$
+Expanding this formula for each of the densities given above yields the following results. 
+$$
+	\eps_1 = \int_{0.693}^{1}\frac{1}{2}\mathrm{d}x=0.076 \ \ \ \ \ \ \ \eps_2 = \int_{0}^{0.693}\exp(-x)\mathrm{d}x =  0.499
+$$
+$$
+	\eps = 0.076 * 0.5 + 0.499 * 0.5 = 0.287
+$$
+
+\noindent\rule{\textwidth}{.5pt}
+(d)
 \end{document} 
