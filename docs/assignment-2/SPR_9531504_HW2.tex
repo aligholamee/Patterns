@@ -661,5 +661,24 @@ $$
 $$
 
 \noindent\rule{\textwidth}{.5pt}
-(d)
+(d) We repeat the whole process with $a=2$ and $b=22$ again. The decision boundary will be as following:
+$$
+	d(x) = x - 2.995\  \bfrac{\overset{c_1}{>}}{\overset{c_2}{<}}\
+$$
+Here is the results after plotting the decision boundary(green line).
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.7\textwidth]{5_3.png}
+	\caption{Decision Boundary of Class 1 and Class 2 with $a=2$ and $b=22$.}
+	\label{pl1}
+\end{figure}
+The Bayes error for this condition is given below. In this case, the point $x = 2.995$ is in the interval $2 < x < 20$, thus the miss detection and false alarm can be written as:
+$$
+	\eps_1 = \int_{2.995}^{22}\frac{1}{20}\mathrm{d}x=0.039 \ \ \ \ \ \ \ \eps_2 = \int_{2}^{2.995}\exp(-x)\mathrm{d}x =  0.085
+$$
+$$
+	\eps = 0.039 * 0.5 + 0.085 * 0.5 = 0.062
+$$
+
+\section{Linear Discriminant Analysis \& Bayes Classifier}
+
 \end{document} 
