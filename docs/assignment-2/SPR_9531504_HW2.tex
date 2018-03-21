@@ -686,6 +686,7 @@ Consider a 2-class classification problem with d-dimensional real-valued inputs 
 	
 	\item prove that the optimal decision boundary can be written in the form of a linear discriminant, $\underaccent{\bar}{w}\underaccent{\bar}{x} + w_0 = 0$, where $\underaccent{\bar}{w}$ is a d-dimensional weight vector and $w_0$ is a scalar, and clearly indicate what are $\underaccent{\bar}{w}$ and $w_0$ are in terms of parameters of the classification model.
 \end{enumerate}
+\subsection*{Solution}
 The multivariate normal density function is defined as
 \begin{equation}\label{eq:6.1}
 	p(\underaccent{\bar}{x}\ |\ \mu, \Sigma) = \frac{1}{(2\pi)^\frac{n}{2}|\Sigma|^\frac{1}{2}} e^{\frac{-1}{2}(\underaccent{\bar}{x} - \mu)^T\Sigma^{-1}(\underaccent{\bar}{x} - \mu)} 
@@ -721,4 +722,5 @@ $$
 	w_{i0} = -\frac{1}{2}\underaccent{\bar}{\mu}_i^{T}\Sigma^{-1}\underaccent{\bar}{\mu}_i + \log P(\omega_i)
 $$
 
+\section{Mean \& Covariance of Gaussian Points}
 \end{document} 
