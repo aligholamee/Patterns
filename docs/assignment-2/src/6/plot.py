@@ -1,6 +1,25 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Grab the inv function as inverse + log and det
+inverse = np.linalg.inv
+log = np.math.log 
+det = np.linalg.det
+
+# Functions to compute the weights
+def compute_W(cov_inverse):
+    return -(1/2) * cov_inverse
+
+def compute_w(cov_inverse, mean_vector):
+    return cov_inverse * mean_vector
+
+def compute_w0(cov, cov_inverse, mean_vector, prior_prob):
+    return -(1/2) * mean_vector.T * cov_inverse * mean_vector - (1/2) * log(det(cov)) + log(prior_prob)
+
+def decision_boundary(x_vec, meu_1, meu_2, cov_1, cov_2):
+
+
+
 class_1 = np.array([
     [1.5, 0],
     [1, 1],
