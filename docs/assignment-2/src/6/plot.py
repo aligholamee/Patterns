@@ -17,9 +17,10 @@ def compute_w0(cov, cov_inverse, mean_vector, prior_prob):
     return -(1/2) * mean_vector.T * cov_inverse * mean_vector - (1/2) * log(det(cov)) + log(prior_prob)
 
 def decision_boundary(x_vec, meu_1, meu_2, cov_1, cov_2):
+    g1 = x_vec * compute_W(inverse(cov_1)) * x_vec + compute_w(inverse(cov_1), meu_1) * x_vec + compute_w0(cov_1, inverse(cov_1), meu_1, 7/17) 
+    g2 = x_vec * compute_W(inverse(cov_2)) * x_vec + compute_w(inverse(cov_2), meu_2) * x_vec + compute_w0(cov_2, inverse(cov_2), meu_2, 10/17)
 
-
-
+    return g1 - g2
 class_1 = np.array([
     [1.5, 0],
     [1, 1],
