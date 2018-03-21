@@ -680,5 +680,45 @@ $$
 $$
 
 \section{Linear Discriminant Analysis \& Bayes Classifier}
+Consider a 2-class classification problem with d-dimensional real-valued inputs x, where the class-conditional densities, $p(x\ |\ c_1)$ and $p(x\ |\ c_2)$ are multivariate Gaussian with different means $\underaccent{\bar}{\mu}_1$ and $\underaccent{\bar}{\mu}_2$ and a common covariance matrix $\Sigma$, with class probabilities $P(c_1)$ and $P(c_2)$.
+\begin{enumerate}[label=(\alph*)]
+	\item Write the discriminant function for this problem in the form of $g_1(\underaccent{\bar}{x}) = \log p(\underaccent{\bar}{x}\ |\ c_1) + \log P(c_1).$
+	
+	\item prove that the optimal decision boundary can be written in the form of a linear discriminant, $\underaccent{\bar}{w}\underaccent{\bar}{x} + w_0 = 0$, where $\underaccent{\bar}{w}$ is a d-dimensional weight vector and $w_0$ is a scalar, and clearly indicate what are $\underaccent{\bar}{w}$ and $w_0$ are in terms of parameters of the classification model.
+\end{enumerate}
+The multivariate normal density function is defined as
+\begin{equation}\label{eq:6.1}
+	p(\underaccent{\bar}{x}\ |\ \mu, \Sigma) = \frac{1}{(2\pi)^\frac{n}{2}|\Sigma|^\frac{1}{2}} e^{\frac{-1}{2}(\underaccent{\bar}{x} - \mu)^T\Sigma^{-1}(\underaccent{\bar}{x} - \mu)} 
+\end{equation}
+Using Bayes rule, the \textit{MAP} discriminant function becomes
+$$
+	g_1(\underaccent{\bar}{x}) = p(\omega_i\ |\ \underaccent{\bar}{x}) = \frac{1}{(2\pi)^\frac{n}{2}|\Sigma|^\frac{1}{2}} e^{\frac{-1}{2}(\underaccent{\bar}{x} - \underaccent{\bar}{\mu}_1)^T\Sigma^{-1}(\underaccent{\bar}{x} - \underaccent{\bar}{\mu}_1)}P(\omega_i)\frac{1}{p(\underaccent{\bar}{x})}
+$$
+Eliminating the constant term($p(\underaccent{\bar}{x})$ which is not considered in discrimination) and taking natural log(since the logarithm is monotonically increasing function)
+$$
+	g_1(\underaccent{\bar}{x}) = -\frac{1}{2}(\underaccent{\bar}{x}-\underaccent{\bar}{\mu}_1)\Sigma^{-1}(\underaccent{\bar}{x} - \underaccent{\bar}{\mu}_1) - \frac{1}{2}\log(|\Sigma|) + \log(P(\omega_1))
+$$
+Almost the same condition happens for the $g_2(\underaccent{\bar}{x})$ with minor index changes:
+$$
+	g_2(\underaccent{\bar}{x}) = -\frac{1}{2}(\underaccent{\bar}{x}-\underaccent{\bar}{\mu}_2)\Sigma^{-1}(\underaccent{\bar}{x} - \underaccent{\bar}{\mu}_2) - \frac{1}{2}\log(|\Sigma|) + \log(P(\omega_1))
+$$
+\noindent\rule{\textwidth}{.5pt}
+(b) This can be gone further by removing the constant term of $\log(|\Sigma|)$ from the above discriminants. We'll can derive the following results.
+$$
+		g_i(\underaccent{\bar}{x}) = -\frac{1}{2}(\underaccent{\bar}{x}-\underaccent{\bar}{\mu}_2)\Sigma^{-1}(\underaccent{\bar}{x} - \underaccent{\bar}{\mu}_2) + \log(P(\omega_1))
+$$
+Expanding the quadratic term yields
+$$
+		g_i(\underaccent{\bar}{x}) = -\frac{1}{2}(\underaccent{\bar}{x}^T\Sigma^{-1} \underaccent{\bar}{x} - 2\mu_i^T\Sigma^{-1}\underaccent{\bar}{x}  + \underaccent{\bar}{\mu}_i^{T}\Sigma^{-1}\underaccent{\bar}{\mu}_i) + \log(P(\omega_1))
+$$
+Removing the term $\underaccent{\bar}{x}^T\Sigma^{-1}\underaccent{\bar}{x}$ which is constant for all classes. Reorganizing terms we obtain 
+\begin{equation}
+	g_i(\underaccent{\bar}{x}) = w_i^Tx + w_{i0}
+\end{equation}
+where $w_i$ and $w_{i0}$ are defined as:
+$$
+	w_i(\underaccent{\bar}{x}) = \Sigma^{-1}\underaccent{\bar}{\mu}_i \ \ \ \ \ \ 
+	w_{i0} = -\frac{1}{2}\underaccent{\bar}{\mu}_i^{T}\Sigma^{-1}\underaccent{\bar}{\mu}_i + \log P(\omega_i)
+$$
 
 \end{document} 
