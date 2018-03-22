@@ -32,10 +32,17 @@ print("Setosa variance: ", class_1_variance)
 print("Veriscolor mean: ", class_2_mean)
 print("Veriscolor variance: ", class_2_variance)
 
-ax = plt.subplot()
-ax.plot(class_1, marker='^', color='darkblue', label='Iris Setosa')
-ax.plot(class_2, marker='o', color='green', label='Iris Veriscolor')
-plt.legend(loc='upper right')
+# Config bin size and intervals
+bin_size = 0.2; min_edge = 1; max_edge = 5
+N = (max_edge-min_edge)/bin_size; Nplus1 = N + 1
+bin_list = np.linspace(min_edge, max_edge, Nplus1)
+
+
+fig, ax = plt.subplots(nrows=1, ncols=2)
+ax[0].hist(class_1, bins=bin_list, color='darkblue', label='Iris Setosa')
+ax[0].legend(loc='upper right')
+ax[1].hist(class_2, bins=bin_list, color='green', label='Iris Veriscolor')
+ax[1].legend(loc='upper right')
 
 plt.show()
 
