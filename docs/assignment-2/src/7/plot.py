@@ -16,11 +16,6 @@ def compute_w(cov_inverse, mean_vector):
 def compute_w0(cov, cov_inverse, mean_vector, prior_prob):
     return -(1/2) * mean_vector.T * cov_inverse * mean_vector - (1/2) * log(det(cov)) + log(prior_prob)
 
-def decision_boundary(x_vec, meu_1, meu_2, cov_1, cov_2):
-    g1 = x_vec * compute_W(inverse(cov_1)) * x_vec + compute_w(inverse(cov_1), meu_1) * x_vec + compute_w0(cov_1, inverse(cov_1), meu_1, 7/17) 
-    g2 = x_vec * compute_W(inverse(cov_2)) * x_vec + compute_w(inverse(cov_2), meu_2) * x_vec + compute_w0(cov_2, inverse(cov_2), meu_2, 10/17)
-
-    return g1 - g2
 class_1 = np.array([
     [1.5, 0],
     [1, 1],
@@ -65,5 +60,10 @@ plt.xlabel('x1')
 plt.ylabel('x2')
 ftext = 'p(x|c1) ~ N(mu1=[1.571,1.571], cov1=[[0.452, 0.119], [0.119, 0.952]])\np(x|c2) ~ N(mu2=[-0.15, -0.15], cov2=[[1.725, 0.002], [0.002, 0.558]])'
 plt.figtext(.9,.9, ftext, fontsize=10, ha='right')
+
+x = np.linspace(-2.5, 4, 100)
+y = np.linspace(-7, 7, 100)
+x, y = np.meshgrid(x, y)
+plt.contour(x, y, (x**2 + x*(-0.331536*y - 3.78581) - 0.413482*y**2 - 1.78816*y +3.94877), [1], levels=[0], cmap="Greys_r")
 plt.show()
 

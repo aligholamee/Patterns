@@ -1,15 +1,9 @@
 import numpy as np
-import seaborn as sns
+from math import e
 import pylab
 
-
-data_uniform = np.random.normal(2, 4, 400)
-data_exponentioal = np.random.exponential(1, 400)
-x = np.arange(-5, 15, 2)
-y = x - 0.693
-sns.set_style('darkgrid')
-sns.kdeplot(0.5*data_uniform, label='P(c1)p(x|c1)')
-sns.kdeplot(0.5*data_exponentioal, label='P(c2)p(x|c2)')
-pylab.plot(x, y)
-pylab.axis([-1, 4, 0, 0.3])
+x = np.linspace(0, 5, 1000)
+pylab.plot(x, list(map(lambda x: 0.5*0.5 if 2 <= x <= 4 else 0, x)), color='darkblue')
+pylab.plot(x, list(map(lambda x: 0.5*1 * e ** (-x), x)), color='orange')
+pylab.legend(['Uniform Distribution', 'Exponential Distribution'], loc='upper right') 
 pylab.show()

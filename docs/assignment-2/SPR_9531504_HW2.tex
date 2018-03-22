@@ -231,12 +231,12 @@ Each of the $g_{i}(\underaccent{\bar}{x})$ represent a discriminator plane in th
 \noindent\rule{\textwidth}{.5pt}
 (c) Here are the plots of distributions and discriminators below. These are coded in Python using \textit{PyLab}.
 \begin{figure}[!h]\centering
-	\includegraphics[width=0.8\textwidth]{1_c_1.png}
+	\includegraphics[width=0.6\textwidth]{1_c_1.png}
 	\caption{Distributions of three classes described in the problem description.}
 	\label{pl1}
 \end{figure}
 \begin{figure}[!h]\centering
-	\includegraphics[width=0.8\textwidth]{1_c_2.png}
+	\includegraphics[width=0.6\textwidth]{1_c_2.png}
 	\caption{Linear discriminators of Figure 1.1 distributions.}
 	\label{pl2}
 \end{figure}
@@ -264,7 +264,7 @@ $$
 \section*{Solution}
 (a) Figure 2.1, illustrates the density functions of these two classes. I've used the \textit{Seaborn} library to generate these density functions.
 \begin{figure}[!h]\centering
-	\includegraphics[width=0.7\textwidth]{2_1_1.png}
+	\includegraphics[width=0.6\textwidth]{2_1_1.png}
 	\caption{Illustration of density functions of $w_1$(Blue) and $w_2$(Orange).}
 	\label{density}
 \end{figure}
@@ -601,7 +601,7 @@ Simplifying the weights given above in the equation $g_1(x) = g_2(x)$, we'll get
 \end{equation}
 Here is the plotted results.
 \begin{figure}[!h]\centering
-	\includegraphics[width=0.7\textwidth]{4_3.png}
+	\includegraphics[width=0.6\textwidth]{4_3.png}
 	\caption{Contour lines for the Bayesian discriminator (4.3)}
 	\label{pl1}
 \end{figure}
@@ -640,43 +640,38 @@ $$
 in which $d(x)$ is the decision boundary for the given classes.
 \newpage
 
-(b) Here is the result for after plotting these two distributions. The green line illustrates the decision boundary. Note that although the blue distribution is uniform, the coefficient of 0.5 makes it a bit sloppy.
+(b) Here is the result for after plotting these two distributions. The green line illustrates the decision boundary.
 \begin{figure}[!h]\centering
-	\includegraphics[width=0.7\textwidth]{5_2.png}
+	\includegraphics[width=0.6\textwidth]{5_2.png}
 	\caption{Class 1 and Class 2 Distribution Plots.}
 	\label{pl1}
 \end{figure}
 
 \noindent\rule{\textwidth}{.5pt}
-(c) Here is the Bayes error formula. The important thing here is the regions we are integrating each class's density on. Since the interval is unlimited and the discriminant point is $x=0.693$, we'll assume the whole region to be the interval $[0, 1]$.
+(c) According to the figure (5.2), the Bayes error can be calculated by integrating the exponential density over the period [2, 4].
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.6\textwidth]{5_3.png}
+	\caption{Bayes Error Surface Plot.}
+	\label{pl1}
+\end{figure}
 $$
-	\eps = \eps_1P(\omega_1) + \eps_2P(\omega_2)
-$$
-Expanding this formula for each of the densities given above yields the following results. 
-$$
-	\eps_1 = \int_{0.693}^{1}\frac{1}{2}\mathrm{d}x=0.076 \ \ \ \ \ \ \ \eps_2 = \int_{0}^{0.693}\exp(-x)\mathrm{d}x =  0.499
-$$
-$$
-	\eps = 0.076 * 0.5 + 0.499 * 0.5 = 0.287
+	\eps = \int_{2}^{4}\frac{1}{2}\exp(-x) = -0.058
 $$
 
 \noindent\rule{\textwidth}{.5pt}
 (d) We repeat the whole process with $a=2$ and $b=22$ again. The decision boundary will be as following:
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.6\textwidth]{5_4.png}
+	\caption{Bayes Error Surface Plot.}
+	\label{pl1}
+\end{figure}
 $$
 	d(x) = x - 2.995\  \bfrac{\overset{c_1}{>}}{\overset{c_2}{<}}\
 $$
 Here is the results after plotting the decision boundary(green line).
-\begin{figure}[!h]\centering
-	\includegraphics[width=0.7\textwidth]{5_3.png}
-	\caption{Decision Boundary of Class 1 and Class 2 with $a=2$ and $b=22$.}
-	\label{pl1}
-\end{figure}
-The Bayes error for this condition is given below. In this case, the point $x = 2.995$ is in the interval $2 < x < 20$, thus the miss detection and false alarm can be written as:
+The Bayes error for this condition is given below. The interval is $2 < x < 22$:
 $$
-	\eps_1 = \int_{2.995}^{22}\frac{1}{20}\mathrm{d}x=0.039 \ \ \ \ \ \ \ \eps_2 = \int_{2}^{2.995}\exp(-x)\mathrm{d}x =  0.085
-$$
-$$
-	\eps = 0.039 * 0.5 + 0.085 * 0.5 = 0.062
+	\eps = \int_{2}^{22}\frac{1}{2}\exp(-x) = -0.067
 $$
 
 \section{Linear Discriminant Analysis \& Bayes Classifier}
@@ -722,5 +717,13 @@ $$
 	w_{i0} = -\frac{1}{2}\underaccent{\bar}{\mu}_i^{T}\Sigma^{-1}\underaccent{\bar}{\mu}_i + \log P(\omega_i)
 $$
 
-\section{Mean \& Covariance of Gaussian Points}
+\newpage
+\section{Bayesian Decision Plot}
+\subsection*{Solution}
+Here is the result after plotting the both points and Bayesian discriminator. Please refer to the \textit{plot.py} in the directory of problem 7.
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.6\textwidth]{7.png}
+	\caption{Decision region for the given scattered points.}
+	\label{pl1}
+\end{figure}
 \end{document} 
