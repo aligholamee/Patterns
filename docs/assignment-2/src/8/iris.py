@@ -41,8 +41,15 @@ bin_list = np.linspace(min_edge, max_edge, Nplus1)
 fig, ax = plt.subplots(nrows=1, ncols=2)
 ax[0].hist(class_1, bins=bin_list, color='darkblue', label='Iris Setosa')
 ax[0].legend(loc='upper right')
+ax[0].set_xlabel('sample')
+ax[0].set_ylabel('sepal-width')
 ax[1].hist(class_2, bins=bin_list, color='green', label='Iris Veriscolor')
 ax[1].legend(loc='upper right')
+ax[1].set_xlabel('sample')
+ax[1].set_ylabel('sepal-width')
+# Class Prior probabilities
+print("Prior probability of Setosa: ", class_1.size/df.size)
+print("Prior probability of Veriscolor: ", class_2.size/df.size)
 
 plt.show()
 
