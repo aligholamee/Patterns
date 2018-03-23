@@ -762,7 +762,7 @@ $$\\
 \newpage
 We can derive the Bayes decision boundary by writing down the \textit{log likelihood} ratio. The result is given in the code(section 8) and the plot is given here. Class posteriors can be computed by expanding the Bayes formula and replacing the mean and variance of each class.
 $$
-	p(w_i\ |\ x) = \frac{p(x\ |\ w_i)P(w_i)}{p(x)}
+	p(c_i\ |\ x) = \frac{p(x\ |\ c_i)P(c_i)}{p(x)} = \frac{1}{\sqrt{2\pi}\sigma_i}\exp(-\frac{(x - \mu_i)^2}{2\sigma_i^2})P(c_i)
 $$
 After removing the constant term $p(x)$ and performing a log likelihood, we'll get:
 $$
@@ -774,4 +774,5 @@ $$
 	\label{pl8_4}
 \end{figure}\\
 
+(e) 
 \end{document} 

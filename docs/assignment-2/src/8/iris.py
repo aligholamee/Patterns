@@ -89,7 +89,20 @@ ax2.plot(x_range, yy3, label='Decision Boundary', color='red')
 ax2.set_ylim(0, 1.5)
 ax2.legend(loc='upper right')
 
-plt.show()
+# plt.show()
 
+# Classify the training data  
+cols = ['sepal-width', 'predicted-class']
+train_prediction = pd.DataFrame(columns=cols)
 
+for x in class_1:
+    cond = b_d_b(x, class_1_mean, class_2_mean, class_1_variance, class_2_variance, prior_1, prior_2)
+    if(cond > 0):
+        # Classify as class 1
+        train_prediction = train_prediction.append({'sepal-width': x, 'predicted-class': 0.0}, ignore_index=True)
+    else:
+        # Classify as class 2
+        train_prediction = train_prediction.append({'sepal-width': x, 'predicted-class': 1.0}, ignore_index=True)
 
+print(train_prediction)
+# Classify the test data
