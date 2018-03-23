@@ -20,6 +20,14 @@ def b_d_b(x, mean1, mean2, var1, var2, prior1, prior2):
     '''
     return (log(var2/var1, e) - (x - mean1)**2/(2*var1) + (x - mean2)**2/(2*var2) - log(prior2/prior1, e))
 
+# Find the accuracy of the classification
+def find_accuracy(actual, predicted):
+    '''
+        Divide the number of truly predicted labels to the total number of labels
+    '''
+    return (100.0 * np.sum(actual['class'] == predicted['class']) / actual.size)
+
+    
 # Read the train and test data
 df = pd.read_fwf(DATA_ROOT+'Iris_train.dat')
 
@@ -28,9 +36,12 @@ df.columns = COL_NAMES
 
 # ax = plt.Figure()
 # ax.add_subplot(111)
+
+train_data = df[['sepal-width', 'class']]
+
 # plt.hist(pd)
-class_1 = df.loc[df['class'] == 0.0]
-class_2 = df.loc[df['class'] == 1.0]
+class_1 = df.loc[train_data['class'] == 0.0]
+class_2 = df.loc[train_data['class'] == 1.0]
 
 class_1 = class_1['sepal-width']
 class_2 = class_2['sepal-width']
@@ -63,7 +74,7 @@ ax[1].legend(loc='upper right')
 ax[1].set_xlabel('sample')
 ax[1].set_ylabel('sepal-width')
 
-plt.show()
+# plt.show()
 
 # # Class Prior probabilities
 prior_1 = class_1.size/df.size
@@ -92,17 +103,19 @@ ax2.legend(loc='upper right')
 # plt.show()
 
 # Classify the training data  
-cols = ['sepal-width', 'predicted-class']
+cols = ['sepal-width', 'class']
 train_prediction = pd.DataFrame(columns=cols)
 
-for x in class_1:
+for x in train_data:
     cond = b_d_b(x, class_1_mean, class_2_mean, class_1_variance, class_2_variance, prior_1, prior_2)
     if(cond > 0):
         # Classify as class 1
-        train_prediction = train_prediction.append({'sepal-width': x, 'predicted-class': 0.0}, ignore_index=True)
+        train_prediction = train_prediction.append({'sepal-width': x, 'class': 0.0}, ignore_index=True)
     else:
         # Classify as class 2
-        train_prediction = train_prediction.append({'sepal-width': x, 'predicted-class': 1.0}, ignore_index=True)
+        train_prediction = train_prediction.append({'sepal-width': x, 'class': 1.0}, ignore_index=True)
 
-print(train_prediction)
+# Calculate the accuracy of precition
+train_acc = find_accuracy(train_data, train_prediction)
+print("Training Accuracy: ", train_acc)
 # Classify the test data
