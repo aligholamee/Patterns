@@ -1,10 +1,18 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from math import sqrt, pi, exp
 
 DATA_ROOT = './data/'
 COL_NAMES = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 
+# Univariate normal density
+def u_n_d(x, mean, variance):
+    '''
+        Return the univariate density of given set x
+    '''
+    return 1/(sqrt(2*pi*variance)) * exp(-((x - mean)**2 / 2*variance))
+ 
 # Read the train and test data
 df = pd.read_fwf(DATA_ROOT+'Iris_train.dat')
 
@@ -47,9 +55,25 @@ ax[1].hist(class_2, bins=bin_list, color='green', label='Iris Veriscolor')
 ax[1].legend(loc='upper right')
 ax[1].set_xlabel('sample')
 ax[1].set_ylabel('sepal-width')
-# Class Prior probabilities
+
+plt.show()
+
+# # Class Prior probabilities
 print("Prior probability of Setosa: ", class_1.size/df.size)
 print("Prior probability of Veriscolor: ", class_2.size/df.size)
 
+# Plot the density functions of two classes
+ax2 = plt.subplot()
+x_range = np.linspace(-5, 10, 100)
+
+yy1 = [u_n_d(x, class_1_mean, class_1_variance) for x in x_range]
+yy2 = [u_n_d(x, class_2_mean, class_2_variance) for x in x_range]
+
+ax2.scatter(x_range, yy1, marker='^', label='Setosa Density')
+ax2.scatter(x_range, yy2, marker='o', label='Veriscolor Density')
+ax2.legend(loc='upper right')
+
 plt.show()
+
+
 

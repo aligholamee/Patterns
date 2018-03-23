@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.22)  23 MAR 2018 01:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.22)  23 MAR 2018 11:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -809,35 +809,30 @@ File: 7.png Graphic file (type png)
 
 <use 7.png>
 Package pdftex.def Info: 7.png used on input line 725.
-(pdftex.def)             Requested size: 281.85585pt x 207.87646pt.
+(pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.726 ...n region for the given scattered points.}
-                                                   [15 <./7.png>]
-<8_1.png, id=181, 1387.584pt x 669.9429pt>
+                                                  
+<8_1.png, id=175, 730.6497pt x 346.896pt>
 File: 8_1.png Graphic file (type png)
  <use 8_1.png>
-Package pdftex.def Info: 8_1.png used on input line 735.
-(pdftex.def)             Requested size: 516.73335pt x 249.47992pt.
-
-Overfull \hbox (46.97836pt too wide) in paragraph at lines 735--736
- [][] 
- []
-
+Package pdftex.def Info: 8_1.png used on input line 734.
+(pdftex.def)             Requested size: 375.80542pt x 178.42847pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.736 ...gram of Iris Setosa and Iris Veriscolor.}
-                                                   [16 <./8_1.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 739.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 739.
-
-(./SPR_9531504_HW2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 739.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 739.
+l.735 ...gram of Iris Setosa and Iris Veriscolor.}
+                                                   [15 <./7.png> <./8_1.png>]
+[16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 758.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 758.
+ (./SPR_9531504_HW2.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 758.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 758.
 Package rerunfilecheck Info: File `SPR_9531504_HW2.out' has not changed.
 (rerunfilecheck)             Checksum: CA92CE29CBB81935994DBB71DAB7DBED;640.
 
@@ -848,7 +843,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  17752 strings out of 493029
  329768 string characters out of 6136234
- 401160 words of memory out of 5000000
+ 401161 words of memory out of 5000000
  20896 multiletter control sequences out of 15000+600000
  12325 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -869,7 +864,7 @@ s/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on SPR_9531504_HW2.pdf (16 pages, 516851 bytes).
+Output written on SPR_9531504_HW2.pdf (16 pages, 508044 bytes).
 PDF statistics:
  260 PDF objects out of 1000 (max. 8388607)
  204 compressed objects within 3 object streams
