@@ -65,7 +65,8 @@
 \usepackage{xcolor}
 \newcommand*{\bfrac}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
 \newcommand\myatop[2]{\left[{{#1}\atop#2}\right]} % "wrapper macro"
-
+\usepackage{array}
+\usepackage{multirow}
 \makeatletter
 \renewcommand*\env@matrix[1][\arraystretch]{%
 	\edef\arraystretch{#1}%
@@ -193,13 +194,13 @@ where $\mu_{iN}$ denotes the \textit{N}'th feature of class \textit{i}. Removing
 
 One can simply find each discriminator, $g_{i}(\underaccent{\bar}{x})$, by replacing the given information in the problem description in the formula given above. Thus we'll have the following results for the section (a).
 $$
-	g_{1}(\underaccent{\bar}{x}) = -\frac{1}{2}(\frac{2x[1]*0 + 2}{1} + \frac{2x[2]*2 + 4}{\frac{1}{9}}) - \frac{1}{2}\log(1*\frac{1}{9}) + ?
+	g_{1}(\underaccent{\bar}{x}) = -\frac{1}{2}(\frac{2x[1]*0 + 2}{1} + \frac{2x[2]*2 + 4}{\frac{1}{9}}) - \frac{1}{2}\log(1*\frac{1}{9})
 $$
 $$
-g_{2}(\underaccent{\bar}{x}) = -\frac{1}{2}(\frac{2x[1]*3 + 3}{1} + \frac{2x[2]*1 + 1}{\frac{1}{9}}) - \frac{1}{2}\log(1*\frac{1}{9}) + ?
+g_{2}(\underaccent{\bar}{x}) = -\frac{1}{2}(\frac{2x[1]*3 + 3}{1} + \frac{2x[2]*1 + 1}{\frac{1}{9}}) - \frac{1}{2}\log(1*\frac{1}{9})
 $$
 $$
-g_{3}(\underaccent{\bar}{x}) = -\frac{1}{2}(\frac{2x[1]*1 + 1}{1} + \frac{2x[2]*0 + 0}{\frac{1}{9}}) - \frac{1}{2}\log(1*\frac{1}{9}) + ?
+g_{3}(\underaccent{\bar}{x}) = -\frac{1}{2}(\frac{2x[1]*1 + 1}{1} + \frac{2x[2]*0 + 0}{\frac{1}{9}}) - \frac{1}{2}\log(1*\frac{1}{9})
 $$
 The simplified results are
 $$
@@ -773,6 +774,41 @@ $$
 	\caption{Decision Boundary of Iris Setosa and Iris Veriscolor.}
 	\label{pl8_4}
 \end{figure}\\
+\newpage
+(e),(f) Here is the final results after the classification of both training data and test data.
 
-(e) 
+\def\arraystretch{1.5}
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{l|l|c|c|c}
+		\multicolumn{2}{c}{}&\multicolumn{2}{c}{Predicted Class}&\\
+		\cline{3-4}
+		\multicolumn{2}{c|}{}&Setosa&Veriscolor&\multicolumn{1}{c}{Total}\\
+		\cline{2-4}
+		\multirow{2}{*}{Actual Class\ \ }& Setosa & $33$ & $6$ & $39$\\
+		\cline{2-4}
+		& Veriscolor & $7$ & $23$ & $30$\\
+		\cline{2-4}
+		\multicolumn{1}{c}{} & \multicolumn{1}{c}{Total} & \multicolumn{1}{c}{$40$} & \multicolumn{    1}{c}{$29$} & \multicolumn{1}{c}{$69$}\\
+	\end{tabular}
+	\caption{Confusion matrix of IRIS training set prediction.}
+\end{table} 
+
+\def\arraystretch{1.5}
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{l|l|c|c|c}
+		\multicolumn{2}{c}{}&\multicolumn{2}{c}{Predicted Class}&\\
+		\cline{3-4}
+		\multicolumn{2}{c|}{}&Setosa&Veriscolor&\multicolumn{1}{c}{Total}\\
+		\cline{2-4}
+		\multirow{2}{*}{Actual Class\ \ }& Setosa & $9$ & $2$ & $11$\\
+		\cline{2-4}
+		& Veriscolor & $1$ & $17$ & $18$\\
+		\cline{2-4}
+		\multicolumn{1}{c}{} & \multicolumn{1}{c}{Total} & \multicolumn{1}{c}{$10$} & \multicolumn{    1}{c}{$19$} & \multicolumn{1}{c}{$29$}\\
+	\end{tabular}
+	\caption{Confusion matrix of IRIS testing set prediction.}
+\end{table} 
+
 \end{document} 

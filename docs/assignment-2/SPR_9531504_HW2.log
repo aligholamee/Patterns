@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.22)  23 MAR 2018 14:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.22)  23 MAR 2018 16:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -503,6 +503,17 @@ Package: titlesec 2016/03/15 v2.10.1 Sectioning titles
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 )
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen171
+\extrarowheight=\dimen172
+\NC@list=\toks37
+\extratabsurround=\skip56
+\backup@length=\skip57
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen173
+)
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
@@ -559,7 +570,7 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen171
+\@linkdim=\dimen174
 \Hy@linkcounter=\count131
 \Hy@pagecounter=\count132
 
@@ -581,10 +592,10 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count134
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen172
+\XeTeXLinkMargin=\dimen175
 \Fld@menulength=\count135
-\Field@Width=\dimen173
-\Fld@charsize=\dimen174
+\Field@Width=\dimen176
+\Fld@charsize=\dimen177
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -611,9 +622,9 @@ Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip56
+\Hy@SectionHShift=\skip58
 )
-\fwtwo=\skip57
+\fwtwo=\skip59
 
 (./SPR_9531504_HW2.aux
 
@@ -631,33 +642,33 @@ LaTeX Warning: Label `pl1' multiply defined.
 )
 \openout1 = `SPR_9531504_HW2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
  (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count141
-\scratchdimen=\dimen175
+\scratchdimen=\dimen178
 \scratchbox=\box45
 \nofMPsegments=\count142
 \nofMParguments=\count143
-\everyMPshowfont=\toks37
+\everyMPshowfont=\toks38
 \MPscratchCnt=\count144
-\MPscratchDim=\dimen176
+\MPscratchDim=\dimen179
 \MPnumerator=\count145
 \makeMPintoPDFobject=\count146
-\everyMPtoPDFconversion=\toks38
+\everyMPtoPDFconversion=\toks39
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -675,7 +686,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box46
-Package hyperref Info: Link coloring ON on input line 94.
+Package hyperref Info: Link coloring ON on input line 95.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -685,41 +696,41 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count147
 )
-LaTeX Info: Redefining \ref on input line 94.
-LaTeX Info: Redefining \pageref on input line 94.
-LaTeX Info: Redefining \nameref on input line 94.
+LaTeX Info: Redefining \ref on input line 95.
+LaTeX Info: Redefining \pageref on input line 95.
+LaTeX Info: Redefining \nameref on input line 95.
 
 (./SPR_9531504_HW2.out) (./SPR_9531504_HW2.out)
 \@outlinefile=\write4
 \openout4 = `SPR_9531504_HW2.out'.
 
-LaTeX Font Info:    Try loading font information for U+lasy on input line 105.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 106.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 105.
+LaTeX Font Info:    Try loading font information for U+msa on input line 106.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 105.
+LaTeX Font Info:    Try loading font information for U+msb on input line 106.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (7.21712pt too wide) in paragraph at lines 113--114
+Overfull \hbox (7.21712pt too wide) in paragraph at lines 114--115
  []\OT1/cmr/bx/n/12 Keywords.[] \OT1/cmr/m/it/12 Lin-ear Dis-crim-i-na-tor, Qua
 dratic Dis-crim-i-na-tor, Bayes Clas-si-fi-ca-tion, Bayes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
 
-Overfull \hbox (4.9883pt too wide) detected at line 177
+Overfull \hbox (0.98836pt too wide) detected at line 178
 \OML/cmm/m/it/12 g[]\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = \O
 MS/cmsy/m/n/12 ^^@[]\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 ^^@ 
 []\OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 )[] [] ([]\OML/cmm/m/it/12 x \OMS/cmsy/
@@ -734,31 +745,31 @@ m/n/12 ^^@ []\OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ [] []
 <1_c_1.png, id=70, 1084.05pt x 351.714pt>
 File: 1_c_1.png Graphic file (type png)
  <use 1_c_1.png>
-Package pdftex.def Info: 1_c_1.png used on input line 234.
+Package pdftex.def Info: 1_c_1.png used on input line 235.
 (pdftex.def)             Requested size: 281.85585pt x 91.44348pt.
 
 <1_c_2.png, id=72, 1084.05pt x 351.714pt>
 File: 1_c_2.png Graphic file (type png)
  <use 1_c_2.png>
-Package pdftex.def Info: 1_c_2.png used on input line 239.
+Package pdftex.def Info: 1_c_2.png used on input line 240.
 (pdftex.def)             Requested size: 281.85585pt x 91.44348pt.
  [3 <./1_c_1.png> <./1_c_2.png>] <2_1_1.png, id=81, 462.528pt x 341.1144pt>
 File: 2_1_1.png Graphic file (type png)
  <use 2_1_1.png>
-Package pdftex.def Info: 2_1_1.png used on input line 267.
+Package pdftex.def Info: 2_1_1.png used on input line 268.
 (pdftex.def)             Requested size: 281.85585pt x 207.87646pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.268 ...ctions of $w_1$(Blue) and $w_2$(Orange).}
+l.269 ...ctions of $w_1$(Blue) and $w_2$(Orange).}
                                                    [4 <./2_1_1.png>] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 379--381
+Underfull \hbox (badness 10000) in paragraph at lines 380--382
 
  []
 
 [6]
-Overfull \hbox (37.2764pt too wide) in paragraph at lines 386--388
+Overfull \hbox (37.2764pt too wide) in paragraph at lines 387--389
 \OT1/cmr/m/n/12 Since $^^F[] = \OML/cmm/m/it/12 ^^[[]I$ \OT1/cmr/m/n/12 with $\
 OML/cmm/m/it/12 ^^[[] \OT1/cmr/m/n/12 = 1$(according to prob-lem de-scrip-tion)
  with equal prior probabilities($\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/
@@ -768,109 +779,113 @@ it/12 ![]\OT1/cmr/m/n/12 ) =
 [7] [8] [9] <4_3.png, id=131, 462.528pt x 341.1144pt>
 File: 4_3.png Graphic file (type png)
  <use 4_3.png>
-Package pdftex.def Info: 4_3.png used on input line 604.
+Package pdftex.def Info: 4_3.png used on input line 605.
 (pdftex.def)             Requested size: 281.85585pt x 207.87646pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.605 ...nes for the Bayesian discriminator (4.3)}
+l.606 ...nes for the Bayesian discriminator (4.3)}
                                                    [10 <./4_3.png>] [11]
 <5_2.png, id=147, 462.528pt x 341.1144pt>
 File: 5_2.png Graphic file (type png)
  <use 5_2.png>
-Package pdftex.def Info: 5_2.png used on input line 645.
+Package pdftex.def Info: 5_2.png used on input line 646.
 (pdftex.def)             Requested size: 281.85585pt x 207.87646pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.646 ...{Class 1 and Class 2 Distribution Plots.}
+l.647 ...{Class 1 and Class 2 Distribution Plots.}
                                                   
 <5_3.png, id=148, 462.528pt x 341.1144pt>
 File: 5_3.png Graphic file (type png)
  <use 5_3.png>
-Package pdftex.def Info: 5_3.png used on input line 653.
+Package pdftex.def Info: 5_3.png used on input line 654.
 (pdftex.def)             Requested size: 281.85585pt x 207.87646pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.654 	\caption{Bayes Error Surface Plot.}
+l.655 	\caption{Bayes Error Surface Plot.}
                                           
 <5_4.png, id=149, 462.528pt x 341.1144pt>
 File: 5_4.png Graphic file (type png)
  <use 5_4.png>
-Package pdftex.def Info: 5_4.png used on input line 664.
+Package pdftex.def Info: 5_4.png used on input line 665.
 (pdftex.def)             Requested size: 281.85585pt x 207.87646pt.
  [12 <./5_2.png> <./5_3.png>] [13 <./5_4.png>] [14] <7.png, id=174, 462.528pt x
  341.1144pt>
 File: 7.png Graphic file (type png)
 
 <use 7.png>
-Package pdftex.def Info: 7.png used on input line 725.
+Package pdftex.def Info: 7.png used on input line 726.
 (pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.726 ...n region for the given scattered points.}
+l.727 ...n region for the given scattered points.}
                                                   
 <8_1.png, id=175, 1387.584pt x 669.9429pt>
 File: 8_1.png Graphic file (type png)
  <use 8_1.png>
-Package pdftex.def Info: 8_1.png used on input line 734.
+Package pdftex.def Info: 8_1.png used on input line 735.
 (pdftex.def)             Requested size: 375.80542pt x 181.43901pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.735 ...gram of Iris Setosa and Iris Veriscolor.}
+l.736 ...gram of Iris Setosa and Iris Veriscolor.}
                                                    [15 <./7.png> <./8_1.png>]
 <8_3.png, id=184, 462.528pt x 346.896pt>
 File: 8_3.png Graphic file (type png)
  <use 8_3.png>
-Package pdftex.def Info: 8_3.png used on input line 758.
+Package pdftex.def Info: 8_3.png used on input line 759.
 (pdftex.def)             Requested size: 375.80542pt x 281.86818pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.759 ...Plot of Iris Setosa and Iris Veriscolor.}
+l.760 ...Plot of Iris Setosa and Iris Veriscolor.}
                                                    [16 <./8_3.png>]
 <8_4.png, id=190, 462.528pt x 346.896pt>
 File: 8_4.png Graphic file (type png)
  <use 8_4.png>
-Package pdftex.def Info: 8_4.png used on input line 772.
+Package pdftex.def Info: 8_4.png used on input line 773.
 (pdftex.def)             Requested size: 375.80542pt x 281.86818pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.773 ...dary of Iris Setosa and Iris Veriscolor.}
+l.774 ...dary of Iris Setosa and Iris Veriscolor.}
                                                   
-Underfull \hbox (badness 10000) in paragraph at lines 770--776
+Underfull \hbox (badness 10000) in paragraph at lines 771--777
 
  []
 
-[17 <./8_4.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 777.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 777.
+[17 <./8_4.png>]pdfTeX warning (ext4): destination with the same identifier (na
+me{table.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.794 ... matrix of IRIS training set prediction.}
+                                                   [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 814.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 814.
  (./SPR_9531504_HW2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 777.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 777.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 814.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 814.
 Package rerunfilecheck Info: File `SPR_9531504_HW2.out' has not changed.
 (rerunfilecheck)             Checksum: CA92CE29CBB81935994DBB71DAB7DBED;640.
-
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17765 strings out of 493029
- 329897 string characters out of 6136234
- 401310 words of memory out of 5000000
- 20906 multiletter control sequences out of 15000+600000
+ 17821 strings out of 493029
+ 330681 string characters out of 6136234
+ 402198 words of memory out of 5000000
+ 20954 multiletter control sequences out of 15000+600000
  12325 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,10n,54p,830b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -890,10 +905,10 @@ s/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on SPR_9531504_HW2.pdf (17 pages, 637466 bytes).
+Output written on SPR_9531504_HW2.pdf (18 pages, 638410 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
+ 273 PDF objects out of 1000 (max. 8388607)
+ 211 compressed objects within 3 object streams
+ 71 named destinations out of 1000 (max. 500000)
  132 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from math import sqrt, pi, exp, log, e
+from sklearn.metrics import confusion_matrix
 
 DATA_ROOT = './data/'
 COL_NAMES = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
@@ -135,3 +136,9 @@ train_acc = find_accuracy(train_data, train_prediction)
 test_acc = find_accuracy(test_data, test_prediction)
 print("Training Accuracy: ", train_acc)
 print("Test Accuracy: ", test_acc)
+print("Training Error: ", 1.0 - train_acc)
+print("Test Error: ", 1.0 - test_acc)
+print("Training Confusion Matrix: ")
+print(confusion_matrix(train_data['class'], train_prediction['class']))
+print("Testing Confusion Matrix: ")
+print(confusion_matrix(test_data['class'], test_prediction['class']))
