@@ -753,6 +753,25 @@ $$
 $$
 	\sigma_{Veriscolor}:  0.11072222222222221
 $$\\
-(d) 
+(d) Here is the density plot for both classes.
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.8\textwidth]{8_3.png}
+	\caption{Density Plot of Iris Setosa and Iris Veriscolor.}
+	\label{pl8_3}
+\end{figure}
+\newpage
+We can derive the Bayes decision boundary by writing down the \textit{log likelihood} ratio. The result is given in the code(section 8) and the plot is given here. Class posteriors can be computed by expanding the Bayes formula and replacing the mean and variance of each class.
+$$
+	p(w_i\ |\ x) = \frac{p(x\ |\ w_i)P(w_i)}{p(x)}
+$$
+After removing the constant term $p(x)$ and performing a log likelihood, we'll get:
+$$
+	d(x) = \ln\frac{\sigma_2}{\sigma_1} - \frac{(x-\mu_1)^2}{2\sigma_1^2} + \frac{(x-\mu_2)^2}{2\sigma_2^2} - \ln\frac{P(c_2)}{c_2} = 0
+$$
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.8\textwidth]{8_4.png}
+	\caption{Decision Boundary of Iris Setosa and Iris Veriscolor.}
+	\label{pl8_4}
+\end{figure}\\
 
 \end{document} 

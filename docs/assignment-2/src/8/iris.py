@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from math import sqrt, pi, exp
+from math import sqrt, pi, exp, log, e
 
 DATA_ROOT = './data/'
 COL_NAMES = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
@@ -11,8 +11,15 @@ def u_n_d(x, mean, variance):
     '''
         Return the univariate density of given set x
     '''
-    return 1/(sqrt(2*pi*variance)) * exp(-((x - mean)**2 / 2*variance))
+    return 1/(sqrt(2*pi*variance)) * exp(-((x - mean)**2 / (2*variance)))
  
+# Finds the Baysian decision boundary
+def b_d_b(x, mean1, mean2, var1, var2, prior1, prior2):
+    '''
+        Return a point on the decision boundary
+    '''
+    return (log(var2/var1, e) - (x - mean1)**2/(2*var1) + (x - mean2)**2/(2*var2) - log(prior2/prior1, e))
+
 # Read the train and test data
 df = pd.read_fwf(DATA_ROOT+'Iris_train.dat')
 
@@ -59,18 +66,27 @@ ax[1].set_ylabel('sepal-width')
 plt.show()
 
 # # Class Prior probabilities
-print("Prior probability of Setosa: ", class_1.size/df.size)
-print("Prior probability of Veriscolor: ", class_2.size/df.size)
+prior_1 = class_1.size/df.size
+prior_2 = class_2.size/df.size
+print("Prior probability of Setosa: ", prior_1)
+print("Prior probability of Veriscolor: ", prior_2)
 
 # Plot the density functions of two classes
 ax2 = plt.subplot()
-x_range = np.linspace(-5, 10, 100)
+x_range = np.linspace(1, 6, 100)
 
 yy1 = [u_n_d(x, class_1_mean, class_1_variance) for x in x_range]
 yy2 = [u_n_d(x, class_2_mean, class_2_variance) for x in x_range]
+yy3 = [b_d_b(x, class_1_mean, class_2_mean, class_1_variance, class_2_variance, prior_1, prior_2) for x in x_range]
 
-ax2.scatter(x_range, yy1, marker='^', label='Setosa Density')
-ax2.scatter(x_range, yy2, marker='o', label='Veriscolor Density')
+ax2.plot(x_range, yy1, label='Setosa Density', color='darkblue')
+ax2.plot(x_range, yy2, label='Veriscolor Density', color='green')
+ax2.set_xlabel('sepal-width')
+ax2.set_ylabel('probability density')
+
+# Plot the Bayesian decision boundary
+ax2.plot(x_range, yy3, label='Decision Boundary', color='red')
+ax2.set_ylim(0, 1.5)
 ax2.legend(loc='upper right')
 
 plt.show()
