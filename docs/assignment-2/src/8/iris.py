@@ -30,14 +30,17 @@ def find_accuracy(actual, predicted):
     
 # Read the train and test data
 df = pd.read_fwf(DATA_ROOT+'Iris_train.dat')
+df2 = pd.read_fwf(DATA_ROOT+'Iris_test.dat')
 
 # Rename the columns
 df.columns = COL_NAMES
+df2.columns = COL_NAMES
 
 # ax = plt.Figure()
 # ax.add_subplot(111)
 
 train_data = df[['sepal-width', 'class']]
+test_data = df2[['sepal-width', 'class']]
 
 # plt.hist(pd)
 class_1 = df.loc[train_data['class'] == 0.0]
@@ -106,16 +109,29 @@ ax2.legend(loc='upper right')
 cols = ['sepal-width', 'class']
 train_prediction = pd.DataFrame(columns=cols)
 
-for x in train_data:
-    cond = b_d_b(x, class_1_mean, class_2_mean, class_1_variance, class_2_variance, prior_1, prior_2)
-    if(cond > 0):
+for index, x in train_data.iterrows():
+    cond = b_d_b(x['sepal-width'], class_1_mean, class_2_mean, class_1_variance, class_2_variance, prior_1, prior_2)
+    if(cond >= 0):
         # Classify as class 1
-        train_prediction = train_prediction.append({'sepal-width': x, 'class': 0.0}, ignore_index=True)
+        train_prediction = train_prediction.append({'sepal-width': x['sepal-width'], 'class': 0.0}, ignore_index=True)
     else:
         # Classify as class 2
-        train_prediction = train_prediction.append({'sepal-width': x, 'class': 1.0}, ignore_index=True)
+        train_prediction = train_prediction.append({'sepal-width': x['sepal-width'], 'class': 1.0}, ignore_index=True)
+
+# Classify the test data  
+test_prediction = pd.DataFrame(columns=cols)
+
+for index, x in test_data.iterrows():
+    cond = b_d_b(x['sepal-width'], class_1_mean, class_2_mean, class_1_variance, class_2_variance, prior_1, prior_2)
+    if(cond >= 0):
+        # Classify as class 1
+        test_prediction = test_prediction.append({'sepal-width': x['sepal-width'], 'class': 0.0}, ignore_index=True)
+    else:
+        # Classify as class 2
+        test_prediction = test_prediction.append({'sepal-width': x['sepal-width'], 'class': 1.0}, ignore_index=True)
 
 # Calculate the accuracy of precition
 train_acc = find_accuracy(train_data, train_prediction)
+test_acc = find_accuracy(test_data, test_prediction)
 print("Training Accuracy: ", train_acc)
-# Classify the test data
+print("Test Accuracy: ", test_acc)
