@@ -1,23 +1,21 @@
-import numpy as np
-import seaborn as sns
+import numpy
 import matplotlib.pyplot as plt
 
-X = np.random.standard_normal(100)
-Y = np.zeros(X.shape)
-Z = np.zeros(X.shape)
+w1 = lambda x: 2 * x
+w2 = lambda x: 2 - 2 * x
 
-# Simulate the 1st density function
-for i, value in enumerate(X):
-    if(X[i] >= 0) and (X[i] <= 1):
-        Y[i] = 2*X[i]
-
-# Simulate the 2nd density function
-for i, value in enumerate(X):
-    if(X[i] >= 0) and (X[i] <= 1):
-        Z[i] = 2*X[i] - 2
-
-sns.set_style('whitegrid')
-sns.kdeplot(Y)
-sns.kdeplot(Z)
-
+x = numpy.linspace(0, 1, 2)
+y1 = w1(x)
+y2 = w2(x)
+plt.subplot(1,2,1)
+plt.plot(x, y1,label='w1')
+plt.plot(x, y2,label='w2')
+plt.legend()
+plt.title("Densities")
+plt.subplot(1,2,2)
+plt.plot(x, y1,label='w1')
+plt.plot(x, y2,label='w2')
+plt.plot([1/2,1/2], [0,2],label='Decision Boundary')
+plt.legend()
+plt.title("Decision Boundary")
 plt.show()
