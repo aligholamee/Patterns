@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.24)  11 APR 2018 13:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.24)  12 APR 2018 00:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -694,15 +694,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 1066.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1066.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1066.
 
+Package rerunfilecheck Info: File `SPR_9531504_HW1.out' has not changed.
+(rerunfilecheck)             Checksum: AAB162C24D918D551DDDFC53BCFF07F6;452.
 
-
-Package rerunfilecheck Warning: File `SPR_9531504_HW1.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `SPR_9531504_HW1.out':
-(rerunfilecheck)             Before: 275A404410548BEBFE8A523D2E19B0DB;459
-(rerunfilecheck)             After:  AAB162C24D918D551DDDFC53BCFF07F6;452.
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -711,7 +705,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1066.
 Here is how much of TeX's memory you used:
  17232 strings out of 492995
  322879 string characters out of 6136402
- 388577 words of memory out of 5000000
+ 388575 words of memory out of 5000000
  20401 multiletter control sequences out of 15000+600000
  14461 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -733,7 +727,7 @@ onts/cm/cmsy8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
 <c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><c:/texliv
 e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on SPR_9531504_HW1.pdf (16 pages, 625316 bytes).
+Output written on SPR_9531504_HW1.pdf (16 pages, 625148 bytes).
 PDF statistics:
  286 PDF objects out of 1000 (max. 8388607)
  242 compressed objects within 3 object streams
