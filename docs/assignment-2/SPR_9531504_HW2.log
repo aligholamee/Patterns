@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.24)  27 MAR 2018 14:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.24)  11 APR 2018 13:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./SPR_9531504_HW2.tex
+**./SPR_9531504_HW2.tex -aux-directory=./auxiliary/
 (./SPR_9531504_HW2.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
@@ -890,7 +890,7 @@ Here is how much of TeX's memory you used:
  21142 multiletter control sequences out of 15000+600000
  12325 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,10n,54p,889b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,10n,54p,917b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2017
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2017/texmf-d
@@ -907,7 +907,7 @@ nts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1
 sfonts/cm/cmsy8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmti10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pf
 b>
-Output written on SPR_9531504_HW2.pdf (18 pages, 535017 bytes).
+Output written on SPR_9531504_HW2.pdf (18 pages, 535834 bytes).
 PDF statistics:
  273 PDF objects out of 1000 (max. 8388607)
  211 compressed objects within 3 object streams
