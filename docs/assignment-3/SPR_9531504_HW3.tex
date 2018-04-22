@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+\usepackage{latexsym,amssymb,amsmath} % for \Box, \mathbb, split, etc.
+% \usepackage[]{showkeys} % shows label names
+\usepackage{cite} % sorts citation numbers appropriately
+\usepackage{path}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage[pdftex]{graphicx}
+
+% horizontal margins: 1.0 + 6.5 + 1.0 = 8.5
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\textwidth}{6.5in}
+% vertical margins: 1.0 + 9.0 + 1.0 = 11.0
+\setlength{\topmargin}{0.0in}
+\setlength{\headheight}{12pt}
+\setlength{\headsep}{13pt}
+\setlength{\textheight}{625pt}
+\setlength{\footskip}{24pt}
+
+\renewcommand{\textfraction}{0.10}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\floatpagefraction}{0.90}
+
+\usepackage{accents}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+\makeatletter
+\setlength{\arraycolsep}{2\p@} % make spaces around "=" in eqnarray smaller
+\makeatother
+\usepackage{stackengine}
+% change equation, table, figure numbers to be counted inside a section:
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+
+% begin of personal macros
+\newcommand{\half}{{\textstyle \frac{1}{2}}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\myth}{\vartheta}
+\newcommand{\myphi}{\varphi}
+
+\newcommand{\IN}{\mathbb{N}}
+\newcommand{\IZ}{\mathbb{Z}}
+\newcommand{\IQ}{\mathbb{Q}}
+\newcommand{\IR}{\mathbb{R}}
+\newcommand{\IC}{\mathbb{C}}
+\newcommand{\Real}[1]{\mathrm{Re}\left({#1}\right)}
+\newcommand{\Imag}[1]{\mathrm{Im}\left({#1}\right)}
+\DeclareRobustCommand{\brkbinom}{\genfrac[]{0pt}{}}
+\newcommand{\norm}[2]{\|{#1}\|_{{}_{#2}}}
+\newcommand{\abs}[1]{\left|{#1}\right|}
+\newcommand{\ip}[2]{\left\langle {#1}, {#2} \right\rangle}
+\newcommand{\der}[2]{\frac{\partial {#1}}{\partial {#2}}}
+\newcommand{\dder}[2]{\frac{\partial^2 {#1}}{\partial {#2}^2}}
+\usepackage{enumitem}
+\newcommand{\nn}{\mathbf{n}}
+\newcommand{\xx}{\mathbf{x}}
+\newcommand{\uu}{\mathbf{u}}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
+\usepackage{titlesec}
+\newcommand{\junk}[1]{{}}
+\usepackage{sectsty}
+\usepackage{xcolor}
+\newcommand*{\bfrac}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
+\newcommand\myatop[2]{\left[{{#1}\atop#2}\right]} % "wrapper macro"
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+	\edef\arraystretch{#1}%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{*\c@MaxMatrixCols c}}
+\makeatother
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{#1}}
+\makeatother
+
+\definecolor{darkblue}{rgb}{0,0,0.4}
+\usepackage[colorlinks = true,
+linkcolor = darkblue,
+urlcolor  = darkblue,
+citecolor = darkblue,
+anchorcolor = darkblue]{hyperref}
+% set two lengths for the includegraphics commands used to import the plots:
+\newlength{\fwtwo} \setlength{\fwtwo}{0.45\textwidth}
+% end of personal macros
+
+\begin{document}
+\DeclareGraphicsExtensions{.jpg}
+
+\begin{center}
+\textsc{\Large Statistical Pattern Recognition} \\[2pt]
+	\textsc{\large Assignment 3}\\
+	\vspace{0.5cm}
+  Ali Gholami \\[6pt]
+  Department of Computer Engineering \& Information Technology\\
+  Amirkabir University of Technology  \\[6pt]
+  \def\UrlFont{\em}
+  \url{https://aligholamee.github.io}\\
+    \href{mailto:aligholami7596@gmail.com}{\textit{aligholami7596@gmail.com}}
+\end{center}
+
+\begin{abstract}
+In this paper, we'll review the \textit{parametric} techniques to estimate the \textit{unknown} parameters of data distributions. We'll use, \textit{MLE} and \textit{Bayesian} estimation for \textit{parameter estimation}. Also, we'll delve into the \textit{non-parametric} techniques to estimate the unknown \textit{density} of data distribution. We'll use \textit{Kernel Density Estimation} methods such as \textit{Parzen Windows} and other techniques such as \textit{Histogram} and \textit{k-NN} density estimation.
+\end{abstract}
+
+\subparagraph{Keywords.} \textit{Parameter Estimation, Density Estimation, Non-parametric Methods, Parametric Methods, Kernel Density Estimation, Maximum Likelihood Estimation, Bayesian Estimation, Histogram Density Estimation, K-NN Density Estimation.}
+
+\section{Parameter Estimation}
+Let ${x_k}$, $k = 1, 2, ..., N$ denote independent training samples from one of the following densities. Obtain the Maximum Likelihood estimate of $\theta$ in each case.
+\begin{enumerate}[label=(\alph*)]
+	\item $ f(x_k;\theta) = \frac{x_k}{\theta^2}\exp(\frac{-x_k^2}{2\theta^2}) $ where $x_k \geq 0$ and $\theta \ge 0$
+	\item $ f(x_k;\theta) = \sqrt{\theta}x_k^{\sqrt{\theta} - 1}$ where $0 \leq x_k \leq 1$ and $ \theta \ge 0$
+\end{enumerate}
+\subsection*{Solution}
+(a) Substituting the given density inside the \textit{MLE} equation yields the following results.
+\begin{equation}
+	\hat{\theta} = \text{arg}\,\max\limits_{\theta}\, \{P(D|\theta)\} = \text{arg}\,\max\limits_{\theta}\, \{\sum_{k = 1}^{n} \ln P(x_k|\theta)\} 
+\end{equation}
+$$
+	\hat{\theta} = \text{arg}\,\max\limits_{\theta}\, \{\sum_{k = 1}^{n} \ln \frac{x_k}{\theta^2}\exp(\frac{-x_k^2}{2\theta^2})\}
+$$
+$$
+	\nabla_{\theta}l(\theta) = 0 
+$$
+where $l(\theta)$ is $\sum_{k = 1}^{n} \ln \frac{x_k}{\theta^2}\exp(\frac{-x_k^2}{2\theta^2})$ in this case. Performing the gradient on the given equation yields the following results.
+$$
+	\sum_{k = 1}^{n} (\frac{-2}{\theta} + \frac{x_k^2}{\theta^3}) = 0
+$$
+The simplified estimate of unknown $\theta$ is given below.
+$$
+	\hat{\theta} = \sqrt{\frac{\sum_{k = 1}^{n} x_k^2}{2N}}
+$$
+\end{document} 
