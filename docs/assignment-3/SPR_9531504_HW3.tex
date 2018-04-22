@@ -172,4 +172,34 @@ Let $x$ have a uniform density
 	\item Suppose that n samples $ D = {x_1, x_2, ..., x_n}$ are drawn independently according to $f_x(x|\theta)$. Show that the maximum likelihood estimate for $\theta$ is $max[D]$.
 	\item Suppose that n = 5 points are drawn from the distribution and the maximum value of which happens to be $max{x_k} = 0.6$. Plot the likelihood $f_x(D|\theta)$ in the range $0 \leq \theta \leq 1$. Explain in words why you do not need to know the values of the other four points.
 \end{enumerate}
+\subsection*{Solution}
+(a) Substituting the uniform density function in the Maximum Likelihood method yields the following results.
+\begin{equation}
+\hat{\theta} = \text{arg}\,\max\limits_{\theta}\, \{\sum_{k = 1}^{n} \ln \frac{1}{\theta}\}
+\end{equation}
+This equation can be written as
+$$
+	\hat{\theta} = \text{arg}\,\max\limits_{\theta}\, \{l(\theta)\}
+$$
+where $l(\theta) = \sum_{k = 1}^{n} \ln \frac{1}{\theta}$. Performing a gradient on $l(\theta)$ would give us the Maximum Likelihood Estimate of $\theta$.
+$$
+	\sum_{k = 1}^{n} \frac{-1}{\theta} = 0 \rightarrow \frac{n}{\theta} = 0
+$$
+thus 
+$$
+	\hat{\theta} \rightarrow \inf
+$$
+Since $\hat{\theta} \rightarrow \inf$ and $\hat{\theta}\  \epsilon\  \{x_1, x_2, ..., x_n\}$ we'll have:
+$$
+	\hat{\theta} = max[D]
+$$
+(b) Since $	\hat{\theta} = max[D] $ we can simply plot the diagram as following.
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.8\textwidth]{2_b.PNG}
+	\caption{Maximum Likelihood Estimation of $\theta$.}
+	\label{pl1}
+\end{figure}
+
+The other four points wouldn't have maximized the likelihood $P(D|\theta)$.
+
 \end{document} 
