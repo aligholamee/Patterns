@@ -141,4 +141,20 @@ The simplified estimate of unknown $\theta$ is given below.
 $$
 	\hat{\theta} = \sqrt{\frac{\sum_{k = 1}^{n} x_k^2}{2N}}
 $$
+(b) Substituting the given density in the Maximum Likelihood method yields the following result.
+\begin{equation}
+	\hat{\theta} = \text{arg}\,\max\limits_{\theta}\, \{\sum_{k = 1}^{n} \ln \sqrt{\theta}x_k^{\sqrt{\theta} - 1}\}
+\end{equation}
+we can obtain the estimate for the unknown $\theta$:
+$$
+	\nabla_{\theta}l(\theta) = 0 
+$$
+where $l(\theta)$ is $\sum_{k = 1}^{n} \ln \sqrt{\theta}x_k^{\sqrt{\theta} - 1}$ in this case. Performing the gradient on the given equation yields the following results.
+$$
+	\frac{n}{2\theta} + \frac{1}{2\sqrt{\theta}\sum_{k = 1}^{n}\ln x_k} = 0
+$$
+multiplying the whole equation by $\theta$ results in the following equation:
+$$
+	\hat{\theta} = \frac{n^2}{(\sum_{k = 1}^{n}\ln x_k)^2}
+$$
 \end{document} 
