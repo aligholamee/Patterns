@@ -116,7 +116,7 @@ In this paper, we'll review the \textit{parametric} techniques to estimate the \
 
 \subparagraph{Keywords.} \textit{Parameter Estimation, Density Estimation, Non-parametric Methods, Parametric Methods, Kernel Density Estimation, Maximum Likelihood Estimation, Bayesian Estimation, Histogram Density Estimation, K-NN Density Estimation.}
 
-\section{Parameter Estimation}
+\section{Parameter Estimation 1}
 Let ${x_k}$, $k = 1, 2, ..., N$ denote independent training samples from one of the following densities. Obtain the Maximum Likelihood estimate of $\theta$ in each case.
 \begin{enumerate}[label=(\alph*)]
 	\item $ f(x_k;\theta) = \frac{x_k}{\theta^2}\exp(\frac{-x_k^2}{2\theta^2}) $ where $x_k \geq 0$ and $\theta \ge 0$
@@ -157,4 +157,19 @@ multiplying the whole equation by $\theta$ results in the following equation:
 $$
 	\hat{\theta} = \frac{n^2}{(\sum_{k = 1}^{n}\ln x_k)^2}
 $$
+
+\section{Parameter Estimation 2}
+Let $x$ have a uniform density
+
+	\[ f_x(x|\theta) \sim U(0, \theta) = 
+	\begin{cases}
+	\frac{1}{\theta}       & \quad 0 \leq x \leq 0\\
+	0  & \quad otherwise
+	\end{cases}
+	\]
+	
+\begin{enumerate}[label=(\alph*)]
+	\item Suppose that n samples $ D = {x_1, x_2, ..., x_n}$ are drawn independently according to $f_x(x|\theta)$. Show that the maximum likelihood estimate for $\theta$ is $max[D]$.
+	\item Suppose that n = 5 points are drawn from the distribution and the maximum value of which happens to be $max{x_k} = 0.6$. Plot the likelihood $f_x(D|\theta)$ in the range $0 \leq \theta \leq 1$. Explain in words why you do not need to know the values of the other four points.
+\end{enumerate}
 \end{document} 
