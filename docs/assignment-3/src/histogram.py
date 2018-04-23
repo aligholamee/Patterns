@@ -24,10 +24,32 @@ def truncated_normal(mean, std, num_samples, min, max):
 def estimate_histogram_density(samples, bin_size):
     """
         Find the number of existing samples in each bin of the Histogram and return k * n / v as the density of that bin.
+        Return a dictionary containing the bin steps and the density inside them.
     """
+
+    # Estimation dictionary
+    estimation_dict = {
+            'bin_1': 0,
+            'bin_2': 0
+    }
+
+    for sample in samples:
+        # Find the location of sample in Histogram
+        bin_index = sample / bin_size + 1
+        bin_number_str = 'bin_' + str(bin_index)
+
+        # In case the bin item doesn't exist
+        # Simply create that key inside dictionary
+        if(!estimation_dict[bin_number_str])
+            estimation_dict[bin_number_str] = 0
+
+        
+        estimation_dict[bin_number_str] = 
+
 
 
 # One dimensional array of data
 samples_1d = truncated_normal(MEAN, STANDARD_DEVIATION, NUM_SAMPLES, RANGE_MIN, RANGE_MAX)
 
-print(samples_1d)
+# Estimate the density of the samples
+density_estimate_dict = estimate_histogram_density(samples_1d)
