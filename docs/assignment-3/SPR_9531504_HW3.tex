@@ -116,7 +116,7 @@ In this paper, we'll review the \textit{parametric} techniques to estimate the \
 
 \subparagraph{Keywords.} \textit{Parameter Estimation, Density Estimation, Non-parametric Methods, Parametric Methods, Kernel Density Estimation, Maximum Likelihood Estimation, Bayesian Estimation, Histogram Density Estimation, K-NN Density Estimation.}
 
-\section{Parameter Estimation 1}
+\section{General Maximum Likelihood Estimation}
 Let ${x_k}$, $k = 1, 2, ..., N$ denote independent training samples from one of the following densities. Obtain the Maximum Likelihood estimate of $\theta$ in each case.
 \begin{enumerate}[label=(\alph*)]
 	\item $ f(x_k;\theta) = \frac{x_k}{\theta^2}\exp(\frac{-x_k^2}{2\theta^2}) $ where $x_k \geq 0$ and $\theta \ge 0$
@@ -158,7 +158,7 @@ $$
 	\hat{\theta} = \frac{n^2}{(\sum_{k = 1}^{n}\ln x_k)^2}
 $$
 
-\section{Parameter Estimation 2}
+\section{Uniform Maximum Likelihood Estimation}
 Let $x$ have a uniform density
 
 	\[ f_x(x|\theta) \sim U(0, \theta) = 
