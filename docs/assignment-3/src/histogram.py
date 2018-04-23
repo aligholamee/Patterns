@@ -1,5 +1,6 @@
 from scipy.stats import truncnorm
 import matplotlib.pyplot as plt
+import numpy as np
 
 # Number of samples
 NUM_SAMPLES = 100
