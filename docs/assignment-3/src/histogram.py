@@ -13,14 +13,11 @@ STANDARD_DEVIATION = 5
 RANGE_MIN = 1
 RANGE_MAX = 25
 
-# One dimensional array of data
-samples_1d = truncated_normal(MEAN, STANDARD_DEVIATION, RANGE_MIN, RANGE_MAX)
-
 # Generates random normal numbers in a range
 def truncated_normal(mean, stddev, min, max):
 
     return truncnorm(
-        (min - mean) / stddev, (max - mean) / stddev, loc=mean, sd=stddev
+        (min - mean) / stddev, (max - mean) / stddev, loc=mean, scale=stddev
     )
 
 # Implements the histogram density estimation methods
@@ -30,5 +27,7 @@ def estimate_histogram_density(samples, bin_size):
     """
 
 
+# One dimensional array of data
+samples_1d = truncated_normal(MEAN, STANDARD_DEVIATION, RANGE_MIN, RANGE_MAX)
 
-print(one_d_data)
+print(samples_1d)
