@@ -27,16 +27,16 @@ def sample_count_in_bins(samples, bin_size):
         Return a dictionary containing the bin steps and the density inside them.
     """
 
-    # Estimation dictionary
+    # Sample counts in each bin of the Histogram
     sample_counts = {
-            'bin_1': 0,
-            'bin_2': 0
+            '1': 0,
+            '2': 0
     }
 
     for sample in samples:
         # Find the location of sample in Histogram
         bin_index = int(sample / bin_size) + 1
-        bin_number_str = 'bin_' + str(bin_index)
+        bin_number_str = str(bin_index)
 
         if bin_number_str in sample_counts:
             # Update the value of that key
@@ -71,18 +71,17 @@ def find_density(sample_count_dict, num_samples, bin_size):
     height_of_density_for_each_sample = 1 / (num_samples * bin_size)
 
     # Iterate the sample_count_dict
-    for bin_number, sample_count in sample_count_dict.iteritems():
-        draw_density(RANGE_MIN, RANGE_MAX, bin_number, BIN_SIZE, sample_count, height_of_density_for_each_sample)
+    for bin_number, sample_count in sample_count_dict.items():
+        draw_density(RANGE_MIN, RANGE_MAX, int(bin_number), BIN_SIZE, sample_count, height_of_density_for_each_sample)
 
+    # Display the plot
+    plt.show()
 
 # One dimensional array of data
 samples_1d = truncated_normal(MEAN, STANDARD_DEVIATION, NUM_SAMPLES, RANGE_MIN, RANGE_MAX)
 
-# Estimate the density of the samples
+# Find the number of sample count in each bin of the Histogram
 sample_counts_dict = sample_count_in_bins(samples_1d, BIN_SIZE)
 
-# plot the generated samples
-plt.scatter(samples_1d, np.zeros_like(samples_1d), color='b')
-plt.ylim(-0.1, 5)
-plt.xlim(1, 20)
-plt.show()
+# Estimate the density and plot it
+find_density(sample_counts_dict, NUM_SAMPLES, BIN_SIZE)
