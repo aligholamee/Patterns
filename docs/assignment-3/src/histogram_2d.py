@@ -45,8 +45,9 @@ def sample_count_in_bins(samples, bin_size):
 
     for sample in samples:
         # Find the location of sample in Histogram
-        bin_index = int(sample / bin_size) + 1
-        bin_number_str = str(bin_index)
+        bin_index_x = int(sample[0] / bin_size) + 1
+        bin_index_y = int(sample[1] / bin_size) + 1
+        bin_number_str = str(bin_index_x * bin_index_y)
 
         if bin_number_str in sample_counts:
             # Update the value of that key
@@ -94,17 +95,19 @@ def find_density(sample_count_dict, num_samples, bin_size):
 # One dimensional array of data
 # samples_1d = truncated_normal(MEAN, STANDARD_DEVIATION, NUM_SAMPLES, RANGE_MIN, RANGE_MAX)
 
-# # Find the number of sample count in each bin of the Histogram
-# sample_counts_dict = sample_count_in_bins(samples_1d, BIN_SIZE)
-
 # # Estimate the density and plot it
 # find_density(sample_counts_dict, NUM_SAMPLES, BIN_SIZE)
 
 samples_2d = truncated_normal(MEAN, STANDARD_DEVIATION, NUM_SAMPLES, RANGE_MIN, RANGE_MAX)
+
+# # Find the number of sample count in each bin of the Histogram
+sample_counts_dict = sample_count_in_bins(samples_2d, BIN_SIZE)
+
 # 3D plot the results
 # fig = plt.figure()
 # ax = fig.add_subplot(111, projection='3d')
-x = samples_2d[:, 0]
-y = samples_2d[:, 1]
-plt.scatter(x, y, color='darkred', marker='^')
-plt.show()
+# x = np.linspace(1, 20, 400)
+# y = samples_2d[:, 0]
+# z = samples_2d[:, 1]
+# ax.scatter(x, y, color='darkblue', marker='^')
+# plt.show()
