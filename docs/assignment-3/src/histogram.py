@@ -35,17 +35,15 @@ def sample_count_in_bins(samples, bin_size):
 
     for sample in samples:
         # Find the location of sample in Histogram
-        bin_index = sample / bin_size + 1
+        bin_index = int(sample / bin_size) + 1
         bin_number_str = 'bin_' + str(bin_index)
 
-        # In case the bin item doesn't exist
-        # Simply create that key inside dictionary
-        if(!sample_counts[bin_number_str]):
-            # Simply create that key inside dictionary
-            sample_counts[bin_number_str] = 1
-        else:
+        if bin_number_str in sample_counts:
             # Update the value of that key
-            sample_counts[bin_number_str] = estimation_dict[bin_number_str] + 1
+            sample_counts[bin_number_str] += 1
+        else:
+            # Simply create that key inside dictionary and assign it as 1
+            sample_counts[bin_number_str] = 1
 
     
     # Return the results dictionary
@@ -54,8 +52,10 @@ def sample_count_in_bins(samples, bin_size):
 
 
 # One dimensional array of data
-
 samples_1d = truncated_normal(MEAN, STANDARD_DEVIATION, NUM_SAMPLES, RANGE_MIN, RANGE_MAX)
 
 # Estimate the density of the samples
-sample_counts_dict = sample_count_in_bins(samples_1d)
+sample_counts_dict = sample_count_in_bins(samples_1d, BIN_SIZE)
+
+# Test the results
+print(sample_counts_dict)
