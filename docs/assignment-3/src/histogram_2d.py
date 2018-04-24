@@ -11,7 +11,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 
 # Number of samples
-NUM_SAMPLES = 200
+NUM_SAMPLES = 1000
 
 # Bin size of the Histogram
 BIN_SIZE = 2
@@ -45,8 +45,8 @@ def sample_count_in_bins(samples, bin_size):
 
     for sample in samples:
         # Find the location of sample in Histogram
-        bin_index_x = int(sample[0] / bin_size) + 1
-        bin_index_y = int(sample[1] / bin_size) + 1
+        bin_index_x = int(np.ceil(sample[0] / bin_size))
+        bin_index_y = int(np.ceil(sample[1] / bin_size))
         bin_number_str = str(bin_index_x * bin_index_y)
 
         if bin_number_str in sample_counts:
@@ -65,8 +65,10 @@ def sample_count_in_bins(samples, bin_size):
 def draw_density(range_min, range_max, which_bin, bin_size, num_samples_in_bin, hist_height_of_each_sample, ax):
 
     # Extract the row and column of 2D Histogram
-    bin_x = np.ceil(which_bin / ((range_max - range_min) / bin_size))
-    bin_y = which_bin % ((range_max - range_min) / bin_size)
+    bin_x = int(np.ceil(which_bin / ((range_max - range_min) / bin_size)))
+    bin_y = int(which_bin % ((range_max - range_min) / bin_size))
+    print("\nBin row: ", bin_x)
+    print(" Bin col: ", bin_y)
 
     interval_low_x = range_min + (bin_x) * bin_size
     interval_high_x = interval_low_x + bin_size
@@ -75,11 +77,13 @@ def draw_density(range_min, range_max, which_bin, bin_size, num_samples_in_bin, 
     interval_high_y = interval_low_y + bin_size
 
     # GENERATE MANY POINTS!!!!
-    z = np.linspace(1, 21, 3000)
 
-    ax.plot(z,
-            list(map(lambda z: num_samples_in_bin * hist_height_of_each_sample if interval_low_x <= z <= interval_high_x else 0, z)),
-            list(map(lambda z: num_samples_in_bin * hist_height_of_each_sample if interval_low_y <= z <= interval_high_y else 0, z)),
+    x = np.linspace(1, 21, 3000)
+    y = np.linspace(1, 21, 3000)
+    
+    ax.plot_surface(x,
+            y,
+            z,
             color='darkblue')
 
     # plt.fill_between(z, list(map(lambda x: num_samples_in_bin*hist_height_of_each_sample if interval_low <= x <= interval_high else 0, x)), color='darkblue')
@@ -113,7 +117,7 @@ samples_2d = truncated_normal(MEAN, STANDARD_DEVIATION, NUM_SAMPLES, RANGE_MIN, 
 
 # # Find the number of sample count in each bin of the Histogram
 sample_counts_dict = sample_count_in_bins(samples_2d, BIN_SIZE)
-
+print(sample_counts_dict)
 # Estimate the density and plot it
 find_density(sample_counts_dict, NUM_SAMPLES, BIN_SIZE)
 
