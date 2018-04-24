@@ -59,6 +59,7 @@ def draw_density(range_min, range_max, which_bin, bin_size, num_samples_in_bin, 
     # GENERATE MANY POINTS!!!!
     x = np.linspace(1, 21, 1000)
     plt.plot(x, list(map(lambda x: num_samples_in_bin*hist_height_of_each_sample if interval_low <= x <= interval_high else 0, x)), color='darkblue')
+    plt.fill_between(x, list(map(lambda x: num_samples_in_bin*hist_height_of_each_sample if interval_low <= x <= interval_high else 0, x)), color='darkblue')
 
 
 # Implemenets the density estimation method
@@ -75,6 +76,9 @@ def find_density(sample_count_dict, num_samples, bin_size):
         draw_density(RANGE_MIN, RANGE_MAX, int(bin_number), BIN_SIZE, sample_count, height_of_density_for_each_sample)
 
     # Display the plot
+    plt.title('Density estimation of a normal distribution')
+    plt.xlabel('Sample value')
+    plt.ylabel('Estimated Density')
     plt.show()
 
 # One dimensional array of data
