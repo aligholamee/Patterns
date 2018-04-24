@@ -201,5 +201,17 @@ $$
 \end{figure}
 
 The other four points wouldn't have maximized the likelihood $P(D|\theta)$.
+\section{Density Estimation; Histogram, Parzen Windows and K-NN Method}
+In this section, we'll be implementing top non-parametric methods for density estimation. We've implemented the 1-D and 2-D Scenario of density estimation in the \textit{src} folder. The experiment results are provided here.
+\subsection*{Histogram Density Estimation}
+\subsubsection*{Core Definition}
+In this method, we'll divide the range of available samples to multiple bins. Then we'll count the number of samples in each bin. Let $k_i$ be the number of sample in $i$th bin and $V$ the size of bins($V = h^d$ where $h$ is the size of the bin in each dimension). The density for the $i$th bin can be estimated using the following formula. $n$ is the number of total samples.
+\begin{equation}
+	\hat{p}_{(x)} = \frac{k}{n * V}
+\end{equation}
+\subsubsection*{Python Implementation}
+Full implementation with guiding comments can be found in \textit{src} folder.
+
+\subsection*{Density Estimation with Parzen Windows}
 
 \end{document} 
