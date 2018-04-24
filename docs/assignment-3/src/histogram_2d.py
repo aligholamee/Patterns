@@ -62,15 +62,27 @@ def sample_count_in_bins(samples, bin_size):
 
 
 # Draws the density in matplotlib
-def draw_density(range_min, range_max, which_bin, bin_size, num_samples_in_bin, hist_height_of_each_sample):
+def draw_density(range_min, range_max, which_bin, bin_size, num_samples_in_bin, hist_height_of_each_sample, ax):
 
-    interval_low = range_min + which_bin * bin_size
-    interval_high = interval_low + bin_size
+    # Extract the row and column of 2D Histogram
+    bin_x = np.ceil(which_bin / ((range_max - range_min) / bin_size))
+    bin_y = which_bin % ((range_max - range_min) / bin_size)
+
+    interval_low_x = range_min + (bin_x) * bin_size
+    interval_high_x = interval_low_x + bin_size
+
+    interval_low_y = range_min + bin_y * bin_size
+    interval_high_y = interval_low_y + bin_size
 
     # GENERATE MANY POINTS!!!!
-    x = np.linspace(1, 21, 1000)
-    plt.plot(x, list(map(lambda x: num_samples_in_bin*hist_height_of_each_sample if interval_low <= x <= interval_high else 0, x)), color='darkblue')
-    plt.fill_between(x, list(map(lambda x: num_samples_in_bin*hist_height_of_each_sample if interval_low <= x <= interval_high else 0, x)), color='darkblue')
+    z = np.linspace(1, 21, 3000)
+
+    ax.plot(z,
+            list(map(lambda z: num_samples_in_bin * hist_height_of_each_sample if interval_low_x <= z <= interval_high_x else 0, z)),
+            list(map(lambda z: num_samples_in_bin * hist_height_of_each_sample if interval_low_y <= z <= interval_high_y else 0, z)),
+            color='darkblue')
+
+    # plt.fill_between(z, list(map(lambda x: num_samples_in_bin*hist_height_of_each_sample if interval_low <= x <= interval_high else 0, x)), color='darkblue')
 
 
 # Implemenets the density estimation method
@@ -80,28 +92,30 @@ def find_density(sample_count_dict, num_samples, bin_size):
     # v is bin size in this case
     # n is the number of all samples
 
-    height_of_density_for_each_sample = 1 / (num_samples * bin_size)
+    height_of_density_for_each_sample = 1 / (num_samples * bin_size * bin_size)
+
+    # One figure only
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
 
     # Iterate the sample_count_dict
     for bin_number, sample_count in sample_count_dict.items():
-        draw_density(RANGE_MIN, RANGE_MAX, int(bin_number), BIN_SIZE, sample_count, height_of_density_for_each_sample)
+        draw_density(RANGE_MIN, RANGE_MAX, int(bin_number), BIN_SIZE, sample_count, height_of_density_for_each_sample, ax)
 
     # Display the plot
-    plt.title('Density estimation of a normal distribution')
-    plt.xlabel('Sample value')
-    plt.ylabel('Estimated Density')
+    # plt.title('Density estimation of a normal distribution')
+    # plt.xlabel('Sample value')
+    # plt.ylabel('Estimated Density')
     plt.show()
 
-# One dimensional array of data
-# samples_1d = truncated_normal(MEAN, STANDARD_DEVIATION, NUM_SAMPLES, RANGE_MIN, RANGE_MAX)
-
-# # Estimate the density and plot it
-# find_density(sample_counts_dict, NUM_SAMPLES, BIN_SIZE)
 
 samples_2d = truncated_normal(MEAN, STANDARD_DEVIATION, NUM_SAMPLES, RANGE_MIN, RANGE_MAX)
 
 # # Find the number of sample count in each bin of the Histogram
 sample_counts_dict = sample_count_in_bins(samples_2d, BIN_SIZE)
+
+# Estimate the density and plot it
+find_density(sample_counts_dict, NUM_SAMPLES, BIN_SIZE)
 
 # 3D plot the results
 # fig = plt.figure()
