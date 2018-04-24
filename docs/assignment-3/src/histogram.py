@@ -21,14 +21,14 @@ def truncated_normal(mean, std, num_samples, min, max):
     return  (np.random.normal(loc=mean, scale=std, size=num_samples) % (max - min) + min)
 
 # Implements the histogram density estimation methods
-def estimate_histogram_density(samples, bin_size):
+def sample_count_in_bins(samples, bin_size):
     """
         Find the number of existing samples in each bin of the Histogram and return k * n / v as the density of that bin.
         Return a dictionary containing the bin steps and the density inside them.
     """
 
     # Estimation dictionary
-    estimation_dict = {
+    sample_counts = {
             'bin_1': 0,
             'bin_2': 0
     }
@@ -40,16 +40,22 @@ def estimate_histogram_density(samples, bin_size):
 
         # In case the bin item doesn't exist
         # Simply create that key inside dictionary
-        if(!estimation_dict[bin_number_str])
-            estimation_dict[bin_number_str] = 0
+        if(!sample_counts[bin_number_str]):
+            # Simply create that key inside dictionary
+            sample_counts[bin_number_str] = 1
+        else:
+            # Update the value of that key
+            sample_counts[bin_number_str] = estimation_dict[bin_number_str] + 1
 
-        
-        estimation_dict[bin_number_str] = 
+    
+    # Return the results dictionary
+    return sample_counts
 
 
 
 # One dimensional array of data
+
 samples_1d = truncated_normal(MEAN, STANDARD_DEVIATION, NUM_SAMPLES, RANGE_MIN, RANGE_MAX)
 
 # Estimate the density of the samples
-density_estimate_dict = estimate_histogram_density(samples_1d)
+sample_counts_dict = sample_count_in_bins(samples_1d)
