@@ -57,5 +57,8 @@ samples_1d = truncated_normal(MEAN, STANDARD_DEVIATION, NUM_SAMPLES, RANGE_MIN, 
 # Estimate the density of the samples
 sample_counts_dict = sample_count_in_bins(samples_1d, BIN_SIZE)
 
-# Test the results
-print(sample_counts_dict)
+# plot the generated samples
+plt.scatter(samples_1d, np.zeros_like(samples_1d), color='b')
+plt.ylim(-0.1, 5)
+plt.xlim(1, 20)
+plt.show()
