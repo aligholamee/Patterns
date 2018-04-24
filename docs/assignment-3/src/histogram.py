@@ -20,7 +20,7 @@ def truncated_normal(mean, std, num_samples, min, max):
     """
     return  (np.random.normal(loc=mean, scale=std, size=num_samples) % (max - min) + min)
 
-# Implements the histogram density estimation methods
+# Implements saomple counting strategy
 def sample_count_in_bins(samples, bin_size):
     """
         Find the number of existing samples in each bin of the Histogram and return k * n / v as the density of that bin.
@@ -49,6 +49,27 @@ def sample_count_in_bins(samples, bin_size):
     # Return the results dictionary
     return sample_counts
 
+
+# Draws the density in matplotlib
+def draw_density(which_bin, num_samples_in_bin, hist_height_of_each_sample):
+    
+
+
+
+
+
+# Implemenets the density estimation method
+def find_density(sample_count_dict, num_samples, bin_size):
+
+    # This is the height of density for each sample that can be calculated as heigh = 1 / (n * v)
+    # v is bin size in this case
+    # n is the number of all samples
+
+    height_of_density_for_each_sample = 1 / (num_samples * bin_size)
+
+    # Iterate the sample_count_dict
+    for bin_number, sample_count in sample_count_dict.iteritems():
+        draw_density(bin_number, sample_count, height_of_density_for_each_sample)
 
 
 # One dimensional array of data
