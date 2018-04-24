@@ -4,21 +4,21 @@
 # [] Creation Date : April 2018
 #
 # [] Author 2 : Ali Gholami
-#
 # ========================================
 
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 
 # Number of samples
-NUM_SAMPLES = 100
+NUM_SAMPLES = 200
 
 # Bin size of the Histogram
 BIN_SIZE = 2
 
 # Known density parameters
-MEAN = 5
-STANDARD_DEVIATION = 3
+MEAN = [10, 10]
+STANDARD_DEVIATION = [[2, 0], [0, 2]]
 RANGE_MIN = 1
 RANGE_MAX = 20
 
@@ -27,7 +27,8 @@ def truncated_normal(mean, std, num_samples, min, max):
     """
         Return samples with normal distribution inside the given region
     """
-    return  (np.random.normal(loc=mean, scale=std, size=num_samples) % (max - min) + min)
+    return np.random.multivariate_normal(mean=mean, cov=std, size=num_samples * 2) % (max - min) + min
+
 
 # Implements saomple counting strategy
 def sample_count_in_bins(samples, bin_size):
@@ -91,10 +92,19 @@ def find_density(sample_count_dict, num_samples, bin_size):
     plt.show()
 
 # One dimensional array of data
-samples_1d = truncated_normal(MEAN, STANDARD_DEVIATION, NUM_SAMPLES, RANGE_MIN, RANGE_MAX)
+# samples_1d = truncated_normal(MEAN, STANDARD_DEVIATION, NUM_SAMPLES, RANGE_MIN, RANGE_MAX)
 
-# Find the number of sample count in each bin of the Histogram
-sample_counts_dict = sample_count_in_bins(samples_1d, BIN_SIZE)
+# # Find the number of sample count in each bin of the Histogram
+# sample_counts_dict = sample_count_in_bins(samples_1d, BIN_SIZE)
 
-# Estimate the density and plot it
-find_density(sample_counts_dict, NUM_SAMPLES, BIN_SIZE)
+# # Estimate the density and plot it
+# find_density(sample_counts_dict, NUM_SAMPLES, BIN_SIZE)
+
+samples_2d = truncated_normal(MEAN, STANDARD_DEVIATION, NUM_SAMPLES, RANGE_MIN, RANGE_MAX)
+# 3D plot the results
+# fig = plt.figure()
+# ax = fig.add_subplot(111, projection='3d')
+x = samples_2d[:, 0]
+y = samples_2d[:, 1]
+plt.scatter(x, y, color='darkred', marker='^')
+plt.show()
