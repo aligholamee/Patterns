@@ -10,8 +10,10 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 
+
+
 # Number of samples
-NUM_SAMPLES = 1000
+NUM_SAMPLES = 2000
 
 # Bin size of the Histogram
 BIN_SIZE = 2
@@ -56,7 +58,7 @@ def sample_count_in_bins(samples, bin_size):
             # Simply create that key inside dictionary and assign it as 1
             sample_counts[bin_number_str] = 1
 
-    
+
     # Return the results dictionary
     return sample_counts
 
@@ -67,8 +69,6 @@ def draw_density(range_min, range_max, which_bin, bin_size, num_samples_in_bin, 
     # Extract the row and column of 2D Histogram
     bin_x = int(np.ceil(which_bin / ((range_max - range_min) / bin_size)))
     bin_y = int(which_bin % ((range_max - range_min) / bin_size))
-    print("\nBin row: ", bin_x)
-    print(" Bin col: ", bin_y)
 
     interval_low_x = range_min + (bin_x) * bin_size
     interval_high_x = interval_low_x + bin_size
@@ -76,15 +76,13 @@ def draw_density(range_min, range_max, which_bin, bin_size, num_samples_in_bin, 
     interval_low_y = range_min + bin_y * bin_size
     interval_high_y = interval_low_y + bin_size
 
-    # GENERATE MANY POINTS!!!!
+    ax.bar3d(interval_low_x, interval_low_y, 0, (interval_high_x - interval_low_x), (interval_high_y - interval_low_y), num_samples_in_bin*hist_height_of_each_sample)
 
-    x = np.linspace(1, 21, 3000)
-    y = np.linspace(1, 21, 3000)
-    
-    ax.plot_surface(x,
-            y,
-            z,
-            color='darkblue')
+    # y = x
+    # ax.plot_surface(x,
+    #         y,
+    #         list(map(lambda x: num_samples_in_bin*hist_height_of_each_sample if interval_low_x <= x <= interval_high_y else 0, x)),
+    #         color='darkblue')
 
     # plt.fill_between(z, list(map(lambda x: num_samples_in_bin*hist_height_of_each_sample if interval_low <= x <= interval_high else 0, x)), color='darkblue')
 
