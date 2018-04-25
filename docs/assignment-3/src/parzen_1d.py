@@ -14,15 +14,35 @@ from sklearn.neighbors import KernelDensity
 
 # Seed the random number generator
 np.random.seed(1)
-NUM_SAMPLES = 20
+NUM_SAMPLES = 50
+NUM_BINS = 20
+RANGE_LOW = 1
+RANGE_HIGH = 20
+BANDWIDTH = 1
 
 # Density characteristics
-modal1_mean = 2
-modal2_mean = 10
+modal1_mean = 0
+modal2_mean = 5
 modal1_variance = 1
 modal2_variance = 1
 
 # Generate some samples from the given multi modal distribution
-sample_set = np.concatenate(np.random.normal(modal1_mean, modal1_variance, int(0.3 * NUM_SAMPLES),
-                            np.random.normal(modal2_mean, modal2_variance, int(0.7 * NUM_SAMPLES))))
+sample_set = np.concatenate((np.random.normal(modal1_mean, modal1_variance, int(0.3 * NUM_SAMPLES)),
+                            np.random.normal(modal2_mean, modal2_variance, int(0.7 * NUM_SAMPLES))))[:, np.newaxis]
+
+x_plot = np.linspace(RANGE_LOW, RANGE_HIGH, 1000)[:, np.newaxis]
+bins = np.linspace(RANGE_LOW, RANGE_HIGH, NUM_BINS)
+
+true_dens = (0.3 * norm(modal1_mean, modal1_variance).pdf(x_plot[:, 0])
+             + 0.7 * norm(modal2_mean, modal2_variance).pdf(x_plot[:, 0]))
+plt.fill(x_plot[:, 0], true_dens, fc='black', alpha=0.2,
+        label='input distribution')
+
+# Fit Gaussian windows on the samples
+kde = KernelDensity(kernel='gaussian', bandwidth=BANDWIDTH).fit(sample_set)
+log_dens = kde.score_samples(x_plot)
+plt.fill(x_plot[:, 0], np.exp(log_dens), fc='darkred')
+plt.text(-3.5, 0.31, "Gaussian Kernel Density")
+plt.legend(loc='upper left')
+plt.show()
 
