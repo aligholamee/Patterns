@@ -11,7 +11,6 @@ import matplotlib.pyplot as plt
 from scipy.stats import norm
 from sklearn.neighbors import KernelDensity
 
-
 # Seed the random number generator
 np.random.seed(1)
 NUM_SAMPLES = 100
