@@ -13,13 +13,13 @@ import numpy as np
 
 
 # Number of samples
-NUM_SAMPLES = 3000
+NUM_SAMPLES = 5000
 
 # Bin size of the Histogram
-BIN_SIZE = 5
+BIN_SIZE = 1
 
 # Known density parameters
-MEAN = [10, 10]
+MEAN = [8, 8]
 STANDARD_DEVIATION = [[2, 0], [0, 2]]
 RANGE_MIN = 1
 RANGE_MAX = 20
@@ -76,7 +76,7 @@ def draw_density(range_min, range_max, which_bin, bin_size, num_samples_in_bin, 
     interval_low_y = range_min + bin_y * bin_size
     interval_high_y = interval_low_y + bin_size
 
-    ax.bar3d(interval_low_x, interval_low_y, 0, (interval_high_x - interval_low_x), (interval_high_y - interval_low_y), num_samples_in_bin*hist_height_of_each_sample)
+    ax.bar3d(interval_low_x, interval_low_y, 0, (interval_high_x - interval_low_x), (interval_high_y - interval_low_y), num_samples_in_bin*hist_height_of_each_sample, color='blue')
 
     # y = x
     # ax.plot_surface(x,
@@ -108,6 +108,7 @@ def find_density(sample_count_dict, num_samples, bin_size):
     # plt.title('Density estimation of a normal distribution')
     # plt.xlabel('Sample value')
     # plt.ylabel('Estimated Density')
+    plt.title('Density estimation of a normal distribution')
     plt.show()
 
 

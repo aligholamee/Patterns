@@ -212,7 +212,25 @@ In this method, we'll divide the range of available samples to multiple bins. Th
 \subsubsection*{Python Implementation}
 Full implementation with guiding comments can be found in \textit{src} folder. Note that in this implementation i've not used the internal bindings for kernel density estimation of Sklearn.
 \begin{itemize}
-	1-Dimensional | $\mu = 
+	\item (1-Dimensional) | ($\mu = 5$) | ($var = 3$) | ($bin = 2$) | ($|D| = 100$)
+	\begin{figure}[!h]\centering
+		\includegraphics[width=0.6\textwidth]{3_a_1.PNG}
+		\caption{1-D Histogram Density Estimation.}
+		\label{pl1}
+	\end{figure}
+	
+	\item (2-Dimensional) | ($\mu = 	\begin{bmatrix}
+	8 & 8\\
+	\end{bmatrix}$) | ($var = 	\begin{bmatrix}
+	2 & 0\\
+	0 & 2\\
+	\end{bmatrix}$) | ($bin = 1$) | ($|D| = 5000$)
+	\begin{figure}[!h]\centering
+		\includegraphics[width=0.8\textwidth]{3_a_2.PNG}
+		\caption{2-D Histogram Density Estimation.}
+		\label{pl1}
+	\end{figure}
+	
 \end{itemize}
 
 \subsection*{Density Estimation with Parzen Windows}
