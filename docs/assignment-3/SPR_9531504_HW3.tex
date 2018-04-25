@@ -233,6 +233,17 @@ Full implementation with guiding comments can be found in \textit{src} folder. N
 	
 \end{itemize}
 
-\subsection*{Density Estimation with Parzen Windows}
-
+\subsection*{Density Estimation with Parzen Windows(KDE)}
+\subsubsection*{Core Definition}
+In the method, each of the kernels are represented by $\Phi(x)$. These kernels will be placed on every single sample derived from the main distribution and the estimated density will be represented as following. In this equation, the $k$ stands for the number of samples we have derived from the main distribution. $h$ is called \textit{Bandwidth} and $h^d$ illustrates the Parzen window in a $d$ dimensional space.
+\begin{equation}
+	\hat{p}_{(x)} = \frac{1}{n*h^d} \sum_{i = 1}^{k}\Phi(\frac{x - x_i}{h})
+\end{equation}
+\subsubsection*{Python Implementation}
+This section is implemented using \textit{Numpy, Matplotlib} and \textit{Scipy}. The gray density illustrates the distribution of our data and the blue one represents the estimate using Gaussian windows.
+	\begin{figure}[!h]\centering
+	\includegraphics[width=0.8\textwidth]{3_b_1.PNG}
+	\caption{1-D Multi-modal Gaussian Density Estimation using Gaussian Kernels.}
+	\label{pl1}
+\end{figure}
 \end{document} 

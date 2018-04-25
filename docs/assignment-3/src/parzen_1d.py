@@ -36,7 +36,7 @@ bins = np.linspace(RANGE_LOW, RANGE_HIGH, NUM_BINS)
 true_dens = (0.3 * norm(modal1_mean, modal1_variance).pdf(x_plot[:, 0])
              + 0.7 * norm(modal2_mean, modal2_variance).pdf(x_plot[:, 0]))
 plt.fill(x_plot[:, 0], true_dens, fc='black', alpha=0.2,
-        label='input distribution')
+        label='Input Distribution')
 
 # Fit Gaussian windows on the samples
 kde = KernelDensity(kernel='gaussian', bandwidth=BANDWIDTH).fit(sample_set)
