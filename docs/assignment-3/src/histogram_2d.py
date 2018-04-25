@@ -13,10 +13,10 @@ import numpy as np
 
 
 # Number of samples
-NUM_SAMPLES = 2000
+NUM_SAMPLES = 3000
 
 # Bin size of the Histogram
-BIN_SIZE = 2
+BIN_SIZE = 5
 
 # Known density parameters
 MEAN = [10, 10]
