@@ -14,15 +14,15 @@ from sklearn.neighbors import KernelDensity
 
 # Seed the random number generator
 np.random.seed(1)
-NUM_SAMPLES = 50
+NUM_SAMPLES = 100
 NUM_BINS = 20
 RANGE_LOW = 1
 RANGE_HIGH = 20
 BANDWIDTH = 1
 
 # Density characteristics
-modal1_mean = 0
-modal2_mean = 5
+modal1_mean = 5
+modal2_mean = 15
 modal1_variance = 1
 modal2_variance = 1
 
@@ -41,8 +41,7 @@ plt.fill(x_plot[:, 0], true_dens, fc='black', alpha=0.2,
 # Fit Gaussian windows on the samples
 kde = KernelDensity(kernel='gaussian', bandwidth=BANDWIDTH).fit(sample_set)
 log_dens = kde.score_samples(x_plot)
-plt.fill(x_plot[:, 0], np.exp(log_dens), fc='darkred')
-plt.text(-3.5, 0.31, "Gaussian Kernel Density")
+plt.fill(x_plot[:, 0], np.exp(log_dens), fc='darkblue', label='Gaussian Windows Estimation')
 plt.legend(loc='upper left')
 plt.show()
 
