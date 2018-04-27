@@ -278,15 +278,5 @@ The results in figure 3.6 is given with a bin size of $0.9$. Smaller bandwidths 
 	\label{pl1}
 \end{figure}
 
-\subsection*{Density Estimation with K-NN Method}
-\subsubsection*{Core Definition}
-The \textit{KNN} method is one of the sub-methods of the \textit{KDE}. Although, there is a bit of difference in them. In the previous methods, the \textit{bandwidth} was considered constant. Thus, the number of neighbors in each of the windows was different. In this method, the number of samples, \textit{K} is fixed. The \textit{Bandwidth} changes until the number \textit{K} is satisfied. The following equation describes this idea. Let $X_1, X_2, X_3, ..., X_m$ be independent, identically distributed random variables with bounded continuous density $p(x)$. The \textit{K-Nearest Neighbor} density estimate is given by 
-\begin{equation}
-\hat{p}_{(x, k)} = \frac{1}{n*r_n} \sum_{i = 1}^{n}\Phi(\frac{x - x_i}{r_n})
-\end{equation}
-where $r_n = r_n(x)$ is a Euclidean distance between $x$ and the $k$th nearest neighbor of $x$ among $X_j$'s,
-\begin{equation}
-	r_n(x) = min(k, \{|x - X_j|,\ where\ j = 1, 2, 3, ..., n\})
-\end{equation}
 \end{document} 
 
