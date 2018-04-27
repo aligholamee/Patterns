@@ -232,7 +232,7 @@ Full implementation with guiding comments can be found in \textit{src} folder. N
 	\end{figure}
 	
 \end{itemize}
-\subsubsection{Bin Size Selection Analysis}
+\subsubsection*{Bin Size Selection Analysis}
 The results in figure 3.1 was given with a bin size of $2$. Smaller bin size result in a sharp and spiky estimation. However, choosing a bigger bin size results in an smoother estimation. As an example, figure 3.3 and 3.4 illustrates this phenomenon.
 	\begin{figure}[!h]\centering
 	\includegraphics[width=0.8\textwidth]{3_a_3.PNG}
@@ -277,4 +277,16 @@ The results in figure 3.6 is given with a bin size of $0.9$. Smaller bandwidths 
 	\caption{2-D Gaussian Density Estimation using Gaussian Kernels | Bandwidth = 0.2}
 	\label{pl1}
 \end{figure}
+
+\subsection*{Density Estimation with K-NN Method}
+\subsubsection*{Core Definition}
+The \textit{KNN} method is one of the sub-methods of the \textit{KDE}. Although, there is a bit of difference in them. In the previous methods, the \textit{bandwidth} was considered constant. Thus, the number of neighbors in each of the windows was different. In this method, the number of samples, \textit{K} is fixed. The \textit{Bandwidth} changes until the number \textit{K} is satisfied. The following equation describes this idea. Let $X_1, X_2, X_3, ..., X_m$ be independent, identically distributed random variables with bounded continuous density $p(x)$. The \textit{K-Nearest Neighbor} density estimate is given by 
+\begin{equation}
+\hat{p}_{(x, k)} = \frac{1}{n*r_n} \sum_{i = 1}^{n}\Phi(\frac{x - x_i}{r_n})
+\end{equation}
+where $r_n = r_n(x)$ is a Euclidean distance between $x$ and the $k$th nearest neighbor of $x$ among $X_j$'s,
+\begin{equation}
+	r_n(x) = min(k, \{|x - X_j|,\ where\ j = 1, 2, 3, ..., n\})
+\end{equation}
 \end{document} 
+

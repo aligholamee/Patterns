@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.24)  27 APR 2018 12:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.24)  27 APR 2018 13:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -741,7 +741,7 @@ n-sity Es-ti-ma-tion, Non-parametric Meth-ods, Para-
 [1
 
 {c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<2_b.PNG, id=57, 678.1335pt x 394.47375pt>
+<2_b.PNG, id=53, 678.1335pt x 394.47375pt>
 File: 2_b.PNG Graphic file (type png)
  <use 2_b.PNG>
 Package pdftex.def Info: 2_b.PNG used on input line 198.
@@ -760,7 +760,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 215.
 
-<3_a_1.PNG, id=67, 462.528pt x 341.1144pt>
+<3_a_1.PNG, id=63, 462.528pt x 341.1144pt>
 File: 3_a_1.PNG Graphic file (type png)
  <use 3_a_1.PNG>
 Package pdftex.def Info: 3_a_1.PNG used on input line 217.
@@ -771,7 +771,7 @@ s been already used, duplicate ignored
                    \relax 
 l.218 ...togram Density Estimation | Bin Size = 2}
                                                   
-<3_a_2.PNG, id=68, 462.528pt x 341.1144pt>
+<3_a_2.PNG, id=64, 462.528pt x 341.1144pt>
 File: 3_a_2.PNG Graphic file (type png)
  <use 3_a_2.PNG>
 Package pdftex.def Info: 3_a_2.PNG used on input line 229.
@@ -780,11 +780,7 @@ Package pdftex.def Info: 3_a_2.PNG used on input line 229.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 235.
-
-<3_a_3.PNG, id=69, 462.528pt x 341.1144pt>
+<3_a_3.PNG, id=65, 462.528pt x 341.1144pt>
 File: 3_a_3.PNG Graphic file (type png)
  <use 3_a_3.PNG>
 Package pdftex.def Info: 3_a_3.PNG used on input line 238.
@@ -793,7 +789,7 @@ Package pdftex.def Info: 3_a_3.PNG used on input line 238.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<3_a_4.PNG, id=79, 462.528pt x 341.1144pt>
+<3_a_4.PNG, id=75, 462.528pt x 341.1144pt>
 File: 3_a_4.PNG Graphic file (type png)
  <use 3_a_4.PNG>
 Package pdftex.def Info: 3_a_4.PNG used on input line 244.
@@ -802,7 +798,7 @@ Package pdftex.def Info: 3_a_4.PNG used on input line 244.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<3_b_1.PNG, id=80, 462.528pt x 341.1144pt>
+<3_b_1.PNG, id=76, 462.528pt x 341.1144pt>
 File: 3_b_1.PNG Graphic file (type png)
  <use 3_b_1.PNG>
 Package pdftex.def Info: 3_b_1.PNG used on input line 257.
@@ -811,7 +807,7 @@ Package pdftex.def Info: 3_b_1.PNG used on input line 257.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<3_b_2.PNG, id=90, 462.528pt x 341.1144pt>
+<3_b_2.PNG, id=87, 462.528pt x 341.1144pt>
 File: 3_b_2.PNG Graphic file (type png)
  <use 3_b_2.PNG>
 Package pdftex.def Info: 3_b_2.PNG used on input line 263.
@@ -820,7 +816,7 @@ Package pdftex.def Info: 3_b_2.PNG used on input line 263.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<3_b_3.PNG, id=91, 462.528pt x 341.1144pt>
+<3_b_3.PNG, id=88, 462.528pt x 341.1144pt>
 File: 3_b_3.PNG Graphic file (type png)
  <use 3_b_3.PNG>
 Package pdftex.def Info: 3_b_3.PNG used on input line 270.
@@ -829,7 +825,7 @@ Package pdftex.def Info: 3_b_3.PNG used on input line 270.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<3_b_4.PNG, id=92, 462.528pt x 341.1144pt>
+<3_b_4.PNG, id=89, 462.528pt x 341.1144pt>
 File: 3_b_4.PNG Graphic file (type png)
  <use 3_b_4.PNG>
 Package pdftex.def Info: 3_b_4.PNG used on input line 276.
@@ -838,26 +834,25 @@ Package pdftex.def Info: 3_b_4.PNG used on input line 276.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./3_a_3.PNG>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 280.
- [7 <./3_a_4.PNG> <./3_b_1.PNG>] [8 <./3_b_2.PNG>] [9 <./3_b_3.PNG>] [10 <./3_b
-_4.PNG>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 280.
+[6 <./3_a_3.PNG>] [7 <./3_a_4.PNG>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 291.
+ [8 <./3_b_1.PNG> <./3_b_2.PNG>] [9 <./3_b_3.PNG>] [10 <./3_b_4.PNG>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
  (./SPR_9531504_HW3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 280.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 280.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 291.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 291.
 Package rerunfilecheck Info: File `SPR_9531504_HW3.out' has not changed.
-(rerunfilecheck)             Checksum: 7481B023A45CCF82BC73CF792FAC3E05;321.
+(rerunfilecheck)             Checksum: 07D6053525884E718B47279F70F67C59;240.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17970 strings out of 492995
- 332603 string characters out of 6136402
+ 17973 strings out of 492995
+ 332620 string characters out of 6136402
  398349 words of memory out of 5000000
- 21141 multiletter control sequences out of 15000+600000
+ 21140 multiletter control sequences out of 15000+600000
  12325 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,7n,54p,917b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -875,10 +870,10 @@ st/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmti12.pfb>
-Output written on SPR_9531504_HW3.pdf (10 pages, 581583 bytes).
+Output written on SPR_9531504_HW3.pdf (10 pages, 584323 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
- 142 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 90 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 191 PDF objects out of 1000 (max. 8388607)
+ 144 compressed objects within 2 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 82 words of extra memory for PDF output out of 10000 (max. 10000000)
 
