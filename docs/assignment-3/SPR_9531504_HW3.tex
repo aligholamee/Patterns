@@ -215,7 +215,7 @@ Full implementation with guiding comments can be found in \textit{src} folder. N
 	\item (1-Dimensional) | ($\mu = 5$) | ($var = 3$) | ($bin = 2$) | ($|D| = 100$)
 	\begin{figure}[!h]\centering
 		\includegraphics[width=0.6\textwidth]{3_a_1.PNG}
-		\caption{1-D Histogram Density Estimation.}
+		\caption{1-D Histogram Density Estimation | Bin Size = 2}
 		\label{pl1}
 	\end{figure}
 	
@@ -232,7 +232,19 @@ Full implementation with guiding comments can be found in \textit{src} folder. N
 	\end{figure}
 	
 \end{itemize}
+\subsubsection{Bin Size Selection Analysis}
+The results in figure 3.1 was given with a bin size of $2$. Smaller bin size result in a sharp and spiky estimation. However, choosing a bigger bin size results in an smoother estimation. As an example, figure 3.3 and 3.4 illustrates this phenomenon.
+	\begin{figure}[!h]\centering
+	\includegraphics[width=0.8\textwidth]{3_a_3.PNG}
+	\caption{1-D Histogram Density Estimation | Bin Size = 0.5}
+	\label{pl1}
+\end{figure}
 
+	\begin{figure}[!h]\centering
+	\includegraphics[width=0.8\textwidth]{3_a_4.PNG}
+	\caption{2-D Histogram Density Estimation | Bin Size = 0.2 | Increased Sample Size}
+	\label{pl1}
+\end{figure}
 \subsection*{Density Estimation with Parzen Windows(KDE)}
 \subsubsection*{Core Definition}
 In the method, each of the kernels are represented by $\Phi(x)$. These kernels will be placed on every single sample derived from the main distribution and the estimated density will be represented as following. In this equation, the $k$ stands for the number of samples we have derived from the main distribution. $h$ is called \textit{Bandwidth} and $h^d$ illustrates the Parzen window in a $d$ dimensional space.
@@ -249,8 +261,20 @@ This section is implemented using \textit{Numpy, Matplotlib} and \textit{Scipy}.
 
 	\begin{figure}[!h]\centering
 	\includegraphics[width=0.8\textwidth]{3_b_2.PNG}
-	\caption{2-D Gaussian Density Estimation using Gaussian Kernels.}
+	\caption{2-D Gaussian Density Estimation using Gaussian Kernels | Bandwidth = 0.9}
+	\label{pl1}
+\end{figure}
+\subsubsection*{Bandwidth Selection Analysis}
+The results in figure 3.6 is given with a bin size of $0.9$. Smaller bandwidths result in a sharp and spiky estimation. However, choosing a bigger bandwidth results in an smoother estimation. As an example, figure 3.7 and 3.8 illustrates this phenomenon.
+	\begin{figure}[!h]\centering
+	\includegraphics[width=0.8\textwidth]{3_b_3.PNG}
+	\caption{1-D Multi-modal Gaussian Density Estimation using Gaussian Kernel | Bandwidth = 0.1}
 	\label{pl1}
 \end{figure}
 
+	\begin{figure}[!h]\centering
+	\includegraphics[width=0.8\textwidth]{3_b_4.PNG}
+	\caption{2-D Gaussian Density Estimation using Gaussian Kernels | Bandwidth = 0.2}
+	\label{pl1}
+\end{figure}
 \end{document} 

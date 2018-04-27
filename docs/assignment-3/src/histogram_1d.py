@@ -14,7 +14,7 @@ import numpy as np
 NUM_SAMPLES = 100
 
 # Bin size of the Histogram
-BIN_SIZE = 2
+BIN_SIZE = 0.5
 
 # Known density parameters
 MEAN = 5
