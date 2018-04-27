@@ -17,7 +17,7 @@ NUM_SAMPLES = 100
 NUM_BINS = 20
 RANGE_LOW = 1
 RANGE_HIGH = 20
-BANDWIDTH = 0.1
+BANDWIDTH = 0.6
 
 # Density characteristics
 modal1_mean = 5
@@ -39,7 +39,7 @@ plt.fill(x_plot[:, 0], true_dens, fc='black', alpha=0.2,
         label='Input Distribution')
 
 # Fit Gaussian windows on the samples
-kde = KernelDensity(kernel='gaussian', bandwidth=BANDWIDTH).fit(sample_set)
+kde = KernelDensity(kernel='epanechnikov', bandwidth=BANDWIDTH).fit(sample_set)
 log_dens = kde.score_samples(x_plot)
 plt.fill(x_plot[:, 0], np.exp(log_dens), fc='darkblue', label='Gaussian Windows Estimation')
 plt.legend(loc='upper left')
