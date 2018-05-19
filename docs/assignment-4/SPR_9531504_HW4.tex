@@ -128,7 +128,7 @@ Given dataset $ X = 2, 3, 4, 4, 4, 5, 5, 10, 11, 11, 11, 12, 14, 16 $ use Parzen
 	\]
 
 
-	\item If you use Gaussian Kernel, $N(0, 10)$.
+	\item If you use Gaussian Kernel, $N(0, 1)$.
 	
 	\item For the same dataset and the same sample points, i.e. $x = 5$ and $x = 12$, estimate the density using KNN approach. Take $ K = 5$ in your estimations.
 
@@ -179,7 +179,7 @@ $$
 $$
 \begin{enumerate}[label=(\alph*)]
 		
-	\item	Let $\phi(x) = N(1, 0)$. Find and sketch the Parzen Windows estimate for the values of $h_n$ of $0.1$ and $1.0$.
+	\item	Let $\phi(x) = N(0, 1)$. Find and sketch the Parzen Windows estimate for the values of $h_n$ of $0.1$ and $1.0$.
 	\begin{equation}
 	\hat{f_n}_{(x)} = \frac{1}{n*h_n} \sum_{i = 1}^{k}\Phi(\frac{x - x_i}{h_n})
 	\end{equation}
@@ -203,6 +203,12 @@ $$
 	\hat{f_n}_{(x = 0.41)} = \frac{1}{6*0.1} * 1 = 1.66\ \ \ \ 	\hat{f_n}_{(x = 0.48)} = \frac{1}{6*0.1} * 1 = 1.66
 	$$
 	As denoted above, estimation will give 0 for all of the points in the dataset with $h_n = 0.1$. We can understand that, the window size has been chosen too small that no point is being considered by the estimator. Note that the $h = 0.1$ will be divided by 2 (Being symmetric) and the neighborhood of each given point in the dataset is checked with a diameter of $0.05$. In this case, non of the windows contained other points. Since we have considered the point itself having an effect on the density (As in previous problem), we'll consider them here also.
+	In this case, the density estimation plot is given in the figure 2.1.
+	\begin{figure}[!h]\centering
+	\includegraphics[width=0.6\textwidth]{2_a_1.PNG}
+	\caption{Kernel Estimation of f(x) with $h_n = 0.1$.}
+	\label{pl1}
+	\end{figure}
 	
 	In the second case, the window size is $h_n = 1.0$. For each point in the dataset, if we put a window of size 1.0 on that point, all other points are included in the window. We can understand that in this case, the window size is too large. $f(x)$ estimation is given below.
 	
@@ -212,11 +218,12 @@ $$
 	$$
 	$$
 	exp(\frac{-0.16}{2}) + exp(\frac{-0.2209}{2}) = 0.95
-	$$	
-	This procedure is same for all of the given points in the dataset. In the case of window size of 0.1, the estimation results is given in the figure 2.1.
+	$$
+	\newpage
+	This procedure is same for all of the given points in the dataset. In the case of window size of 0.1, the estimation results is given in the figure 2.2.
 	\begin{figure}[!h]\centering
-		\includegraphics[width=0.6\textwidth]{2_a_1.PNG}
-		\caption{Kernel Estimation of f(x) with $h_n = 0.1$.}
+		\includegraphics[width=0.6\textwidth]{2_a_2.PNG}
+		\caption{Kernel Estimation of f(x) with $h_n = 1$.}
 		\label{pl1}
 	\end{figure}
 \end{enumerate}
