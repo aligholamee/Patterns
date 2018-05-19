@@ -116,7 +116,7 @@ anchorcolor = darkblue]{hyperref}
 
 \subparagraph{Keywords.} \textit{KNN Classifier, Kernel Density Estimation.}
 
-\section{Parzen Windows}
+\section{Kernel Density Estimation \& KNN Estimation}
 Given dataset $ X = 2, 3, 4, 4, 4, 5, 5, 10, 11, 11, 11, 12, 14, 16 $ use Parzen windows to estimate density $p(x)$ at $x = 5$ and $x = 12$; assuming $h = 4$ in the following conditions.
 \begin{enumerate}[label=(\alph*)]
 	\item If you use standard kernel function
@@ -171,6 +171,50 @@ Given dataset $ X = 2, 3, 4, 4, 4, 5, 5, 10, 11, 11, 11, 12, 14, 16 $ use Parzen
 	x = 12\ \ \ \rightarrow\ \ \ \hat{p}_{(x)} = \frac{1}{14 * 2} * (5) = 0.178
 	$$
 \end{enumerate}
+
+\section{Parzen Windows \& KNN Estimation}
+Consider the following training set drawn from an unknown density $f(x)$:
+$$
+	X = { 0.01, 0.12, 0.19, 0.32, 0.41, 0.48}
+$$
+\begin{enumerate}[label=(\alph*)]
+		
+	\item	Let $\phi(x) = N(1, 0)$. Find and sketch the Parzen Windows estimate for the values of $h_n$ of $0.1$ and $1.0$.
+	\begin{equation}
+	\hat{f_n}_{(x)} = \frac{1}{n*h_n} \sum_{i = 1}^{k}\Phi(\frac{x - x_i}{h_n})
+	\end{equation}
+	
+	
+	\item Find and sketch the 3-nearest neighbor estimate of $f(x)$.
+\end{enumerate}
+
+\section*{Solution}
+
+\begin{enumerate}[label=(\alph*)]
+	\item For each point in our dataset, we'll center the Gaussian Kernel and add the values of these kernels. Here are the computations in case that $h_n = 0.1$.
+	$$
+	\hat{f_n}_{(x = 0.01)} = \frac{1}{6*0.1} \sum_{i = 1}^{k}\Phi(0) = 0
+	$$
+	$$
+	\hat{f_n}_{(x = 0.12)} = \frac{1}{6*0.1} \sum_{i = 1}^{k}\Phi(0) = 0
+	$$
+	$$
+	\hat{f_n}_{(x = 0.19)} = \frac{1}{6*0.1} \sum_{i = 1}^{k}\Phi(0) = 0
+	$$
+	$$
+	\hat{f_n}_{(x = 0.32)} = \frac{1}{6*0.1} \sum_{i = 1}^{k}\Phi(0) = 0
+	$$
+	$$
+	\hat{f_n}_{(x = 0.41)} = \frac{1}{6*0.1} \sum_{i = 1}^{k}\Phi(0) = 0
+	$$
+	$$
+	\hat{f_n}_{(x = 0.48)} = \frac{1}{6*0.1} \sum_{i = 1}^{k}\Phi(0) = 0
+	$$
+	As denoted above, estimation will give 0 for all of the points in the dataset with $h_n = 0.1$. We can understand that, the window size has been chosen too small that no point is being considered by the estimator.
+	
+	\item
+\end{enumerate}
+
 
 
 \end{document} 
