@@ -226,6 +226,36 @@ $$
 		\caption{Kernel Estimation of f(x) with $h_n = 1$.}
 		\label{pl1}
 	\end{figure}
+
+
+	\item In this section, we'll start from $h_n = 0$. We'll gradually increase the value of $h_n$ until the window includes 3 samples. Starting from $x = 0.01$, suppose $h = 0.2$. Only 2 samples are included in the window. Increasing the window size to $h = 0.4$ will properly include 3 samples which is denoted by $ k = 3$. Thus, for the first sample, the proper window size is $h_n = 0.4$. The estimated value will be:
+	$$
+		\hat{f_n}_{(x = 0.01)} = \frac{1}{6*0.4} * (exp(0) + exp(\frac{-0.0121}{2}) + exp(\frac{-0.0324}{2})) = \frac{2.71}{2.4} = 1.12
+	$$
+
+	$$
+	\hat{f_n}_{(x = 0.12)} = \frac{1}{6*0.22} * (exp(\frac{-0.0121}{2})+ exp(0) + exp(\frac{-0.0049}{2})) = \frac{2.99}{1.32} = 1.24
+	$$
+	Continuing this procedure for all of the points in the dataset yields the figure 2.3.
+	$$
+		\hat{f_n}_{(x = 0.19)} = \frac{2.97}{1.56} = 1.9
+	$$
+	$$
+		\hat{f_n}_{(x = 0.32)} = \frac{2.97}{1.56} = 1.9
+	$$
+	
+	$$
+		\hat{f_n}_{(x = 0.41)} = \frac{2.98}{1.08} = 2.75
+	$$
+	
+	$$
+		\hat{f_n}_{(x = 0.48)} = \frac{2.96}{1.92} = 1.54
+	$$
+	\begin{figure}[!h]\centering
+		\includegraphics[width=0.6\textwidth]{2_b.PNG}
+		\caption{Kernel Estimation of f(x) with KNN Estimator with $K = 3$.}
+		\label{pl1}
+	\end{figure}
 \end{enumerate}
 
 
