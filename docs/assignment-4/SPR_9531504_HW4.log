@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.24)  19 MAY 2018 23:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.24)  20 MAY 2018 00:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -645,6 +645,27 @@ LaTeX Warning: Label `pl1' multiply defined.
 
 LaTeX Warning: Label `pl1' multiply defined.
 
+
+LaTeX Warning: Label `pl1' multiply defined.
+
+
+LaTeX Warning: Label `pl1' multiply defined.
+
+
+LaTeX Warning: Label `pl1' multiply defined.
+
+
+LaTeX Warning: Label `pl1' multiply defined.
+
+
+LaTeX Warning: Label `pl1' multiply defined.
+
+
+LaTeX Warning: Label `pl1' multiply defined.
+
+
+LaTeX Warning: Label `pl1' multiply defined.
+
 )
 \openout1 = `SPR_9531504_HW4.aux'.
 
@@ -726,85 +747,165 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 109.
 
 (c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+<1_a_1.PNG, id=29, 462.528pt x 341.1144pt>
+File: 1_a_1.PNG Graphic file (type png)
+ <use 1_a_1.PNG>
+Package pdftex.def Info: 1_a_1.PNG used on input line 136.
+(pdftex.def)             Requested size: 281.85585pt x 207.87646pt.
 
-{c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<2_a_1.PNG, id=59, 638.385pt x 497.4585pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<1_a_2.PNG, id=31, 462.528pt x 341.1144pt>
+File: 1_a_2.PNG Graphic file (type png)
+ <use 1_a_2.PNG>
+Package pdftex.def Info: 1_a_2.PNG used on input line 143.
+(pdftex.def)             Requested size: 281.85585pt x 207.87646pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<1_a_3.PNG, id=32, 462.528pt x 341.1144pt>
+File: 1_a_3.PNG Graphic file (type png)
+ <use 1_a_3.PNG>
+Package pdftex.def Info: 1_a_3.PNG used on input line 150.
+(pdftex.def)             Requested size: 281.85585pt x 207.87646pt.
+ [1
+
+{c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<1_a_4.PNG, id=51, 462.528pt x 341.1144pt>
+File: 1_a_4.PNG Graphic file (type png)
+ <use 1_a_4.PNG>
+Package pdftex.def Info: 1_a_4.PNG used on input line 157.
+(pdftex.def)             Requested size: 281.85585pt x 207.87646pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<1_b_1.PNG, id=52, 462.528pt x 341.1144pt>
+File: 1_b_1.PNG Graphic file (type png)
+ <use 1_b_1.PNG>
+Package pdftex.def Info: 1_b_1.PNG used on input line 164.
+(pdftex.def)             Requested size: 281.85585pt x 207.87646pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<1_b_2.PNG, id=53, 462.528pt x 341.1144pt>
+File: 1_b_2.PNG Graphic file (type png)
+ <use 1_b_2.PNG>
+Package pdftex.def Info: 1_b_2.PNG used on input line 171.
+(pdftex.def)             Requested size: 281.85585pt x 207.87646pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<1_b_3.PNG, id=54, 462.528pt x 341.1144pt>
+File: 1_b_3.PNG Graphic file (type png)
+ <use 1_b_3.PNG>
+Package pdftex.def Info: 1_b_3.PNG used on input line 178.
+(pdftex.def)             Requested size: 281.85585pt x 207.87646pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2 <./1_a_1.PNG> <./1_a_2.PNG>] [3 <./1_a_3.PNG> <./1_a_4.PNG>] [4 <./1_b_1.PNG
+> <./1_b_2.PNG>] [5 <./1_b_3.PNG>] [6]
+<2_a_1.PNG, id=109, 638.385pt x 497.4585pt>
 File: 2_a_1.PNG Graphic file (type png)
  <use 2_a_1.PNG>
-Package pdftex.def Info: 2_a_1.PNG used on input line 208.
+Package pdftex.def Info: 2_a_1.PNG used on input line 281.
 (pdftex.def)             Requested size: 281.85585pt x 219.63388pt.
- [3 <./2_a_1.PNG>]
-<2_a_2.PNG, id=67, 634.16925pt x 492.6405pt>
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.282 ...nel Estimation of f(x) with $h_n = 0.1$.}
+                                                   [7 <./2_a_1.PNG>]
+<2_a_2.PNG, id=116, 634.16925pt x 492.6405pt>
 File: 2_a_2.PNG Graphic file (type png)
  <use 2_a_2.PNG>
-Package pdftex.def Info: 2_a_2.PNG used on input line 225.
+Package pdftex.def Info: 2_a_2.PNG used on input line 298.
 (pdftex.def)             Requested size: 281.85585pt x 218.95747pt.
-
-<2_b.PNG, id=68, 648.62325pt x 499.26524pt>
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.299 ...ernel Estimation of f(x) with $h_n = 1$.}
+                                                  
+<2_b.PNG, id=117, 648.62325pt x 499.26524pt>
 File: 2_b.PNG Graphic file (type png)
  <use 2_b.PNG>
-Package pdftex.def Info: 2_b.PNG used on input line 255.
+Package pdftex.def Info: 2_b.PNG used on input line 328.
 (pdftex.def)             Requested size: 281.85585pt x 216.9577pt.
-
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.329 ...of f(x) with KNN Estimator with $K = 3$.}
+                                                  
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4 <./2_a_2.PNG>] <3_1.png, id=76, 462.528pt x 341.1144pt>
+[8 <./2_a_2.PNG>] <3_1.png, id=124, 462.528pt x 341.1144pt>
 File: 3_1.png Graphic file (type png)
  <use 3_1.png>
-Package pdftex.def Info: 3_1.png used on input line 267.
+Package pdftex.def Info: 3_1.png used on input line 340.
 (pdftex.def)             Requested size: 328.82706pt x 242.52081pt.
 
-<3_2.png, id=77, 462.528pt x 341.1144pt>
+<3_2.png, id=125, 462.528pt x 341.1144pt>
 File: 3_2.png Graphic file (type png)
  <use 3_2.png>
-Package pdftex.def Info: 3_2.png used on input line 281.
+Package pdftex.def Info: 3_2.png used on input line 354.
 (pdftex.def)             Requested size: 328.82706pt x 242.52081pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.282 ...NN Decision Boundaries \& Voronoi Cells.}
-                                                   [5 <./2_b.PNG> <./3_1.png>]
-<4.png, id=87, 462.528pt x 341.1144pt>
+l.355 ...NN Decision Boundaries \& Voronoi Cells.}
+                                                   [9 <./2_b.PNG> <./3_1.png>]
+<4.png, id=134, 462.528pt x 341.1144pt>
 File: 4.png Graphic file (type png)
  <use 4.png>
-Package pdftex.def Info: 4.png used on input line 292.
+Package pdftex.def Info: 4.png used on input line 365.
 (pdftex.def)             Requested size: 328.82706pt x 242.52081pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./3_2.png>] <4_2.png, id=99, 462.528pt x 341.1144pt>
+[10 <./3_2.png>] <4_2.png, id=146, 462.528pt x 341.1144pt>
 File: 4_2.png Graphic file (type png)
  <use 4_2.png>
-Package pdftex.def Info: 4_2.png used on input line 305.
+Package pdftex.def Info: 4_2.png used on input line 378.
 (pdftex.def)             Requested size: 328.82706pt x 242.52081pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.306 ...NN Decision Boundaries \& Voronoi Cells.}
-                                                   [7 <./4.png> <./4_2.png>]
-[8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 314.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 314.
+l.379 ...NN Decision Boundaries \& Voronoi Cells.}
+                                                   [11 <./4.png> <./4_2.png>]
+[12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 387.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 387.
  (./SPR_9531504_HW4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 314.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 314.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 387.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 387.
 Package rerunfilecheck Info: File `SPR_9531504_HW4.out' has not changed.
-(rerunfilecheck)             Checksum: 847F64AA4EA5925F39313E50E07D939B;300.
+(rerunfilecheck)             Checksum: DE2DAA0052152BF8B2CD2B8988A75C2C;371.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17941 strings out of 492995
- 332034 string characters out of 6136402
- 400316 words of memory out of 5000000
- 21115 multiletter control sequences out of 15000+600000
+ 17993 strings out of 492995
+ 332613 string characters out of 6136402
+ 400315 words of memory out of 5000000
+ 21144 multiletter control sequences out of 15000+600000
  11979 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,7n,54p,917b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -814,13 +915,14 @@ live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2017
 ist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2017/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmmi8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on SPR_9531504_HW4.pdf (8 pages, 195645 bytes).
+nts/cm/cmr10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on SPR_9531504_HW4.pdf (12 pages, 439412 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 80 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 213 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 
