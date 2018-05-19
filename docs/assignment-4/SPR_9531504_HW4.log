@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.24)  19 MAY 2018 18:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.24)  19 MAY 2018 22:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -633,6 +633,12 @@ LaTeX Warning: Label `pl1' multiply defined.
 
 LaTeX Warning: Label `pl1' multiply defined.
 
+
+LaTeX Warning: Label `pl1' multiply defined.
+
+
+LaTeX Warning: Label `pl1' multiply defined.
+
 )
 \openout1 = `SPR_9531504_HW4.aux'.
 
@@ -717,19 +723,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<2_a_1.PNG, id=51, 638.385pt x 497.4585pt>
+<2_a_1.PNG, id=55, 638.385pt x 497.4585pt>
 File: 2_a_1.PNG Graphic file (type png)
  <use 2_a_1.PNG>
 Package pdftex.def Info: 2_a_1.PNG used on input line 208.
 (pdftex.def)             Requested size: 281.85585pt x 219.63388pt.
  [3 <./2_a_1.PNG>]
-<2_a_2.PNG, id=59, 634.16925pt x 492.6405pt>
+<2_a_2.PNG, id=63, 634.16925pt x 492.6405pt>
 File: 2_a_2.PNG Graphic file (type png)
  <use 2_a_2.PNG>
 Package pdftex.def Info: 2_a_2.PNG used on input line 225.
 (pdftex.def)             Requested size: 281.85585pt x 218.95747pt.
 
-<2_b.PNG, id=60, 648.62325pt x 499.26524pt>
+<2_b.PNG, id=64, 648.62325pt x 499.26524pt>
 File: 2_b.PNG Graphic file (type png)
  <use 2_b.PNG>
 Package pdftex.def Info: 2_b.PNG used on input line 255.
@@ -738,25 +744,41 @@ Package pdftex.def Info: 2_b.PNG used on input line 255.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4 <./2_a_2.PNG>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 263.
- [5 <./2_b.PNG>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 263.
+[4 <./2_a_2.PNG>] <3_1.png, id=72, 462.528pt x 341.1144pt>
+File: 3_1.png Graphic file (type png)
+ <use 3_1.png>
+Package pdftex.def Info: 3_1.png used on input line 267.
+(pdftex.def)             Requested size: 328.82706pt x 242.52081pt.
+
+<3_2.png, id=73, 462.528pt x 341.1144pt>
+File: 3_2.png Graphic file (type png)
+ <use 3_2.png>
+Package pdftex.def Info: 3_2.png used on input line 281.
+(pdftex.def)             Requested size: 328.82706pt x 242.52081pt.
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.282 ...NN Decision Boundaries \& Voronoi Cells.}
+                                                   [5 <./2_b.PNG> <./3_1.png>]
+[6 <./3_2.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 289.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 289.
  (./SPR_9531504_HW4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 263.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 263.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 289.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 289.
 Package rerunfilecheck Info: File `SPR_9531504_HW4.out' has not changed.
-(rerunfilecheck)             Checksum: 5B515738EEC822C1EBC02DEAE1826763;149.
+(rerunfilecheck)             Checksum: BFB6072D963E1A308ADDCE3086D1295A;224.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17901 strings out of 492995
- 331676 string characters out of 6136402
- 400333 words of memory out of 5000000
- 21097 multiletter control sequences out of 15000+600000
+ 17920 strings out of 492995
+ 331852 string characters out of 6136402
+ 400316 words of memory out of 5000000
+ 21106 multiletter control sequences out of 15000+600000
  11979 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,7n,54p,917b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -769,10 +791,10 @@ blic/amsfonts/cm/cmmi8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmr12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:
 /texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on SPR_9531504_HW4.pdf (5 pages, 156453 bytes).
+Output written on SPR_9531504_HW4.pdf (6 pages, 174428 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
- 27 named destinations out of 1000 (max. 500000)
- 44 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 133 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 62 words of extra memory for PDF output out of 10000 (max. 10000000)
 
