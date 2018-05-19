@@ -286,5 +286,30 @@ In the following questions you will consider a K-Nearest Neighbor classifier usi
 	\item It will be classified as red, as the regions are given in figure 3.1.
 \end{enumerate}
 
+\section{KNN Decision Boundary \& KNN Error Rate}
+Consider a K-Nearest Neighbor classifier using Euclidean distance metric on a binary classification task.
+	\begin{figure}[!h]\centering
+	\includegraphics[width=0.7\textwidth]{4.png}
+	\label{pl1}
+\end{figure}
+\begin{enumerate}[label=(\alph*)]
+	\item In the figure, sketch the 1-Nearest Neighbor decision boundary for this dataset.
+	\item If you try to classify the entire training dataset using a K-NN classifier, what value of K will minimize the error for this dataset?
+	\item What happens if you use a very large K on this dataset? Why might too small values of K also be bad?
+\end{enumerate}
+\newpage
+\subsection*{Solution}
+\begin{enumerate}[label=(\alph*)]
+	\item 	Here is the results plotted using Matplotlib in Python.
+	\begin{figure}[!h]\centering
+		\includegraphics[width=0.7\textwidth]{4_2.png}
+		\caption{1-NN Decision Boundaries \& Voronoi Cells.}
+		\label{pl1}
+	\end{figure}
+
+	\item K can be found using experiments. The code is provided in the \textit{src} folder.
+	
+	\item Using large K's yields in a smaller degree of freedom. Thus, it prevents the classifier from overfitting. Too small values for K result in a higher degree of freedom. This results in an overfitted model.
+\end{enumerate}
 \end{document} 
 
