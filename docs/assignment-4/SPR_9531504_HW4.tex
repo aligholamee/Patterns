@@ -1,0 +1,177 @@
+\documentclass[12pt]{article}
+\usepackage{latexsym,amssymb,amsmath} % for \Box, \mathbb, split, etc.
+% \usepackage[]{showkeys} % shows label names
+\usepackage{cite} % sorts citation numbers appropriately
+\usepackage{path}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage[pdftex]{graphicx}
+
+% horizontal margins: 1.0 + 6.5 + 1.0 = 8.5
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\textwidth}{6.5in}
+% vertical margins: 1.0 + 9.0 + 1.0 = 11.0
+\setlength{\topmargin}{0.0in}
+\setlength{\headheight}{12pt}
+\setlength{\headsep}{13pt}
+\setlength{\textheight}{625pt}
+\setlength{\footskip}{24pt}
+
+\renewcommand{\textfraction}{0.10}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\floatpagefraction}{0.90}
+
+\usepackage{accents}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+\makeatletter
+\setlength{\arraycolsep}{2\p@} % make spaces around "=" in eqnarray smaller
+\makeatother
+\usepackage{stackengine}
+% change equation, table, figure numbers to be counted inside a section:
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+
+% begin of personal macros
+\newcommand{\half}{{\textstyle \frac{1}{2}}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\myth}{\vartheta}
+\newcommand{\myphi}{\varphi}
+
+\newcommand{\IN}{\mathbb{N}}
+\newcommand{\IZ}{\mathbb{Z}}
+\newcommand{\IQ}{\mathbb{Q}}
+\newcommand{\IR}{\mathbb{R}}
+\newcommand{\IC}{\mathbb{C}}
+\newcommand{\Real}[1]{\mathrm{Re}\left({#1}\right)}
+\newcommand{\Imag}[1]{\mathrm{Im}\left({#1}\right)}
+\DeclareRobustCommand{\brkbinom}{\genfrac[]{0pt}{}}
+\newcommand{\norm}[2]{\|{#1}\|_{{}_{#2}}}
+\newcommand{\abs}[1]{\left|{#1}\right|}
+\newcommand{\ip}[2]{\left\langle {#1}, {#2} \right\rangle}
+\newcommand{\der}[2]{\frac{\partial {#1}}{\partial {#2}}}
+\newcommand{\dder}[2]{\frac{\partial^2 {#1}}{\partial {#2}^2}}
+\usepackage{enumitem}
+\newcommand{\nn}{\mathbf{n}}
+\newcommand{\xx}{\mathbf{x}}
+\newcommand{\uu}{\mathbf{u}}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
+\usepackage{titlesec}
+\newcommand{\junk}[1]{{}}
+\usepackage{sectsty}
+\usepackage{xcolor}
+\newcommand*{\bfrac}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
+\newcommand\myatop[2]{\left[{{#1}\atop#2}\right]} % "wrapper macro"
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+	\edef\arraystretch{#1}%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{*\c@MaxMatrixCols c}}
+\makeatother
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{#1}}
+\makeatother
+
+\definecolor{darkblue}{rgb}{0,0,0.4}
+\usepackage[colorlinks = true,
+linkcolor = darkblue,
+urlcolor  = darkblue,
+citecolor = darkblue,
+anchorcolor = darkblue]{hyperref}
+% set two lengths for the includegraphics commands used to import the plots:
+\newlength{\fwtwo} \setlength{\fwtwo}{0.45\textwidth}
+% end of personal macros
+
+\begin{document}
+\DeclareGraphicsExtensions{.jpg}
+
+\begin{center}
+\textsc{\Large Statistical Pattern Recognition} \\[2pt]
+	\textsc{\large Assignment 4}\\
+	\vspace{0.5cm}
+  Ali Gholami \\[6pt]
+  Department of Computer Engineering \& Information Technology\\
+  Amirkabir University of Technology  \\[6pt]
+  \def\UrlFont{\em}
+  \url{https://aligholamee.github.io}\\
+    \href{mailto:aligholami7596@gmail.com}{\textit{aligholami7596@gmail.com}}
+\end{center}
+
+\begin{abstract}
+
+\end{abstract}
+
+\subparagraph{Keywords.} \textit{KNN Classifier, Kernel Density Estimation.}
+
+\section{Parzen Windows}
+Given dataset $ X = 2, 3, 4, 4, 4, 5, 5, 10, 11, 11, 11, 12, 14, 16 $ use Parzen windows to estimate density $p(x)$ at $x = 5$ and $x = 12$; assuming $h = 4$ in the following conditions.
+\begin{enumerate}[label=(\alph*)]
+	\item If you use standard kernel function
+	\[ K(u) =
+	\begin{cases}
+	1      & \quad |u| \leq \frac{1}{2}\\
+	0  & \quad o.w.
+	\end{cases}
+	\]
+
+
+	\item If you use Gaussian Kernel, $N(0, 10)$.
+	
+	\item For the same dataset and the same sample points, i.e. $x = 5$ and $x = 12$, estimate the density using KNN approach. Take $ K = 5$ in your estimations.
+
+\end{enumerate}
+
+\subsection*{Solution}
+\begin{enumerate}[label=(\alph*)]
+	\item We'll use (1.1) to estimate the density using different kernels.
+	\begin{equation}
+	\hat{p}_{(x)} = \frac{1}{n*h^d} \sum_{i = 1}^{k}\Phi(\frac{x - x_i}{h})
+	\end{equation}
+	In this case, we'll compute the distance of each of the given points from our dataset. For every distance less than 2 we'll consider the effect of that point in our estimation.
+	$$
+		x = 5\ \ \ \rightarrow\ \ \ \hat{p}_{(x)} = \frac{1}{14 * 4} * (6) = \frac{3}{28} = 0.107
+	$$
+	Doing the same for the point $x = 12$ and we'll have the following results:
+	$$
+		x = 12\ \ \ \rightarrow\ \ \ \hat{p}_{(x)} = \frac{1}{14 * 4} * (6) = \frac{3}{28} = 0.107
+	$$
+	
+	\item In this case, the value of items in the $\sum$ are no longer 1. They will have different outputs, specially on the center of the curve. This can lead to an smoother and more realistic estimation of the density. The Gaussian Kernel equation is given in (1.2).
+	\begin{equation}
+		\phi(u) = \frac{1}{\sqrt{2\pi}}\exp(\frac{-u^2}{2})
+	\end{equation}
+	
+	$$
+		x = 5\ \ \ \rightarrow\ \ \ \hat{p}_{(x)} = \frac{1}{14 * 4} * \frac{1}{\sqrt{2\pi}} (\exp(-2) + 3\exp(\frac{-1}{2}) + 2)) = 0.028
+	$$
+	
+	$$
+		x = 12\ \ \ \rightarrow\ \ \ \hat{p}_{(x)} = \frac{1}{14 * 4} * \frac{1}{\sqrt{2\pi}} (2\exp(-2) + 3\exp(\frac{-1}{2}) + 1)) = 0.021
+	$$
+	
+	\item In this case, we have to consider the window size as a dynamic variable. In case $h = 2$ then $x = 4$, $x = 4$, $x = 4$ and $x = 5$ will be in our window of estimation as well as the centered point $x = 5$ (K = 5). To estimate the density we'll have the following equation:
+	$$
+		x = 5\ \ \ \rightarrow\ \ \ \hat{p}_{(x)} = \frac{1}{14 * 2} * (5) = 0.178
+	$$
+	Note that we have considered the kernel to be the same as part a. In the second case, choosing the $h = 2$ yields 5 points.
+	$$
+	x = 12\ \ \ \rightarrow\ \ \ \hat{p}_{(x)} = \frac{1}{14 * 2} * (5) = 0.178
+	$$
+\end{enumerate}
+
+
+\end{document} 
+
