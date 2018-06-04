@@ -168,11 +168,25 @@ Applying this algorithm on the given objective function yields the following res
 \end{itemize}
 And the results of removing each of the features:
 \begin{itemize}
-	\item $J(x_1x_2x_3x_4) = $
-	\item $J(x_1x_2x_3x_5) = $
-	\item $J(x_1x_2x_4x_5) = $
-	\item $J(x_1x_3x_4x_5) = $
-	\item $J(x_2x_3x_4x_5) = $
+	\item $J(x_1x_2x_3x_4) = 19$
+	\item $J(x_1x_2x_3x_5) = 20$
+	\item $J(x_1x_2x_4x_5) = 22$
+	\item $J(x_1x_3x_4x_5) = 24$
+	\item $J(x_2x_3x_4x_5) = 21$
 \end{itemize}
+It is obvious that $x_2$ is the most useless feature among these. We'll remove $x_2$ and obtain the feature subset with 4 features: $x_1$, $x_3$, $x_4$ and $x_5$.
+\begin{itemize}
+	\item $J(x_1x_3x_4x_5) = 24$
+\end{itemize}
+We can obtain the following subsets:
+\begin{itemize}
+	\item $J(x_1x_3x_4) = 18$
+	\item $J(x_1x_3x_5) = 15$
+	\item $J(x_1x_4x_5) = 17$
+	\item $J(x_3x_4x_5) = 16$
+\end{itemize}
+$x_5$ will be removed since it has the lowest effect on the greatness of evaluation.
+The proper feature subset includes: $x_1$, $x_3$ and $x_4$.
+
 \end{document} 
 
