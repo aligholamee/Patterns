@@ -1,0 +1,178 @@
+\documentclass[12pt]{article}
+\usepackage{latexsym,amssymb,amsmath} % for \Box, \mathbb, split, etc.
+% \usepackage[]{showkeys} % shows label names
+\usepackage{cite} % sorts citation numbers appropriately
+\usepackage{path}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage[pdftex]{graphicx}
+
+% horizontal margins: 1.0 + 6.5 + 1.0 = 8.5
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\textwidth}{6.5in}
+% vertical margins: 1.0 + 9.0 + 1.0 = 11.0
+\setlength{\topmargin}{0.0in}
+\setlength{\headheight}{12pt}
+\setlength{\headsep}{13pt}
+\setlength{\textheight}{625pt}
+\setlength{\footskip}{24pt}
+
+\renewcommand{\textfraction}{0.10}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\floatpagefraction}{0.90}
+
+\usepackage{accents}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+\makeatletter
+\setlength{\arraycolsep}{2\p@} % make spaces around "=" in eqnarray smaller
+\makeatother
+\usepackage{stackengine}
+% change equation, table, figure numbers to be counted inside a section:
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+
+% begin of personal macros
+\newcommand{\half}{{\textstyle \frac{1}{2}}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\myth}{\vartheta}
+\newcommand{\myphi}{\varphi}
+
+\newcommand{\IN}{\mathbb{N}}
+\newcommand{\IZ}{\mathbb{Z}}
+\newcommand{\IQ}{\mathbb{Q}}
+\newcommand{\IR}{\mathbb{R}}
+\newcommand{\IC}{\mathbb{C}}
+\newcommand{\Real}[1]{\mathrm{Re}\left({#1}\right)}
+\newcommand{\Imag}[1]{\mathrm{Im}\left({#1}\right)}
+\DeclareRobustCommand{\brkbinom}{\genfrac[]{0pt}{}}
+\newcommand{\norm}[2]{\|{#1}\|_{{}_{#2}}}
+\newcommand{\abs}[1]{\left|{#1}\right|}
+\newcommand{\ip}[2]{\left\langle {#1}, {#2} \right\rangle}
+\newcommand{\der}[2]{\frac{\partial {#1}}{\partial {#2}}}
+\newcommand{\dder}[2]{\frac{\partial^2 {#1}}{\partial {#2}^2}}
+\usepackage{enumitem}
+\newcommand{\nn}{\mathbf{n}}
+\newcommand{\xx}{\mathbf{x}}
+\newcommand{\uu}{\mathbf{u}}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
+\usepackage{titlesec}
+\newcommand{\junk}[1]{{}}
+\usepackage{sectsty}
+\usepackage{xcolor}
+\newcommand*{\bfrac}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
+\newcommand\myatop[2]{\left[{{#1}\atop#2}\right]} % "wrapper macro"
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+	\edef\arraystretch{#1}%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{*\c@MaxMatrixCols c}}
+\makeatother
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{#1}}
+\makeatother
+
+\definecolor{darkblue}{rgb}{0,0,0.4}
+\usepackage[colorlinks = true,
+linkcolor = darkblue,
+urlcolor  = darkblue,
+citecolor = darkblue,
+anchorcolor = darkblue]{hyperref}
+% set two lengths for the includegraphics commands used to import the plots:
+\newlength{\fwtwo} \setlength{\fwtwo}{0.45\textwidth}
+% end of personal macros
+
+\begin{document}
+\DeclareGraphicsExtensions{.jpg}
+
+\begin{center}
+\textsc{\Large Statistical Pattern Recognition} \\[2pt]
+	\textsc{\large Assignment 5}\\
+	\vspace{0.5cm}
+  Ali Gholami \\[6pt]
+  Department of Computer Engineering \& Information Technology\\
+  Amirkabir University of Technology  \\[6pt]
+  \def\UrlFont{\em}
+  \url{https://aligholamee.github.io}\\
+    \href{mailto:aligholami7596@gmail.com}{\textit{aligholami7596@gmail.com}}
+\end{center}
+
+\begin{abstract}
+
+\end{abstract}
+
+\subparagraph{Keywords.} \textit{Dimensionality Reduction, Principal Component Analysis, Fisher Linear Discriminant Analysis, Feature Subset Selection, Sequential Feature Selection, Data Visualization \& Representation.}
+
+
+\section{Sequential Feature Selection}
+Given the following objective function, use \textbf{SFS}, \textbf{SBS} and \textbf{Plus-2 Minus-1 Selection} to select 3 features:
+$$
+	J(x) = 5x_1 + 7x_2 + 4x_3 + 9x_4 + 3x_5 -2x_1x_2 + 2x_1x_2x_3 - 2x_2x_3 - 4x_1x_2x_3x_4 + 3x_1x_3x_5
+$$
+\subsection*{Solution}
+\subsubsection*{SFS}
+In this method, we start feature selection from an empty set. We add features one by one and compute the value of the objective function with respect to each of the features being added. The feature with the largest objective function will be selected. The iteration goes on until all features all covered. We then select ideal features (subset with k features and maximum objective). The actual algorithm is as following:
+\begin{enumerate}
+	\item Start with the empty set $ Y_0 = \emptyset$
+	\item Select the next best feature $ x^+ = argmax[J(Y_k + x)]$
+	\item Update $Y_{k + 1} = Y_k + x^+;\ \ k = k + 1$
+	\item Go to 2
+\end{enumerate}
+Below is the demonstration of iterations taken to completely explore the search space. The first iteration is:
+\begin{itemize}
+	\item $J(x_1) = 5$
+	\item $J(x_2) = 7$
+	\item $J(x_3) = 4$
+	\item $J(x_4) = 9$
+	\item $J(x_5) = 3$
+\end{itemize}
+According to the heuristic nature of sequential subset selection, we'll choose $x_4$ as the first best feature. We'll then generate subsets containing combination of features with $x_4$:
+\begin{itemize}
+	\item $J(x_4x_1) = 14$
+	\item $J(x_4x_2) = 16$
+	\item $J(x_4x_3) = 13$
+	\item $J(x_4x_5) = 12$
+\end{itemize}
+Thus, features $x_4$ and $x_2$ are selected until now. We'll drive the 3 sized subsets:
+\begin{itemize}
+	\item $J(x_4x_2x_1) = 19$
+	\item $J(x_4x_2x_3) = 18$
+	\item $J(x_4x_2x_5) = 22$
+\end{itemize}
+Three best features selected by the algorithm are $x_4$, $x_2$ and $x_5$.
+
+\subsubsection*{SBS}
+This method initiates the feature selection procedure using a complete subset of features. It then removes each feature and evaluates the objective function. The feature that causes the lowest decrease in the objective function will be remove (useless feature!). We'll stop when we reach a satisfying 3 sized feature subset. The algorithm is formally working as follows:
+\begin{enumerate}
+	\item Start with the full set $ Y_0 = X$
+	\item Remove the worst feature $x^- = argmax[J(Y_k - x)]$
+	\item Update $Y_{k + 1} = Y_{k} - x^-;\ \ k = k + 1 $
+	\item Go to 2
+\end{enumerate}
+Applying this algorithm on the given objective function yields the following results:
+\begin{itemize}
+	\item $J(x_1x_2x_3x_4x_5) = 25$
+\end{itemize}
+And the results of removing each of the features:
+\begin{itemize}
+	\item $J(x_1x_2x_3x_4) = $
+	\item $J(x_1x_2x_3x_5) = $
+	\item $J(x_1x_2x_4x_5) = $
+	\item $J(x_1x_3x_4x_5) = $
+	\item $J(x_2x_3x_4x_5) = $
+\end{itemize}
+\end{document} 
+
