@@ -386,6 +386,23 @@ $$
 	y = [0.69 \ \ \ 0.71][0.85\ \ \ 1.15]^t = 1.39
 $$	
 This point will be classified as class 1 using a linear classifier in one dimensional space.
+
+\section{PCA on IRIS}
+Carry out a PCA of Fisher’s iris data. These data consist of 50 observations on each of three species of iris: Iris setosa, Iris versicolor, and Iris virginica. The four measured variables are sepal length, sepal width, petal length, and petal width. Ignore the species labels. Compute the PC scores and plot all pairwise sets of PC scores in a matrix plot (a matrix of scatter plots). Explain your results, taking into consideration the species labels. 
+\subsection*{Solution}
+Here is the demonstration of \textit{iris.py} output in the figure 3.1. In this case, the number of principal components was given 3 and the 3d plot illustrates the projection of iris points using the PCA technique.
+		\begin{figure}[!h]\centering
+	\includegraphics[width=0.4\textwidth]{4_1.PNG}
+	\caption{Demonstration of PCA on IRIS Dataset with 3 Components.}
+	\label{pl1}
+\end{figure}
+Figure 3.2 illustrates the pairwise principal component scores for this dataset. It has been borrowed from the official site of \textit{Seaborn} library.
+		\begin{figure}[!h]\centering
+	\includegraphics[width=0.6\textwidth]{4_2.PNG}
+	\caption{Pairwise Scatter Matrix of PC Scores of Iris Dataset with 2 Components.}
+	\label{pl1}
+\end{figure}
+
 \end{document} 
 
 
