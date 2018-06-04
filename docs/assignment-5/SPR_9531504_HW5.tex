@@ -189,7 +189,7 @@ $x_5$ will be removed since it has the lowest effect on the greatness of evaluat
 The proper feature subset includes: $x_1$, $x_3$ and $x_4$.
 
 \section{PCA \& FLDA}
-In this problem, dimensionality reduction with a two-feature two-class dataset is explored. Consider the following dataset and the test sample: $x = [0.85 1.15]^T$
+In this problem, dimensionality reduction with a two-feature two-class dataset is explored. Consider the following dataset and the test sample: $x = [0.85\ \ \ 1.15]^T$
 \begin{itemize}
 	\item 	\textbf{Class 1}: [[0.8, 1.2], [0.9, 1.4], [1.2, 1.4], [1.1, 1.5]]
 	\item \textbf{Class 2}: [[0.8, 1.1], [0.6, 1], [0.65, 1.1], [0.75, 0.9]]
@@ -297,5 +297,90 @@ $$
 	0.03 & 0.09\\
 	\end{bmatrix}
 $$
+In order to find a proper projection vector, we should solve (2.5):
+\begin{equation}
+	S_w^{-1}S_B V = \lambda V
+\end{equation}
+which is an eigenvector equation. Proper $V$ can be found using (2.6).
+\begin{equation}
+	V = S_w^{-1}(m_1 - m_2)
+\end{equation}
+$$
+	V = \renewcommand\arraystretch{1}
+	\setlength\arraycolsep{6.5pt}\begin{bmatrix}
+	9 & -1\\
+	-1 & 11.7\\
+	\end{bmatrix}\begin{bmatrix}
+	0.3\\
+	0.3\\
+	\end{bmatrix} = [2.4 \ \ \ 3.2]^T
+$$
+
+(c) According to the figure 2.1, these vectors are not along the same direction.
+		\begin{figure}[!h]\centering
+	\includegraphics[width=0.7\textwidth]{2_c.PNG}
+	\caption{Illustration of FLD Projection Vector and Mean Deviation Vector.}
+	\label{pl1}
+\end{figure}
+
+(d) In order to perform a principal component analysis on the dataset, we should find the global scatter matrix of our data. In this case, we don't care about the classes and assume the whole data as a single class. Before going further, we have to make sure that all data are decreased by the mean vector value.
+$$
+	S = 8 *	\renewcommand\arraystretch{1}
+	\begin{bmatrix}
+	-0.05 & -0.05 & 0.35 & 0.25 & -0.05 & -0.25 & -0.2 & -0.1 \\
+	0 & 0.2 & 0.2 & 0.3 & -0.1 & -0.2 & -0.1 & -0.3 \\
+	\end{bmatrix} 	\begin{bmatrix}
+	-0.05 & 0\\
+	-0.05 & 0.2\\
+	0.35 & 0.2\\
+	0.25 & 0.3\\
+	-0.05 & -0.1\\
+	-0.25 & -0.2\\
+	-0.2 & -0.1\\
+	-0.1 & -0.3\\
+	\end{bmatrix} = \begin{bmatrix}
+	 2.44 & 1.72\\
+	 1.72 & 2.56\\
+	\end{bmatrix}
+$$
+In this step, we'll find the eigenvalues of the scatter matrix. We need to solve the following equation.
+$$
+	\lambda^2 - 5\lambda + 3.29 = 0
+$$
+which yields the following results:
+$$
+	\lambda_1 =  4.22 \ \ \ \ \lambda_2 = 0.78
+$$
+The eigenvector corresponding to the greatest eigenvector is obtained as:
+$$
+	V = \alpha[1\ \ \ 1.03]^T
+$$
+where
+$$
+	\sqrt{\alpha^2 + 1.06\alpha^2} = 1 \ \ \rightarrow \ \ V = [0.69 \ \ 0.71]^T
+$$
+		\begin{figure}[!h]\centering
+	\includegraphics[width=0.65\textwidth]{2_d.PNG}
+	\caption{Illustration of PCA Projection Vector.}
+	\label{pl1}
+\end{figure}
+
+(e) Fisher's vector provides the proper direction in which the classes are mostly separable. However, PCA's vector provides the direction in which the variance of the whole data is maximized and thus useful for representation purposes. Figure 2.3 provides the scatter plot of this phenomenon.
+		\begin{figure}[!h]\centering
+	\includegraphics[width=0.65\textwidth]{2_e.PNG}
+	\caption{Dataset \& Projection Vectors Using Fisher and PCA Methods.}
+	\label{pl1}
+\end{figure}
+
+(f) We can use (2.7) to project our samples on a given vector A:
+\begin{equation}
+	y_i = A^t x_i
+\end{equation}
+replacing $x_i$ with the test sample and $A^t$ with [2.4 3.2]:
+$$
+	y = [2.4 \ \ \ 3.2][0.85\ \ \ 1.15]^t = [2.04 \ \ \ 3.68]
+$$
 \end{document} 
+
+
 
