@@ -403,6 +403,53 @@ Figure 3.2 illustrates the pairwise principal component scores for this dataset.
 	\label{pl1}
 \end{figure}
 
+\section{Fisher Linear Discriminant}
+Consider the following data drawn from two distributions in 2 dimensions.
+\begin{itemize}
+	\item \textbf{Class 1}: [[-2 1], [-5 -4], [-3 1], [0 -3], [-8 -1]]
+	\item \textbf{Class 2}: [[2 5], [1 0], [5 -1], [-1 -3], [6 1]]
+\end{itemize}
+Classify the data using the Fisher Linear Discriminant method. Show all steps, including the computed class means, within-class scatter matrices and the optimal line direction. Also, show which points are classified correctly and which points are not. You can assign all points with positive projections to one class and all points with negative projections to the other class for this problem.
+
+\subsection*{Solution}
+Calculated mean vectors are:
+$$
+	\mu_1  = [-3.6\ \ \ -1.2]^T \ \ \ \mu_2 = [2.6 \ \ \ 0.4]^T
+$$
+We conduct equations represented in section 2 to compute scatter matrices.
+$$
+\renewcommand\arraystretch{1}
+\setlength\arraycolsep{6.5pt}
+	S_1 = \begin{bmatrix}
+	148.8 & 12.64\\
+	12.64 & 83.2\\
+	\end{bmatrix} \ \ \ S_2 = \begin{bmatrix}
+	138.4 & 35.68\\
+	35.68 & 140.8\\
+	\end{bmatrix}
+$$
+Adding up the scatter matrices and inversing the result yields in the following \textbf{within class scatter} matrix.
+$$
+\renewcommand\arraystretch{1}
+\setlength\arraycolsep{6.5pt}
+	S_w^{-1} = \begin{bmatrix}
+	0.0036 & -0.00077\\
+	-0.00077 & 0.0046\\
+	\end{bmatrix}
+$$
+We obtain the proper vector for the classification using (2.6).
+$$
+	V = \begin{bmatrix}
+	-0.021\\
+	-0.0025\\
+	\end{bmatrix}
+$$
+Here is the scatter plot and the Fisher's result illustrated in figure 4.1.
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.75\textwidth]{5_1.PNG}
+	\caption{Illustration of Fisher's Linear Discriminant Vector.}
+	\label{pl1}
+\end{figure}
 \end{document} 
 
 
