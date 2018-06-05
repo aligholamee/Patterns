@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.24)  5 JUN 2018 11:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.24)  5 JUN 2018 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -723,7 +723,9 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 109.
 
 (c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [1
+
+{c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 136.
 
 
@@ -732,74 +734,78 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 136.
- [1
-
-{c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
-<2_c.PNG, id=78, 790.152pt x 529.98pt>
+ [2] [3] [4] [5]
+<2_c.PNG, id=84, 790.152pt x 529.98pt>
 File: 2_c.PNG Graphic file (type png)
  <use 2_c.PNG>
-Package pdftex.def Info: 2_c.PNG used on input line 321.
+Package pdftex.def Info: 2_c.PNG used on input line 344.
 (pdftex.def)             Requested size: 328.82706pt x 220.56027pt.
- [5 <./2_c.PNG>]
-<2_d.PNG, id=88, 778.70924pt x 533.5935pt>
+ [6 <./2_c.PNG>]
+<2_d.PNG, id=94, 778.70924pt x 533.5935pt>
 File: 2_d.PNG Graphic file (type png)
  <use 2_d.PNG>
-Package pdftex.def Info: 2_d.PNG used on input line 363.
+Package pdftex.def Info: 2_d.PNG used on input line 386.
 (pdftex.def)             Requested size: 305.33788pt x 209.22421pt.
 
-<2_e.PNG, id=89, 776.30025pt x 530.58224pt>
+<2_e.PNG, id=95, 776.30025pt x 530.58224pt>
 File: 2_e.PNG Graphic file (type png)
  <use 2_e.PNG>
-Package pdftex.def Info: 2_e.PNG used on input line 370.
+Package pdftex.def Info: 2_e.PNG used on input line 393.
 (pdftex.def)             Requested size: 305.33788pt x 208.69118pt.
- [6 <./2_d.PNG>]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7 <./2_d.PNG>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
-
-<4_1.PNG, id=96, 609.9588pt x 466.1415pt>
+ <4_1.PNG, id=104, 609.9588pt x 466.1415pt>
 File: 4_1.PNG Graphic file (type png)
  <use 4_1.PNG>
-Package pdftex.def Info: 4_1.PNG used on input line 395.
+Package pdftex.def Info: 4_1.PNG used on input line 418.
 (pdftex.def)             Requested size: 187.89912pt x 143.59193pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.396 ...f PCA on IRIS Dataset with 3 Components.}
+l.419 ...f PCA on IRIS Dataset with 3 Components.}
                                                   
-<4_2.PNG, id=97, 722.7pt x 706.0779pt>
+<4_2.PNG, id=105, 722.7pt x 706.0779pt>
 File: 4_2.PNG Graphic file (type png)
  <use 4_2.PNG>
-Package pdftex.def Info: 4_2.PNG used on input line 401.
+Package pdftex.def Info: 4_2.PNG used on input line 424.
 (pdftex.def)             Requested size: 281.85585pt x 275.36926pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.402 ...cores of Iris Dataset with 2 Components.}
-                                                   [7 <./2_e.PNG>] [8 <./4_1.PN
-G> <./4_2.PNG>] <5_1.PNG, id=113, 761.244pt x 497.4585pt>
+l.425 ...cores of Iris Dataset with 2 Components.}
+                                                  
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8 <./2_e.PNG>] [9 <./4_1.PNG> <./4_2.PNG>]
+<5_1.PNG, id=119, 761.244pt x 497.4585pt>
 File: 5_1.PNG Graphic file (type png)
  <use 5_1.PNG>
-Package pdftex.def Info: 5_1.PNG used on input line 449.
+Package pdftex.def Info: 5_1.PNG used on input line 472.
 (pdftex.def)             Requested size: 352.31624pt x 230.23795pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.450 ... of Fisher's Linear Discriminant Vector.}
-                                                  
+l.473 ... of Fisher's Linear Discriminant Vector.}
+                                                   [10 <./5_1.PNG>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 476.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 476.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 453.
- [10 <./5_1.PNG>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 453.
- (./SPR_9531504_HW5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 453.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 453.
+(./SPR_9531504_HW5.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 476.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 476.
 Package rerunfilecheck Info: File `SPR_9531504_HW5.out' has not changed.
 (rerunfilecheck)             Checksum: 00E3A1A03F390A0B667BCAD0C21BF93B;218.
 
@@ -808,8 +814,8 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17958 strings out of 492995
- 332342 string characters out of 6136402
+ 17959 strings out of 492995
+ 332352 string characters out of 6136402
  401328 words of memory out of 5000000
  21128 multiletter control sequences out of 15000+600000
  11979 words of font info for 46 fonts, out of 8000000 for 9000
@@ -822,14 +828,15 @@ ist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2017/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmmi6.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmmi8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/
-texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2
-017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2017/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on SPR_9531504_HW5.pdf (10 pages, 474639 bytes).
+10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2017/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2017/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on SPR_9531504_HW5.pdf (10 pages, 493340 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 139 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
+ 182 PDF objects out of 1000 (max. 8388607)
+ 143 compressed objects within 2 object streams
+ 48 named destinations out of 1000 (max. 500000)
  75 words of extra memory for PDF output out of 10000 (max. 10000000)
 

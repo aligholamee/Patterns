@@ -111,7 +111,7 @@ anchorcolor = darkblue]{hyperref}
 \end{center}
 
 \begin{abstract}
-
+The need for dimensionality reduction has many real world applications. It is often associated with data representation and visualization which we'll use PCA technique to perform this task. The goal might be data classification sometimes. In that case, we often take care of other parameters as we do in Fisher's technique. We also analyze some feature selection techniques as SFS, SBS and LRS.
 \end{abstract}
 
 \subparagraph{Keywords.} \textit{Dimensionality Reduction, Principal Component Analysis, Fisher Linear Discriminant Analysis, Feature Subset Selection, Sequential Feature Selection, Data Visualization \& Representation.}
@@ -188,6 +188,29 @@ We can obtain the following subsets:
 $x_5$ will be removed since it has the lowest effect on the greatness of evaluation.
 The proper feature subset includes: $x_1$, $x_3$ and $x_4$.
 
+\subsubsection*{Plus 2 Minus 1}
+Since $2 > 1$, we start from an empty set. On each iteration we add 2 features and remove 1 feature. Using this technique we can obtain a little bit of backtracking in the tree of subsets. We have to choose among the following features:
+\begin{itemize}
+	\item $J(x_1) = 5$
+	\item $J(x_2) = 7$
+	\item $J(x_3) = 4$
+	\item $J(x_4) = 9$
+	\item $J(x_5) = 3$
+\end{itemize}
+The selected feature is $x_4$. We have to select another feature. We'll expand the 2-sized subsets:
+\begin{itemize}
+	\item $J(x_4x_1) = 14$
+	\item $J(x_4x_2) = 16$
+	\item $J(x_4x_3) = 13$
+	\item $J(x_4x_5) = 12$
+\end{itemize}
+Thus, the best feature to select is $x_2$ according to the heuristic forwarding scheme. Now its time to drop either $x_4$ or $x_2$. $x_4$ is a useless feature compared to $x_2$ because:
+\begin{itemize}
+	\item $J(x_2) = 7$
+	\item $J(x_4) = 9$
+\end{itemize} 
+Makes $x_4$ to be removed.
+Following the same iterations we can obtain the 3-sized feature subset which is $x_2$, $x_4$ and $x_1$.
 \section{PCA \& FLDA}
 In this problem, dimensionality reduction with a two-feature two-class dataset is explored. Consider the following dataset and the test sample: $x = [0.85\ \ \ 1.15]^T$
 \begin{itemize}
