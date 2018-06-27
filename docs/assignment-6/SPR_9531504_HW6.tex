@@ -168,8 +168,33 @@ $$
 $$
 	y_2(W^T\phi_2(x) + W_0) \geq 1
 $$
-\begin{enumerate}
-	content...
+\begin{enumerate}[label=(\alph*)]
+	\item Write down a vector that is parallel to the optimal vector $\hat{W}$. Hint: $\hat{W}$ is prependicular to the decision boundary between the two points in the $3D$ feature space.
+	
+	\item What is the value of the margin that is achieved by this $\hat{W}$? Hint: The margin is the distance from each support vector to the decision boundary. Think about the geometry of the points in feature space, and the vector between them.
+	
+	\item Solve for $\hat{W}$, using the fact that the margin is equal to $\frac{1}{||\hat{W}||}$.
+	
+	\item Solve for $\hat{W_0}$ using your value for $\hat{W}$ and (3.1). Hint: The points will be on the decision boundary, so the inequalities will be tight. A \textit{Tight Inequality} is an equality that is as strict as possible.
+\end{enumerate}
+
+\section{Hierarchical Clustring}
+Let $X = \{x_i,\ i = 1, 2, 3, 4, 5 \}$, with $x_1 = [1,\ 1]^T$, $x_2 = [2,\ 1]^T$, $x_3 = [5,\ 4]^T$, $x_4 = [6,\ 5]^T$ and $x_5 = [6.5,\ 6]^T$. The pattern matrix of X is
+$$
+	D(X) = \begin{bmatrix}
+	1 & 1\\
+	2 & 1\\
+	5 & 4\\
+	6 & 5\\
+	6.5 & 6\\
+	\end{bmatrix}
+$$
+Use the following methods to cluster the pattern matrix and draw the dendogram for hierarchical models:
+\begin{enumerate}[label=(\alph*)]
+	\item Single Linkage
+	\item Complete Linkage
+	\item Average Linkage
+	\item Mean Method
 \end{enumerate}
 \end{document} 
 
