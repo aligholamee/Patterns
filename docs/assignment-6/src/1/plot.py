@@ -30,10 +30,13 @@ class_2 = np.array([
     [-3, -1]
 ])
 
+plt.scatter(class_1[:, 0], class_1[0, :], marker='^', label='Class 1', c='black')
+plt.scatter(class_2[:, 0], class_2[0, :], marker='o', label='Class 2', c='black')
+
 # Plot decision lines
 for i in range(5):
     lab = 'y = ' + str(weights[i][1]) + 'x1 + ' + str(weights[i][2]) + 'x2 + ' + str(weights[i][0])
     plt.plot(x, (-1 * weights[i][1] * x + weights[i][0] * x) / (weights[i][2]), colors[i], label=lab)
 
-plt.legend(loc='bottm center')
+plt.legend(loc='best')
 plt.show()
