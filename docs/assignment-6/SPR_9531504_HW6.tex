@@ -311,6 +311,61 @@ $$
 	0 & 2 \\
 	\end{bmatrix}
 $$
+In order to find the \textit{SVM} decision boundary, we'll use the following formula which represents an optimization problem with respect to the constraints given in the problem description:
+\begin{equation}
+	L_D(\alpha) = \sum_{i = 1}^{2}\alpha_i - \frac{1}{2}\sum_{i = 1}^{2}\sum_{i = 1}^{2}\alpha_i\alpha_jz_iz_jx_i.x_j
+\end{equation}
+This can be written as
+$$
+	L_D(\alpha) = \alpha_1 + \alpha_2 - \frac{1}{2}(\alpha_1\begin{bmatrix}
+	1 \\ 
+	0 \\
+	0 \\
+	\end{bmatrix} - \alpha_2\begin{bmatrix}
+	1 \\ 
+	2 \\
+	2 \\
+	\end{bmatrix}).(\alpha_1\begin{bmatrix}
+	1 \\ 
+	0 \\
+	0 \\
+	\end{bmatrix} - \alpha_2\begin{bmatrix}
+	1 \\ 
+	2 \\
+	2 \\
+	\end{bmatrix})
+$$
+simplifying the results yields in 
+\begin{equation}
+		L_D(\alpha) = \frac{-9}{2}\alpha_2^2 - \frac{1}{2}\alpha_1^2 + \alpha_1\alpha_2 + \alpha_1 + \alpha_2
+\end{equation}
+To solve (3.3), we should find the derivatives with respect to $\alpha_1$ and $\alpha_2$.
+$$
+	\der{L_D(\alpha)}{\alpha_1} = -\alpha_1 + \alpha_2 + 1 = 0
+$$
+$$
+	\der{L_D(\alpha)}{\alpha_2} = -9\alpha_2 + \alpha_1 + 1 = 0
+$$
+Thus $\alpha_1 = \frac{5}{4}$ and $\alpha_2 = \frac{1}{4}$. Weights can be obtained using
+\begin{equation}
+	W = \sum_{i = 1}^{2}z_ix_i\alpha_i
+\end{equation}
+Thus
+$$
+	W = \frac{5}{4}\begin{bmatrix}
+	1 \\
+	0 \\
+	0 \\
+	\end{bmatrix} - \frac{1}{4}\begin{bmatrix}
+	1 \\
+	2 \\
+	2 \\
+	\end{bmatrix} = \begin{bmatrix}
+	1 \\
+	-1/2 \\
+	-1/2 \\
+	\end{bmatrix}
+$$
 \section{Hierarchical Clustring}
 Let $X = \{x_i,\ i = 1, 2, 3, 4, 5 \}$, with $x_1 = [1,\ 1]^T$, $x_2 = [2,\ 1]^T$, $x_3 = [5,\ 4]^T$, $x_4 = [6,\ 5]^T$ and $x_5 = [6.5,\ 6]^T$. The pattern matrix of X is
 $$
