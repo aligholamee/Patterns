@@ -390,7 +390,7 @@ $$
 	6.5 & 6\\
 	\end{bmatrix}
 $$
-Use the following methods to cluster the pattern matrix and draw the dendogram for hierarchical models:
+Use the following methods to cluster the pattern matrix and draw the dendrogram for hierarchical models:
 \begin{enumerate}[label=(\alph*)]
 	\item Single Linkage
 	\item Complete Linkage
@@ -406,35 +406,35 @@ $$
  $x_1$ & 0 & 1 & 7 & 9 & 10.5 \\ \hline
  $x_2$ & 1 & 0 & 6 & 8 & 9.5 \\ \hline
  $x_3$ & 7 & 6 & 0 & 2 & 3.5 \\ \hline
- $x_4$ & 9 & 8 & 2 & 0 & 2.5 \\ \hline
- $x_5$ & 10.5 & 9.5 & 3.5 & 2.5 & 0 \\ \hline
+ $x_4$ & 9 & 8 & 2 & 0 & 1.5 \\ \hline
+ $x_5$ & 10.5 & 9.5 & 3.5 & 1.5 & 0 \\ \hline
 \end{tabular}
 $$
 The \textit{Single Linkage} method initializes each of the points in the dataset to a cluster respectively (a bottom-up approach).
 \subsubsection*{Step 1 (d = 1)}
 At the very first beginning, the lowest distance between two points is selected from the table. The cluster $\{x_1, x_2\}$ is made in this step.
-\subsubsection*{Step 2 (d = 2)}
+\subsubsection*{Step 2 (d = 1.5)}
 $$
 \begin{tabular}{ | l | l | l | r | r |}
 \hline	
 			   & $\{x_1, x_2\}$ & $x_3$ & $x_4$ & $x_5$ \\ \hline		
 $\{x_1, x_2\}$ & 0 				& 6 & 8 & 9.5\\ \hline
 $x_3$ 		   & 6 				& 0 & 2 & 3.5  \\ \hline
-$x_4$		   & 8 				& 2 & 0 & 2.5  \\ \hline
-$x_5$ 		   & 9.5	        & 3.5 & 2.5 & 0  \\ \hline
+$x_4$		   & 8 				& 2 & 0 & 1.5  \\ \hline
+$x_5$ 		   & 9.5	        & 3.5 & 1.5 & 0  \\ \hline
 \end{tabular}
 $$
-In this step, $x_3$ and $x_4$ are merged together with a distance of $d = 2$:
+In this step, $x_4$ and $x_5$ are merged together with a distance of $d = 1.5$:
 $$
 \begin{tabular}{ | l | l | r | r |}
 \hline	
-			   & $\{x_1, x_2\}$ & $\{x_3, x_4\}$ & $x_5$ \\ \hline		
+			   & $\{x_1, x_2\}$ & $x_3$ & $\{x_4, x_5\}$ \\ \hline		
 $\{x_1, x_2\}$ & 0 				& 6 & 8 \\ \hline
-$\{x_3, x_4\}$ & 6				& 0 & 2.5 \\ \hline
-$x_5$ 		   & 9.5	        & 2.5 & 0 \\ \hline
+$x_3$ & 6				& 0 & 2 \\ \hline
+$\{x_4, x_5\}$ 		   & 9.5	        & 2 & 0 \\ \hline
 \end{tabular}
 $$
-\subsubsection*{Step 3 (d = 2.5)}
+\subsubsection*{Step 3 (d = 2)}
 In step 3, $x_3$, $x_4$ and $x_5$ are being merged together.
 $$
 \begin{tabular}{ | l | r | r |}
@@ -445,7 +445,26 @@ $\{x_3, x_4, x_5\}$ & 6				& 0 \\ \hline
 \end{tabular}
 $$
 \subsubsection*{Step 4 (d = 6)}
-In the final step, 2 clusters are merged together with $d = 6$. \textit{Dendogram} for this method is given in figure (4.1).
+In the final step, 2 clusters are merged together with $d = 6$. \textit{Dendrogram} for this method is given in figure (4.1).
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.5\textwidth]{dendro1.PNG}
+	\caption{Dendrogram illustration of hierarchical clustering with \textit{single link} method.}
+	\label{pl1}
+\end{figure}
+(b) The difference between \textit{Average Linkage} and \textit{Single Linkage} method is \textbf{when} the clustering happens. In the \textit{Complete Linkage} method, the average distance between two clusters are considered while merging two clusters. Following the same pattern for this section yields in the following results:
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.5\textwidth]{dendro2.PNG}
+	\caption{Dendrogram illustration of hierarchical clustering with \textit{average link} method.}
+	\label{pl1}
+\end{figure}
+
+(c) The difference between \textit{Complete Linkage} and \textit{Single Linkage} method is \textbf{when} the clustering happens. In the \textit{Complete Linkage} method, the maximum distance between two clusters are considered while merging two clusters. Following the same pattern for this section yields in the following results:
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.5\textwidth]{dendro3.PNG}
+	\caption{Dendrogram illustration of hierarchical clustering with \textit{complete link} method.}
+	\label{pl1}
+\end{figure}
+The code for these sections is provided in the \textit{src} folder.
 \end{document} 
 
 

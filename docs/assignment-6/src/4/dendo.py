@@ -1,10 +1,10 @@
 import numpy as np
-from scipy.cluster.hierarchy import hac
+import scipy.cluster.hierarchy as hac
 import matplotlib.pyplot as plt
 
 def augmented_dendrogram(*args, **kwargs):
 
-    ddata = dendrogram(*args, **kwargs)
+    ddata = hac.dendrogram(*args, **kwargs)
 
     if not kwargs.get('no_plot', False):
         for i, d in zip(ddata['icoord'], ddata['dcoord']):
@@ -25,4 +25,13 @@ data = np.array([
     [6.5, 6]
 ])
 
-distance_matrix = hac.linkage(data, metric='cityblock', method='single')
+distance_matrix = hac.linkage(data, metric='cityblock', method='complete')
+show_leaf_counts = False
+ddata = augmented_dendrogram(distance_matrix,
+               color_threshold=1,
+               p=6,
+               truncate_mode='lastp',
+               show_leaf_counts=show_leaf_counts,
+               )
+plt.title("show_leaf_counts = %s" % show_leaf_counts)
+plt.show()
