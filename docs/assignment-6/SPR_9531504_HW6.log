@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.6.27)  28 JUN 2018 22:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.6.27)  29 JUN 2018 11:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -710,20 +710,26 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 109.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 318.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 318.
+{c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<plot_1.PNG, id=49, 462.528pt x 344.0052pt>
+File: plot_1.PNG Graphic file (type png)
+ <use plot_1.PNG>
+Package pdftex.def Info: plot_1.PNG used on input line 265.
+(pdftex.def)             Requested size: 328.82706pt x 244.57608pt.
+ [3 <./plot_1.PNG>] [4] [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 323.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 323.
  (./SPR_9531504_HW6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 318.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 323.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 323.
 Package rerunfilecheck Info: File `SPR_9531504_HW6.out' has not changed.
 (rerunfilecheck)             Checksum: 90FB88B202349FE42EF6AFEAB18EEB9A;243.
  ) 
 Here is how much of TeX's memory you used:
- 17882 strings out of 492995
- 331470 string characters out of 6136402
- 400213 words of memory out of 5000000
- 21084 multiletter control sequences out of 15000+600000
+ 17893 strings out of 492995
+ 331579 string characters out of 6136402
+ 400300 words of memory out of 5000000
+ 21091 multiletter control sequences out of 15000+600000
  11979 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,7n,54p,889b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -737,10 +743,10 @@ nts/cm/cmr12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:
 /texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2
 017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on SPR_9531504_HW6.pdf (4 pages, 134226 bytes).
+Output written on SPR_9531504_HW6.pdf (5 pages, 159050 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
- 25 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 120 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
+ 27 named destinations out of 1000 (max. 500000)
+ 50 words of extra memory for PDF output out of 10000 (max. 10000000)
 
