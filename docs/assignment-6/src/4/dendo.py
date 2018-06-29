@@ -25,7 +25,7 @@ data = np.array([
     [6.5, 6]
 ])
 
-distance_matrix = hac.linkage(data, metric='cityblock', method='complete')
+distance_matrix = hac.linkage(data, metric='euclidean', method='centroid')
 show_leaf_counts = False
 ddata = augmented_dendrogram(distance_matrix,
                color_threshold=1,
