@@ -411,9 +411,9 @@ $$
 \end{tabular}
 $$
 The \textit{Single Linkage} method initializes each of the points in the dataset to a cluster respectively (a bottom-up approach).
-\subsubsection{Step 1}
+\subsubsection*{Step 1 (d = 1)}
 At the very first beginning, the lowest distance between two points is selected from the table. The cluster $\{x_1, x_2\}$ is made in this step.
-\subsubsection*{Step 2}
+\subsubsection*{Step 2 (d = 2)}
 $$
 \begin{tabular}{ | l | l | l | r | r |}
 \hline	
@@ -424,6 +424,28 @@ $x_4$		   & 8 				& 2 & 0 & 2.5  \\ \hline
 $x_5$ 		   & 9.5	        & 3.5 & 2.5 & 0  \\ \hline
 \end{tabular}
 $$
+In this step, $x_3$ and $x_4$ are merged together with a distance of $d = 2$:
+$$
+\begin{tabular}{ | l | l | r | r |}
+\hline	
+			   & $\{x_1, x_2\}$ & $\{x_3, x_4\}$ & $x_5$ \\ \hline		
+$\{x_1, x_2\}$ & 0 				& 6 & 8 \\ \hline
+$\{x_3, x_4\}$ & 6				& 0 & 2.5 \\ \hline
+$x_5$ 		   & 9.5	        & 2.5 & 0 \\ \hline
+\end{tabular}
+$$
+\subsubsection*{Step 3 (d = 2.5)}
+In step 3, $x_3$, $x_4$ and $x_5$ are being merged together.
+$$
+\begin{tabular}{ | l | r | r |}
+\hline	
+& $\{x_1, x_2\}$ & $\{x_3, x_4, x_5\}$ \\ \hline		
+$\{x_1, x_2\}$ & 0 				& 6\\ \hline
+$\{x_3, x_4, x_5\}$ & 6				& 0 \\ \hline
+\end{tabular}
+$$
+\subsubsection*{Step 4 (d = 6)}
+In the final step, 2 clusters are merged together with $d = 6$.
 \end{document} 
 
 
