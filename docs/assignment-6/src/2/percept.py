@@ -34,11 +34,13 @@ xor_d = np.array([
 ])
 
 # Generate random weights
-weights = np.array([random.uniform(0, 1) for i in range(3)]).reshape(1, 3)
+weights = np.array([random.uniform(0, 1) for i in range(3)]).reshape(3, 1)
+
+print("Initial weights: ", weights)
 
 for i in range(num_epoch):
     # Load the whole dataset
-    for (b, x, y, l) in np.ndenumerate(aug_norm_or_d):
+    for (b, x, y, l) in aug_norm_xor_d:
 
         # Classify the loaded point using weights in step i - 1
         output = weights[1] * x + weights[2] * y + weights[0] * b
@@ -53,6 +55,4 @@ for i in range(num_epoch):
             weights[2] = weights[2]
         
 
-
-
-
+print("Learned weights: ", weights)
