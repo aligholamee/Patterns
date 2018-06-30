@@ -185,7 +185,7 @@ print(aug_norm_or_d[:, 2])
 plt.scatter(0, 0, c='green')
 plt.scatter(0, 1, c='r')
 plt.scatter(1, 0, c='r')
-plt.scatter(-1, -1, c='green')
+plt.scatter(1, 1, c='r')
 
 # Plot initial weights
 x_p = np.linspace(-4, 4, 1000)
@@ -193,7 +193,7 @@ plt.plot(x_p, (-1 * weights[1] * x_p + weights[0]) / (weights[2]), c='black', la
 
 for i in range(num_epoch):
     # Load the whole dataset
-    for (b, x, y, l) in aug_norm_xor_d:
+    for (b, x, y, l) in aug_norm_or_d:
 
         # Classify the loaded point using weights in step i - 1
         output = weights[1] * x + weights[2] * y + weights[0] * b
