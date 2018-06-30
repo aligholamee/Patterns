@@ -207,15 +207,19 @@ for i in range(num_epoch):
             weights[0] = weights[0]
             weights[1] = weights[1]
             weights[2] = weights[2]
-
+    
+    # Display weights updating
+    print(i)
+    print(" ", weights)
     # Plot learned weights for each step
     if(i == 1 or i == 49):
         plt.plot(x_p, (-1 * weights[1] * x_p + weights[0]) / (weights[2]), c=cnames.get(i), label="Iter. " + str(i))
 
 plt.xlim(-1.5, 1.5)
-plt.ylim(-0.3, 1.5)
+plt.ylim(-1.5, 1.5)
 plt.legend(loc='best')
-plt.title("Perceptron decision boundary for OR data (Normalized Input)")
+
+plt.title("Perceptron decision boundary for XOR data (Normalized Input)")
 plt.show()
 
 print("Learned weights: ", weights)
