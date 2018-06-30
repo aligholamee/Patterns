@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.6.27)  29 JUN 2018 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.6.27)  30 JUN 2018 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -636,6 +636,9 @@ LaTeX Warning: Label `pl1' multiply defined.
 
 LaTeX Warning: Label `pl1' multiply defined.
 
+
+LaTeX Warning: Label `pl1' multiply defined.
+
 )
 \openout1 = `SPR_9531504_HW6.aux'.
 
@@ -725,59 +728,77 @@ File: plot_1.PNG Graphic file (type png)
  <use plot_1.PNG>
 Package pdftex.def Info: plot_1.PNG used on input line 265.
 (pdftex.def)             Requested size: 328.82706pt x 244.57608pt.
- [3 <./plot_1.PNG>] [4] [5] [6] <dendro1.PNG, id=89, 462.528pt x 344.0052pt>
+ [3 <./plot_1.PNG>] <Percept1.png, id=57, 462.528pt x 344.0052pt>
+File: Percept1.png Graphic file (type png)
+ <use Percept1.png>
+Package pdftex.def Info: Percept1.png used on input line 282.
+(pdftex.def)             Requested size: 328.82706pt x 244.57608pt.
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.283 ... boundaries and \textit{OR} data points.}
+                                                   [4 <./Percept1.png>]
+[5] [6] <dendro1.PNG, id=90, 462.528pt x 344.0052pt>
 File: dendro1.PNG Graphic file (type png)
  <use dendro1.PNG>
-Package pdftex.def Info: dendro1.PNG used on input line 450.
+Package pdftex.def Info: dendro1.PNG used on input line 458.
 (pdftex.def)             Requested size: 234.87749pt x 174.6897pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.451 ...tering with \textit{single link} method.}
+l.459 ...tering with \textit{single link} method.}
                                                   
-<dendro2.PNG, id=90, 462.528pt x 344.0052pt>
+<dendro2.PNG, id=91, 462.528pt x 344.0052pt>
 File: dendro2.PNG Graphic file (type png)
  <use dendro2.PNG>
-Package pdftex.def Info: dendro2.PNG used on input line 456.
+Package pdftex.def Info: dendro2.PNG used on input line 464.
 (pdftex.def)             Requested size: 234.87749pt x 174.6897pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<dendro3.PNG, id=91, 462.528pt x 344.0052pt>
+[7] <dendro3.PNG, id=101, 462.528pt x 344.0052pt>
 File: dendro3.PNG Graphic file (type png)
  <use dendro3.PNG>
-Package pdftex.def Info: dendro3.PNG used on input line 463.
+Package pdftex.def Info: dendro3.PNG used on input line 471.
 (pdftex.def)             Requested size: 234.87749pt x 174.6897pt.
 
-<dendro4.PNG, id=92, 462.528pt x 344.0052pt>
+<dendro4.PNG, id=102, 462.528pt x 344.0052pt>
 File: dendro4.PNG Graphic file (type png)
  <use dendro4.PNG>
-Package pdftex.def Info: dendro4.PNG used on input line 470.
+Package pdftex.def Info: dendro4.PNG used on input line 478.
 (pdftex.def)             Requested size: 234.87749pt x 174.6897pt.
- [7 <./dendro1.PNG>]
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8 <./dendro2.PNG> <./dendro3.PNG>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 474.
- [9 <./dendro4.PNG>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 474.
- (./SPR_9531504_HW6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 474.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 474.
-Package rerunfilecheck Info: File `SPR_9531504_HW6.out' has not changed.
-(rerunfilecheck)             Checksum: 90FB88B202349FE42EF6AFEAB18EEB9A;243.
+[8 <./dendro1.PNG> <./dendro2.PNG>] [9 <./dendro3.PNG> <./dendro4.PNG>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 482.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 482.
+
+(./SPR_9531504_HW6.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 482.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 482.
+
+
+Package rerunfilecheck Warning: File `SPR_9531504_HW6.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `SPR_9531504_HW6.out':
+(rerunfilecheck)             Before: 90FB88B202349FE42EF6AFEAB18EEB9A;243
+(rerunfilecheck)             After:  1AB07E85A3B403B4B35ABFA10C70A737;300.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17929 strings out of 492995
- 332019 string characters out of 6136402
- 401355 words of memory out of 5000000
- 21107 multiletter control sequences out of 15000+600000
+ 17936 strings out of 492995
+ 332116 string characters out of 6136402
+ 401346 words of memory out of 5000000
+ 21111 multiletter control sequences out of 15000+600000
  11979 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,9n,54p,889b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -793,10 +814,10 @@ exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/20
 17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2017/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2017/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmti12.pfb>
-Output written on SPR_9531504_HW6.pdf (9 pages, 231784 bytes).
+Output written on SPR_9531504_HW6.pdf (9 pages, 260737 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 43 named destinations out of 1000 (max. 500000)
- 70 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 175 PDF objects out of 1000 (max. 8388607)
+ 137 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 75 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -276,6 +276,14 @@ Start with the truth tables for boolean \textit{AND} and \textit{OR}. Your goal 
 \end{enumerate}
 For each case, please show the evolution in the change of weights by arranging them in a nice tabular format. Remember to include the weight $w_0$ as a part of the training process and set your $x_0$ to $+1$ all the time. For each case, please plot the separating hyperplane in the $x_1-x_2$ plane. Submit your code, result of your run and your comments.
 
+\subsection{Solution}
+(a) In this section, we have provided any code in the \textit{src} folder. The code is written in Python and the results is provided here. As can be seen from figure 2.1, the separating line correctly evolves until all of the points are correctly on one side of the decision boundary only. Since the negative class is normalized before starting the algorithm, rolling back the changes on data points would illustrate how 2 classes are separated.
+\begin{figure}[!h]\centering
+	\includegraphics[width=0.7\textwidth]{Percept1.png}
+	\caption{Illustration of Perceptron decision boundaries and \textit{OR} data points.}
+	\label{pl1}
+\end{figure}
+
 \section{Support Vector Machine}
 Consider a dataset with 2 points in $1D$:
 $$
