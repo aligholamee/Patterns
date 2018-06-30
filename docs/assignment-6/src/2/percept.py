@@ -186,7 +186,7 @@ print(aug_norm_or_d[:, 2])
 plt.scatter(0, 0, c='green')
 plt.scatter(0, 1, c='r')
 plt.scatter(1, 0, c='r')
-plt.scatter(1, 1, c='r')
+plt.scatter(-1, -1, c='green')
 
 # Plot initial weights
 x_p = np.linspace(-4, 4, 1000)
