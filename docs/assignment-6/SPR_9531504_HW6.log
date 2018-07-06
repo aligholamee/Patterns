@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.6.27)  30 JUN 2018 20:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.6.27)  7 JUL 2018 00:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -738,12 +738,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<plot_1.PNG, id=49, 462.528pt x 344.0052pt>
+<plot_1.PNG, id=51, 462.528pt x 344.0052pt>
 File: plot_1.PNG Graphic file (type png)
  <use plot_1.PNG>
 Package pdftex.def Info: plot_1.PNG used on input line 265.
 (pdftex.def)             Requested size: 281.85585pt x 209.63814pt.
- [3 <./plot_1.PNG>] <Percept1.png, id=58, 462.528pt x 344.0052pt>
+ [3 <./plot_1.PNG>] <Percept1.png, id=60, 462.528pt x 344.0052pt>
 File: Percept1.png Graphic file (type png)
  <use Percept1.png>
 Package pdftex.def Info: Percept1.png used on input line 282.
@@ -754,13 +754,13 @@ s been already used, duplicate ignored
                    \relax 
 l.283 ... boundaries and \textit{OR} data points.}
                                                   
-<Percept2.png, id=59, 462.528pt x 344.0052pt>
+<Percept2.png, id=61, 462.528pt x 344.0052pt>
 File: Percept2.png Graphic file (type png)
  <use Percept2.png>
 Package pdftex.def Info: Percept2.png used on input line 291.
 (pdftex.def)             Requested size: 281.85585pt x 209.63814pt.
 
-<Percept3.png, id=60, 610.53094pt x 455.45157pt>
+<Percept3.png, id=62, 610.53094pt x 455.45157pt>
 File: Percept3.png Graphic file (type png)
  <use Percept3.png>
 Package pdftex.def Info: Percept3.png used on input line 297.
@@ -772,13 +772,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Percept4.png, id=61, 462.528pt x 344.0052pt>
+<Percept4.png, id=63, 462.528pt x 344.0052pt>
 File: Percept4.png Graphic file (type png)
  <use Percept4.png>
 Package pdftex.def Info: Percept4.png used on input line 304.
 (pdftex.def)             Requested size: 281.85585pt x 209.63814pt.
 
-<Percept5.png, id=62, 462.528pt x 344.0052pt>
+<Percept5.png, id=64, 462.528pt x 344.0052pt>
 File: Percept5.png Graphic file (type png)
  <use Percept5.png>
 Package pdftex.def Info: Percept5.png used on input line 310.
@@ -791,7 +791,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5 <./Percept2.png> <./Percept3.png>] [6 <./Percept4.png> <./Percept5.png>]
-[7] [8] <dendro1.PNG, id=112, 462.528pt x 344.0052pt>
+[7] [8] <dendro1.PNG, id=114, 462.528pt x 344.0052pt>
 File: dendro1.PNG Graphic file (type png)
  <use dendro1.PNG>
 Package pdftex.def Info: dendro1.PNG used on input line 493.
@@ -802,7 +802,7 @@ s been already used, duplicate ignored
                    \relax 
 l.494 ...tering with \textit{single link} method.}
                                                   
-<dendro2.PNG, id=113, 462.528pt x 344.0052pt>
+<dendro2.PNG, id=115, 462.528pt x 344.0052pt>
 File: dendro2.PNG Graphic file (type png)
  <use dendro2.PNG>
 Package pdftex.def Info: dendro2.PNG used on input line 499.
@@ -816,7 +816,7 @@ l.500 ...ering with \textit{average link} method.}
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9] <dendro3.PNG, id=122, 462.528pt x 344.0052pt>
+[9] <dendro3.PNG, id=124, 462.528pt x 344.0052pt>
 File: dendro3.PNG Graphic file (type png)
  <use dendro3.PNG>
 Package pdftex.def Info: dendro3.PNG used on input line 506.
@@ -827,7 +827,7 @@ s been already used, duplicate ignored
                    \relax 
 l.507 ...ring with \textit{complete link} method.}
                                                   
-<dendro4.PNG, id=123, 462.528pt x 344.0052pt>
+<dendro4.PNG, id=125, 462.528pt x 344.0052pt>
 File: dendro4.PNG Graphic file (type png)
  <use dendro4.PNG>
 Package pdftex.def Info: dendro4.PNG used on input line 513.
@@ -856,11 +856,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17960 strings out of 492995
- 332461 string characters out of 6136402
- 401347 words of memory out of 5000000
- 21127 multiletter control sequences out of 15000+600000
- 11979 words of font info for 46 fonts, out of 8000000 for 9000
+ 17962 strings out of 492995
+ 332485 string characters out of 6136402
+ 401345 words of memory out of 5000000
+ 21128 multiletter control sequences out of 15000+600000
+ 12325 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,9n,54p,889b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
@@ -869,16 +869,18 @@ live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2017
 ist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2017/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmmi8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-6.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/20
-17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2017/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2017/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti12.pfb>
-Output written on SPR_9531504_HW6.pdf (11 pages, 365662 bytes).
+nts/cm/cmr10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/201
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2017/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2017/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmti10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti12.pfb>
+Output written on SPR_9531504_HW6.pdf (11 pages, 397730 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
+ 201 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
  48 named destinations out of 1000 (max. 500000)
  95 words of extra memory for PDF output out of 10000 (max. 10000000)
 
